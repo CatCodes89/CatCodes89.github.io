@@ -85,6 +85,7 @@ strong {
     gap: 32px;
     justify-content: flex-start;
     align-items: flex-start;
+    margin: 20px;
 }
 
 /* Styling for the "I ❤ CSS" Box - Aligned to the right */
