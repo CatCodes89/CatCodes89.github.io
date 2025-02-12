@@ -131,6 +131,7 @@ strong {
     justify-content: center;
 }
 
+/* Styling for Spinner */
 #spinner {
     width: 90px;
     height: 90px;
