@@ -77,25 +77,20 @@ strong {
     width: 300px;
     border: 1px solid black;
     padding: 8px 16px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
 }
 
 /* New Flexbox for Portfolio Samples and Heart Section */
 .side-by-side-container {
     display: flex;
     gap: 32px;
-    justify-content: center;
-    align-items: center;
+    justify-content: center; /* Center the items horizontally */
+    align-items: center;     /* Center the items vertically */
     margin: 20px;
 }
 
-/* Styling for the "I ❤ CSS" Box */
+/* Styling for the "I ❤ CSS" Box - Aligned to the right */
 #b1 {
-    position: relative; /* Ensure it's positioned relative to the normal flow */
-    margin-top: 40px;    /* Space from the <hr> */
+    position: relative; /* Ensures the spinner is positioned relative to this element */
     height: 64px;
     width: 64px;
     background-color: white;
@@ -105,20 +100,43 @@ strong {
     border: 1px solid gray;
     padding: 15px;
     box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    z-index: 10;
+    display: flex;           /* Make the box a flex container */
+    flex-direction: column;  /* Arrange elements vertically */
+    align-items: center;     /* Horizontally center content */
+    justify-content: center; /* Vertically center content */
+    z-index: 10;             /* Ensure box is above spinner */
 }
 
-/* Spinner inside #b1 */
+#b2, #b3 {
+    width: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#b3 {
+    color: #FA9A30;
+}
+
+#b4 {
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#b5, #b6, #b7 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 #spinner {
     width: 90px;
     height: 90px;
     animation: rotateSpinner 1.5s infinite;
     position: absolute;
-    z-index: 1;
+    z-index: -1; /* Ensure the spinner is behind the box */
     border-width: 6px;
     border-style: solid;
     border-top-color: #FA9A30;
@@ -129,9 +147,9 @@ strong {
     display: flex;
     align-items: center;
     justify-content: center;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 50%;    /* Position the spinner vertically at 50% of its container */
+    left: 50%;   /* Position the spinner horizontally at 50% of its container */
+    transform: translate(-50%, -50%); /* Adjust for exact centering behind the box */
 }
 
 /* Spinner Animation */
