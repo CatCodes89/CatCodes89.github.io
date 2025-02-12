@@ -1,0 +1,86 @@
+/* General Body Styles */
+
+html, body {
+    overflow: hidden; /* Prevent scrolling */
+    height: 100%;  /* Ensure full-height content */
+}
+
+body {
+    background-color: white;
+    padding: 40px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Header Styling */
+#h1strong {
+    font-size: 24px;
+    text-align: center;
+}
+
+#h1color {
+    font-size: 28px;
+    color: #FA9A30; /* Coral color */
+}
+
+.italic-text {
+    font-style: italic;
+}
+
+.black-font {
+    color: black;
+    font-style: normal;
+}
+
+strong {
+    font-weight: bold;
+}
+
+/* Horizontal Line (Separator) Styling */
+#separator {
+    border: none !important;
+    border-top: 5px solid #FA9A30 !important; /* Adjust the thickness here */
+    height: 5px !important;
+    width: 80% !important;
+    margin: 20px 0 !important;
+}
+
+/* Containers Section Styling */
+.container-wrapper {
+    display: flex;
+    gap: 32px;
+    justify-content: space-between;
+}
+
+#container, #container2 {
+    height: 300px;
+    width: 300px;
+    border: 1px solid black;
+    padding: 8px 16px;
+}
+
+#container {
+    overflow: auto;
+}
+
+#container2 img {
+    width: 100%;
+    height: auto;
+}
+
+/* Header Text Inside Container */
+#header {
+    margin: 0;
+}
+
+/* Skills Icons Styling */
+.skills-icons img {
+    margin-right: 10px;
+    height: 40px;
+    width: 40px;
+}
