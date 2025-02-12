@@ -80,7 +80,7 @@ strong {
 
 /* Skills Icons Styling */
 .skills-icons img {
-    margin-right: 2px;
+    margin-right: 10px;
     height: auto;  /* Prevent height distortion */
     width: auto;   /* Keep the width at its original size */
 }
