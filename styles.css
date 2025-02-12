@@ -83,13 +83,14 @@ strong {
 .side-by-side-container {
     display: flex;
     gap: 32px;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: center; /* Center the items horizontally */
+    align-items: center;     /* Center the items vertically */
     margin: 20px;
 }
 
 /* Styling for the "I ❤ CSS" Box - Aligned to the right */
 #b1 {
+    position: relative; /* Position it relative to enable the spinner behind it */
     height: 64px;
     width: 64px;
     background-color: white;
@@ -97,10 +98,12 @@ strong {
     border-radius: 10px;
     box-shadow: 8px 8px #FA9A30;
     border: 1px solid gray;
-    margin: 0;
     padding: 15px;
-    gap: 10px;
     box-sizing: border-box;
+    display: flex;           /* Make the box a flex container */
+    flex-direction: column;  /* Arrange elements vertically */
+    align-items: center;     /* Horizontally center content */
+    justify-content: center; /* Vertically center content */
 }
 
 #b2, #b3 {
@@ -133,7 +136,7 @@ strong {
     height: 90px;
     animation: rotateSpinner 1.5s infinite;
     position: absolute;
-    z-index: -1;
+    z-index: -1; /* Ensure the spinner is behind the box */
     border-width: 6px;
     border-style: solid;
     border-top-color: #FA9A30;
@@ -141,6 +144,9 @@ strong {
     border-left-color: transparent;
     border-right-color: transparent;
     border-radius: 50%;
+    top: 50%;    /* Center the spinner vertically */
+    left: 50%;   /* Center the spinner horizontally */
+    transform: translate(-50%, -50%); /* Adjust for exact centering */
 }
 
 /* Spinner Animation */
