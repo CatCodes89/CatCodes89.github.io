@@ -88,7 +88,7 @@ strong {
     margin: 20px;
 }
 
-/* Styling for the "I ❤ CSS" Box - Aligned to the right */
+/* Styling for the "I ❤ CSS" Box */
 #b1 {
     position: relative; /* Ensure it's positioned relative to the normal flow */
     margin-top: 40px;    /* Space from the <hr> */
@@ -108,31 +108,7 @@ strong {
     z-index: 10;
 }
 
-#b2, #b3 {
-    width: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#b3 {
-    color: #FA9A30;
-}
-
-#b4 {
-    width: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#b5, #b6, #b7 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* Styling for Spinner */
+/* Spinner inside #b1 */
 #spinner {
     width: 90px;
     height: 90px;
