@@ -71,15 +71,26 @@ strong {
     margin: 0;
 }
 
-/* Skills Icons Styling */
+/* Portfolio Samples Styling */
 #portfolioSamples {
     height: 100px;
     width: 300px;
     border: 1px solid black;
-    padding: 10px;
+    padding: 16px; /* Increased internal padding */
+    margin-right: 32px; /* Added margin to the right to give space between other containers */
     box-sizing: border-box;
 }
 
+/* Containers Section Styling */
+.side-by-side-container {
+    display: flex;
+    gap: 64px; /* Increased space between the two containers */
+    justify-content: flex-start;
+    align-items: center;
+    padding: 16px 32px; /* Added padding to the container */
+}
+
+/* Styling for the heart section */
 #b1 {
     height: 64px;
     width: 64px;
@@ -147,13 +158,4 @@ strong {
 /* Highlight Text */
 .highlight-text {
     color: #FA9A30;
-}
-
-/* New Flexbox for Portfolio Samples and Heart Section */
-.side-by-side-container {
-    display: flex;
-    gap: 32px; /* Space between the two */
-    justify-content: flex-start; /* Optional: Align to the left */
-    align-items: center; /* Optional: Align items vertically centered */
-    padding: 8px 16px;
 }
