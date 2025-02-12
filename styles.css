@@ -61,9 +61,19 @@ strong {
     padding: 8px 16px;
 }
 
-#container2 img {
-    width: 100%;
+#container2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
     height: auto;
+    border: 1px solid gray;
+    padding: 10px;
+}
+
+#container2 img {
+    width: 100%; /* Make image fill container */
+    height: auto; /* Keep aspect ratio */
 }
 
 /* Portfolio Samples Styling - Centered */
@@ -104,13 +114,10 @@ strong {
     align-items: center;     /* Horizontally center content */
     justify-content: center; /* Vertically center content */
     z-index: 10;             /* Ensure box is above spinner */
+    margin-top: 20px;        /* Add some space between the paragraph and box */
 }
 
 /* Center the spinner and heart at the top */
-#b1 {
-    margin-top: 0; /* Ensure the spinner is aligned at the top */
-}
-
 #b2, #b3 {
     width: 20px;
     display: flex;
@@ -135,6 +142,7 @@ strong {
     justify-content: center;
 }
 
+/* Spinner Styling */
 #spinner {
     width: 90px;
     height: 90px;
