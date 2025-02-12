@@ -59,6 +59,7 @@ strong {
 
 #container {
     overflow: auto;
+    position: relative; /* Ensure the spinner stays inside this container */
 }
 
 #container2 img {
@@ -66,17 +67,16 @@ strong {
     height: auto;
 }
 
-/* Header Text Inside Container */
-#header {
-    margin: 0;
-}
-
-/* Portfolio Samples Styling - Aligned to the left */
+/* Portfolio Samples Styling - Centered */
 #portfolioSamples {
     height: 100px;
     width: 300px;
     border: 1px solid black;
     padding: 8px 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto; /* Center the container */
 }
 
 /* New Flexbox for Portfolio Samples and Heart Section */
