@@ -71,26 +71,26 @@ strong {
     margin: 0;
 }
 
-/* Portfolio Samples Styling */
+/* Portfolio Samples Styling - Aligned to the left */
 #portfolioSamples {
     height: 100px;
     width: 300px;
     border: 1px solid black;
-    padding: 16px; /* Padding inside portfolio section */
-    margin-right: 32px; /* Optional: Margin to the right to provide additional space */
+    padding: 16px; /* Padding inside the portfolio section */
     box-sizing: border-box;
+    /* No need for margin-right here anymore */
 }
 
 /* New Flexbox for Portfolio Samples and Heart Section */
 .side-by-side-container {
     display: flex;
-    justify-content: space-between; /* Aligns the children to the left and right */
+    justify-content: space-between; /* Aligns items to opposite sides */
     align-items: center;
-    padding: 16px 32px; /* Padding for spacing inside the container */
-    width: 100%; /* Ensures the container takes up the full width */
+    width: 100%; /* Make sure the container takes full width */
+    padding: 16px 32px; /* Padding inside the container */
 }
 
-/* Styling for the "I ❤ CSS" Box */
+/* Styling for the "I ❤ CSS" Box - Aligned to the right */
 #b1 {
     height: 64px;
     width: 64px;
