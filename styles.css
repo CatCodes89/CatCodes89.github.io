@@ -104,7 +104,7 @@ strong {
     flex-direction: column;  /* Arrange elements vertically */
     align-items: center;     /* Horizontally center content */
     justify-content: center; /* Vertically center content */
-    z-index: 10; /* Ensures box is above spinner */
+    z-index: 1; /* Ensures box is above spinner */
 }
 
 #b2, #b3 {
