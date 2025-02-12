@@ -127,8 +127,8 @@ strong {
 
 /* Spinner Styling */
 #spinner {
-    width: 175px;
-    height: 175px;
+    width: 74px;
+    height: 74px;
     animation: rotateSpinner 1.5s infinite;
     position: absolute;
     z-index: -1;
