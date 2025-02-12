@@ -74,18 +74,14 @@ strong {
 }
 
 /* Skills Icons Styling */
-.skills-icons img {
-    margin-right: 10px;
-    height: auto;  /* Prevent height distortion */
-    width: auto;   /* Keep the width at its original size */
-}
-
 #portfolioSamples {
-    height: 300px;
+    height: 100px;
     width: 300px;
     border: 1px solid black;
     padding: 8px 16px;
-
+    display: flex;
+    align-items: center;   /* Centers content vertically */
+    justify-content: center; /* Centers content horizontally */
 }
 
 /* Box Styling */
