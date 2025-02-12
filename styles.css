@@ -90,7 +90,7 @@ strong {
 
 /* Styling for the "I ❤ CSS" Box - Aligned to the right */
 #b1 {
-    position: relative; /* Position it relative to enable the spinner behind it */
+    position: relative; /* Ensures the spinner is positioned relative to this element */
     height: 64px;
     width: 64px;
     background-color: white;
@@ -104,6 +104,7 @@ strong {
     flex-direction: column;  /* Arrange elements vertically */
     align-items: center;     /* Horizontally center content */
     justify-content: center; /* Vertically center content */
+    z-index: 10; /* Ensures box is above spinner */
 }
 
 #b2, #b3 {
@@ -136,7 +137,7 @@ strong {
     height: 90px;
     animation: rotateSpinner 1.5s infinite;
     position: absolute;
-    z-index: -1; /* Ensure the spinner is behind the box */
+    z-index: -1; /* Ensures the spinner is behind the box */
     border-width: 6px;
     border-style: solid;
     border-top-color: #FA9A30;
