@@ -98,6 +98,8 @@ strong {
     border-radius: 10px;
     box-shadow: 8px 8px #FA9A30;
     border: 1px solid gray;
+    padding: 15px;
+    box-sizing: border-box;
     display: flex;           /* Make the box a flex container */
     flex-direction: column;  /* Arrange elements vertically */
     align-items: center;     /* Horizontally center content */
@@ -130,8 +132,8 @@ strong {
 }
 
 #spinner {
-    width: 80px; /* Adjusted size */
-    height: 80px; /* Adjusted size */
+    width: 90px;
+    height: 90px;
     animation: rotateSpinner 1.5s infinite;
     position: absolute;
     z-index: -1; /* Ensure the spinner is behind the box */
@@ -142,6 +144,9 @@ strong {
     border-left-color: transparent;
     border-right-color: transparent;
     border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     top: 50%;    /* Position the spinner vertically at 50% of its container */
     left: 50%;   /* Position the spinner horizontally at 50% of its container */
     transform: translate(-50%, -50%); /* Adjust for exact centering behind the box */
