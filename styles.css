@@ -3,13 +3,9 @@ body {
     background-color: white;
     padding: 40px;
     margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    body {
-    min-height: 100vh;  /* Changed from height: 100vh */
+    min-height: 100vh;
     font-family: 'Times New Roman', Times, serif;
+    overflow: auto; /* Allow scrolling if content overflows */
 }
 
 /* Header Styling */
@@ -50,6 +46,7 @@ strong {
     display: flex;
     gap: 32px;
     justify-content: space-between;
+    width: 100%; /* Ensure it takes up the full width of its container */
 }
 
 #container, #container2 {
@@ -57,6 +54,7 @@ strong {
     width: 300px;
     border: 1px solid black;
     padding: 8px 16px;
+    box-sizing: border-box;
 }
 
 #container {
@@ -80,8 +78,9 @@ strong {
     border: 1px solid black;
     padding: 8px 16px;
     display: flex;
-    align-items: center;   /* Centers content vertically */
-    justify-content: center; /* Centers content horizontally */
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
 }
 
 /* Box Styling */
