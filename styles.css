@@ -50,16 +50,15 @@ strong {
     align-items: flex-start;
 }
 
-#container, #container2 {
-    height: 300px;
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center contents horizontally */
+    justify-content: flex-start; /* Align items to the top */
+    height: auto; /* Allow the container to adjust to content height */
     width: 300px;
     border: 1px solid black;
     padding: 8px 16px;
-}
-
-#container {
-    overflow: auto;
-    position: relative; /* Ensure the spinner stays inside this container */
 }
 
 #container2 img {
@@ -88,7 +87,7 @@ strong {
     margin: 20px;
 }
 
-/* Styling for the "I ❤ CSS" Box - Aligned to the right */
+/* Styling for the "I ❤ CSS" Box - Aligned to the top */
 #b1 {
     position: relative; /* Ensures the spinner is positioned relative to this element */
     height: 64px;
@@ -105,6 +104,11 @@ strong {
     align-items: center;     /* Horizontally center content */
     justify-content: center; /* Vertically center content */
     z-index: 10;             /* Ensure box is above spinner */
+}
+
+/* Center the spinner and heart at the top */
+#b1 {
+    margin-top: 0; /* Ensure the spinner is aligned at the top */
 }
 
 #b2, #b3 {
