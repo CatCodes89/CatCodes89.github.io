@@ -89,6 +89,7 @@ strong {
 }
 
 /* Styling for the "I ❤ CSS" Box - Aligned to the right */
+- Aligned to the right */
 #b1 {
     position: relative; /* Ensures the spinner is positioned relative to this element */
     height: 64px;
@@ -144,6 +145,9 @@ strong {
     border-left-color: transparent;
     border-right-color: transparent;
     border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     top: 50%;    /* Position the spinner vertically at 50% of its container */
     left: 50%;   /* Position the spinner horizontally at 50% of its container */
     transform: translate(-50%, -50%); /* Adjust for exact centering behind the box */
