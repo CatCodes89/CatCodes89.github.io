@@ -84,7 +84,7 @@ strong {
 /* New Flexbox for Portfolio Samples and Heart Section */
 .side-by-side-container {
     display: flex;
-    justify-content: space-between; /* Aligns items to opposite sides */
+    justify-content: row; /* Aligns items to opposite sides */
     align-items: center;
     width: 100%; /* Make sure the container takes full width */
     padding: 16px 32px; /* Padding inside the container */
