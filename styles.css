@@ -3,9 +3,10 @@ body {
     background-color: white;
     padding: 40px;
     margin: 0;
-    min-height: 100vh;
-    font-family: 'Times New Roman', Times, serif;
-    overflow: auto; /* Allow scrolling if content overflows */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
 }
 
 /* Header Styling */
@@ -46,7 +47,6 @@ strong {
     display: flex;
     gap: 32px;
     justify-content: space-between;
-    width: 100%; /* Ensure it takes up the full width of its container */
 }
 
 #container, #container2 {
@@ -54,7 +54,6 @@ strong {
     width: 300px;
     border: 1px solid black;
     padding: 8px 16px;
-    box-sizing: border-box;
 }
 
 #container {
