@@ -148,3 +148,12 @@ strong {
 .highlight-text {
     color: #FA9A30;
 }
+
+/* New Flexbox for Portfolio Samples and Heart Section */
+.side-by-side-container {
+    display: flex;
+    gap: 32px; /* Space between the two */
+    justify-content: flex-start; /* Optional: Align to the left */
+    align-items: center; /* Optional: Align items vertically centered */
+}
+
