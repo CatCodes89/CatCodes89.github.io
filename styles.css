@@ -76,7 +76,7 @@ strong {
     width: 500px;
     border: 1px solid black;
     padding: 20px;
-    margin: 20px;
+    margin: 20px auto 20px 0; /* Aligns to the left */
     display: flex;
     align-items: center;
     justify-content: center;
