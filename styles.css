@@ -78,6 +78,13 @@ strong {
     margin: 0;
 }
 
+/* Skills Icons Styling */
+.skills-icons img {
+    margin-right: 2px;
+    height: auto;  /* Prevent height distortion */
+    width: auto;   /* Keep the width at its original size */
+}
+
 /* Box Styling */
 #b1 {
     height: 64px;
