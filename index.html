@@ -1,86 +1,75 @@
-/* General Body Styles */
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>catcodes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
 
-html, body {
-    overflow: hidden; /* Prevent scrolling */
-    height: 100%;  /* Ensure full-height content */
-}
+    <!-- Hello Section -->
+    <p id="h1strong">
+        <span id="h1color">
+            <strong class="italic-text">Hello</strong>
+            <strong class="italic-text">World ...</strong>
+            <span class="black-font">my name is</span>
+            <strong class="italic-text">Cathy</strong>.
+        </span>
+    </p>
 
-body {
-    background-color: white;
-    padding: 40px;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    height: 100vh;
-    font-family: 'Times New Roman', Times, serif;
-}
+    <!-- Horizontal Line (Separator) -->
+    <hr id="separator">
 
-/* Header Styling */
-#h1strong {
-    font-size: 24px;
-    text-align: center;
-}
+    <!-- Containers Section -->
+    <div class="container-wrapper">
+        <div id="container">
+            <h2 id="header"><span class="highlight-text">I am . . .</span></h2>
+            <p>
+                I am a graduate from triOS college where I studied Web Development Fundamentals and gained skills in:
+            </p>
+            <div class="skills-icons">
+                <img src="https://i.ibb.co/39qWP5xb/photoshop.png" alt="photoshop icon">
+                <img src="https://i.ibb.co/vCYPBWp1/illustrator.png" alt="illustrator icon">
+                <img src="https://i.ibb.co/qLKH7LkT/xd.png" alt="XD icon">
+                <img src="https://i.ibb.co/wn7rznw/html.png" alt="HTML icon">
+                <img src="https://i.ibb.co/ZzcyxJbL/css-3.png" alt="CSS icon">
+                <img src="https://i.ibb.co/6J02Gb4t/js.png" alt="JavaScript icon">
+                <img src="https://i.ibb.co/RGrfsHG8/linux.png" alt="Linux icon">
+                <img src="https://i.ibb.co/7JsFFQKZ/wordpress-logo.png" alt="WordPress icon">
+                <img src="https://i.ibb.co/vxR3JvCm/file.png" alt="Markdown icon">
+                <img src="https://i.ibb.co/gb7G6K4w/github.png" alt="GitHub icon">
+                <img src="https://i.ibb.co/N22bVyTC/java.png" alt="Java icon">
+                <img src="https://i.ibb.co/PztQYbcz/swift.png" alt="Swift icon">
+            </div>
+            <p>
+                I am passionate about collaborating on projects involving Web Development, Software Applications, Graphic Design, and Video Game Development.
+            </p>
+                <p>Images courtesy of 
+        <a href="https://www.flaticon.com/free-icons/swift" title="swift icons">Pixel Perfect</a> / 
+        <a href="https://www.flaticon.com/free-icons/swift" title="swift icons">Flaticon</a>
+    </p>
+        </div>
 
-#h1color {
-    font-size: 28px;
-    color: #FA9A30; /* Coral color */
-}
+        <!-- Image Container -->
+        <div id="container2">
+            <img src="https://i.postimg.cc/kXv6VnL4/Sun-Flower-Girl-upscaled.jpg" alt="Sunflower Girl Image"/>
+        </div>
+    </div>
 
-.italic-text {
-    font-style: italic;
-}
+    <!-- Heart and Spinner Section -->
+    <div id="b1">
+        <div id="spinner"></div>
+        <div id="b2"><span>I</span></div>
+        <div id="b3"><span>❤</span></div>
+        <div id="b4">
+            <div id="b5"><span>C</span></div>
+            <div id="b6"><span>S</span></div>
+            <div id="b7"><span>S</span></div>
+        </div>
+    </div>
 
-.black-font {
-    color: black;
-    font-style: normal;
-}
+    <script src="scripts.js"></script>
+</body>
+</html>
 
-strong {
-    font-weight: bold;
-}
-
-/* Horizontal Line (Separator) Styling */
-#separator {
-    border: none !important;
-    border-top: 5px solid #FA9A30 !important; /* Adjust the thickness here */
-    height: 5px !important;
-    width: 80% !important;
-    margin: 20px 0 !important;
-}
-
-/* Containers Section Styling */
-.container-wrapper {
-    display: flex;
-    gap: 32px;
-    justify-content: space-between;
-}
-
-#container, #container2 {
-    height: 300px;
-    width: 300px;
-    border: 1px solid black;
-    padding: 8px 16px;
-}
-
-#container {
-    overflow: auto;
-}
-
-#container2 img {
-    width: 100%;
-    height: auto;
-}
-
-/* Header Text Inside Container */
-#header {
-    margin: 0;
-}
-
-/* Skills Icons Styling */
-.skills-icons img {
-    margin-right: 10px;
-    height: 40px;
-    width: 40px;
-}
