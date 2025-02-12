@@ -76,10 +76,10 @@ strong {
     width: 500px;
     border: 1px solid black;
     padding: 20px;
-    margin: 20px auto 20px 0; /* Aligns to the left */
+    margin: 20px auto 20px 0; /* Aligns container to the left */
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: center; /* Keeps the content vertically centered */
+    justify-content: flex-start; /* Aligns content to the left */
     box-sizing: border-box;
 }
 
