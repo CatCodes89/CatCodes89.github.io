@@ -155,4 +155,5 @@ strong {
     gap: 32px; /* Space between the two */
     justify-content: flex-start; /* Optional: Align to the left */
     align-items: center; /* Optional: Align items vertically centered */
+    padding: 20px;
 }
