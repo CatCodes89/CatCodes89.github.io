@@ -99,6 +99,7 @@ strong {
     border: 1px solid gray;
     margin: 0;
     padding: 15px;
+    gap: 10px;
     box-sizing: border-box;
 }
 
