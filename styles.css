@@ -73,9 +73,9 @@ strong {
 /* Skills Icons Styling */
 #portfolioSamples {
     height: 100px;
-    width: 300px;
+    width: 500px;
     border: 1px solid black;
-    padding: 8px 16px;
+    padding: 16px 16px;
     display: flex;
     align-items: center;
     justify-content: center;
