@@ -90,10 +90,22 @@ strong {
 
 /* Styling for the "I ❤ CSS" Box - Aligned to the right */
 #b1 {
-    position: fixed; /* Makes it stay in place even when scrolling */
-    bottom: 20px;    /* Distance from the bottom of the screen */
-    right: 20px;     /* Distance from the right of the screen */
-    z-index: 10;     /* Ensures it's on top of other content */
+    position: relative; /* Ensure it's positioned relative to the normal flow */
+    margin-top: 40px;    /* Space from the <hr> */
+    height: 64px;
+    width: 64px;
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    box-shadow: 8px 8px #FA9A30;
+    border: 1px solid gray;
+    padding: 15px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
 }
 
 #b2, #b3 {
@@ -122,9 +134,24 @@ strong {
 
 /* Styling for Spinner */
 #spinner {
-    top: 50%;        /* Keeps spinner centered inside #b1 */
+    width: 90px;
+    height: 90px;
+    animation: rotateSpinner 1.5s infinite;
+    position: absolute;
+    z-index: 1;
+    border-width: 6px;
+    border-style: solid;
+    border-top-color: #FA9A30;
+    border-bottom-color: #000000;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /* Centers it perfectly */
+    transform: translate(-50%, -50%);
 }
 
 /* Spinner Animation */
