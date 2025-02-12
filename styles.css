@@ -1,0 +1,74 @@
+/* Box Styling */
+#b1 {
+    height: 64px;
+    width: 64px;
+    padding: 20px;
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    box-shadow: 8px 8px #FA9A30;
+    border: 1px solid gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 50px auto;
+    position: relative;
+}
+
+#b2, #b3 {
+    width: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#b3 {
+    color: #FA9A30;
+}
+
+#b4 {
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#b5, #b6, #b7 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Spinner Styling */
+#spinner {
+    width: 175px;
+    height: 175px;
+    animation: rotateSpinner 1.5s infinite;
+    position: absolute;
+    z-index: -1;
+    border-width: 6px;
+    border-style: solid;
+    border-top-color: #FA9A30;
+    border-bottom-color: #000000;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-radius: 50%;
+}
+
+/* Spinner Animation */
+@keyframes rotateSpinner {
+    from {
+        opacity: 1;
+        transform: rotate(0deg);
+    }
+    to {
+        opacity: 0;
+        transform: rotate(360deg);
+    }
+}
+
+/* Highlight Text */
+.highlight-text {
+    color: #FA9A30;
+}
