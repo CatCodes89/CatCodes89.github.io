@@ -104,7 +104,7 @@ strong {
     flex-direction: column;  /* Arrange elements vertically */
     align-items: center;     /* Horizontally center content */
     justify-content: center; /* Vertically center content */
-    z-index: 1; /* Ensures box is above spinner */
+    z-index: 10;             /* Ensure box is above spinner */
 }
 
 #b2, #b3 {
@@ -131,13 +131,12 @@ strong {
     justify-content: center;
 }
 
-/* Spinner Styling */
 #spinner {
     width: 90px;
     height: 90px;
     animation: rotateSpinner 1.5s infinite;
     position: absolute;
-    z-index: -1; /* Ensures the spinner is behind the box */
+    z-index: -1; /* Ensure the spinner is behind the box */
     border-width: 6px;
     border-style: solid;
     border-top-color: #FA9A30;
@@ -145,9 +144,9 @@ strong {
     border-left-color: transparent;
     border-right-color: transparent;
     border-radius: 50%;
-    top: 50%;    /* Center the spinner vertically */
-    left: 50%;   /* Center the spinner horizontally */
-    transform: translate(-50%, -50%); /* Adjust for exact centering */
+    top: 50%;    /* Position the spinner vertically at 50% of its container */
+    left: 50%;   /* Position the spinner horizontally at 50% of its container */
+    transform: translate(-50%, -50%); /* Adjust for exact centering behind the box */
 }
 
 /* Spinner Animation */
