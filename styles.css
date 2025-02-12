@@ -76,21 +76,21 @@ strong {
     height: 100px;
     width: 300px;
     border: 1px solid black;
-    padding: 16px; /* Increased internal padding */
-    margin-right: 32px; /* Added margin to the right to give space between other containers */
+    padding: 16px; /* Padding inside portfolio section */
+    margin-right: 32px; /* Optional: Margin to the right to provide additional space */
     box-sizing: border-box;
 }
 
-/* Containers Section Styling */
+/* New Flexbox for Portfolio Samples and Heart Section */
 .side-by-side-container {
     display: flex;
-    gap: 64px; /* Increased space between the two containers */
-    justify-content: flex-start;
+    justify-content: space-between; /* Aligns the children to the left and right */
     align-items: center;
-    padding: 16px 32px; /* Added padding to the container */
+    padding: 16px 32px; /* Padding for spacing inside the container */
+    width: 100%; /* Ensures the container takes up the full width */
 }
 
-/* Styling for the heart section */
+/* Styling for the "I ❤ CSS" Box */
 #b1 {
     height: 64px;
     width: 64px;
