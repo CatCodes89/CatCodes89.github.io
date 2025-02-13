@@ -106,8 +106,8 @@ strong {
     background-color: white;
     color: black;
     border-radius: 10px;
-    box-shadow: 8px 8px 15px rgba(250, 154, 48, 0.5); /* Added box shadow */
-    border: 1px solid #FA9A30;  /* Orange border */
+    box-shadow: 8px 8px #FA9A30;
+    border: 1px solid #FA9A30;
     padding: 15px;
     box-sizing: border-box;
     display: flex;
