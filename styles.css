@@ -160,6 +160,12 @@ strong {
     top: 50%;    /* Position the spinner vertically at 50% of its container */
     left: 50%;   /* Position the spinner horizontally at 50% of its container */
     transform: translate(-50%, -50%); /* Adjust for exact centering behind the box */
+    box-sizing: border-box;
+    display: flex;           /* Make the box a flex container */
+    flex-direction: column;  /* Arrange elements vertically */
+    align-items: center;     /* Horizontally center content */
+    justify-content: center; /* Vertically center content */
+    margin-top: 20px;        /* Add some space between the paragraph and box */
 }
 
 /* Spinner Animation */
