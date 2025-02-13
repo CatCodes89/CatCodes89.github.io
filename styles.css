@@ -25,7 +25,7 @@ body {
     border-right-color: transparent;
     border-radius: 50%;
     top: 5%;            /* Adjust spinner's vertical position */
-    left: 30%;           /* Center it horizontally */
+    left: 35%;           /* Center it horizontally */
     transform: translate(-50%, -50%); /* Center it behind content */
 }
 
