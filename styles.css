@@ -15,8 +15,8 @@ body {
     width: 90px;
     height: 90px;
     animation: rotateSpinner 1.5s infinite;
-    position: absolute;
-    z-index: -1; /* Ensure the spinner is behind content */
+    position: absolute;  /* Position the spinner absolutely */
+    z-index: -1;         /* Ensure it stays behind content */
     border-width: 6px;
     border-style: solid;
     border-top-color: #FA9A30;
@@ -24,9 +24,9 @@ body {
     border-left-color: transparent;
     border-right-color: transparent;
     border-radius: 50%;
-    top: 30%;  /* Position the spinner where you want behind the Hello World */
-    left: 50%;
-    transform: translate(-50%, -50%); /* Adjust for exact centering */
+    top: 10%;            /* Adjust spinner's vertical position */
+    left: 50%;           /* Center it horizontally */
+    transform: translate(-50%, -50%); /* Center it behind content */
 }
 
 /* Spinner Animation */
@@ -45,6 +45,8 @@ body {
 #h1strong {
     font-size: 24px;
     text-align: center;
+    position: relative; /* Makes the spinner position relative to this */
+    z-index: 1;         /* Ensures text stays above the spinner */
 }
 
 /* Header Color */
