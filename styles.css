@@ -26,9 +26,9 @@ body {
     border-left-color: transparent;
     border-right-color: transparent;
     border-radius: 50%;
-    top: 4%;            /* Adjust spinner's vertical position */
-    left: 37%;           /* Center it horizontally */
-    transform: translate(-50%, -50%); /* Center it behind content */
+    top: 8%;  /* Adjust the top position */
+    left: 50%; /* Keep the horizontal centering */
+    transform: translateX(-50%); /* Adjust horizontal center */
 }
 
 /* Spinner Animation */
