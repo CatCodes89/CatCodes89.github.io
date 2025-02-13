@@ -1,1 +1,1 @@
-<a href="https://CatCodes89.github.io.com" target="_blank">CatCodes89.github.io</a>
+<a href="https://CatCodes89.github.io" target="_blank">CatCodes89.github.io</a>
