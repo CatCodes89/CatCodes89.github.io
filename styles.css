@@ -7,7 +7,9 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    position: relative;
+    position: relative; /* Ensures the layout remains fixed */
+    overflow: auto; /* Enable scrolling if needed */
+    height: 100vh;  /* Ensures the body covers the full viewport */
 }
 
 /* Header Styling */
@@ -15,13 +17,13 @@ body {
     font-size: 24px;
     text-align: center;
     position: relative;
-    z-index: 1;
+    z-index: 1; /* Ensures text stays above other content */
 }
 
 /* Header Color */
 #h1color {
     font-size: 28px;
-    color: #FA9A30;
+    color: #FA9A30; /* Coral color */
 }
 
 .italic-text {
@@ -40,7 +42,7 @@ strong {
 /* Horizontal Line (Separator) Styling */
 #separator {
     border: none;
-    border-top: 5px solid #FA9A30;
+    border-top: 5px solid #FA9A30; /* Color and thickness of the separator line */
     width: 80%;
     margin: 10px 0;
 }
@@ -51,6 +53,7 @@ strong {
     gap: 32px;
     justify-content: flex-start;
     align-items: flex-start;
+    margin-top: 20px;
 }
 
 #container, #container2 {
@@ -58,7 +61,6 @@ strong {
     width: 300px;
     border: 1px solid black;
     padding: 8px 16px;
-    margin-top: 0px;
 }
 
 #container {
@@ -124,7 +126,7 @@ strong {
 }
 
 #b3 {
-    color: #FA9A30;
+    color: #FA9A30; /* Heart color */
 }
 
 #b4 {
