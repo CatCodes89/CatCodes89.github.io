@@ -7,7 +7,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    position: relative; /* Keep position relative for layout */
+    position: relative;
 }
 
 /* Header Styling */
@@ -21,7 +21,7 @@ body {
 /* Header Color */
 #h1color {
     font-size: 28px;
-    color: #FA9A30; /* Coral color */
+    color: #FA9A30;
 }
 
 .italic-text {
@@ -58,7 +58,7 @@ strong {
     width: 300px;
     border: 1px solid black;
     padding: 8px 16px;
-    margin-top: 0px; /* Adjusted margin */
+    margin-top: 0px;
 }
 
 #container {
@@ -70,16 +70,16 @@ strong {
     height: auto;
 }
 
-/* Portfolio Samples Styling - Aligned to the left */
+/* Portfolio Samples Styling */
 #portfolioSamples {
     height: 100px;
     width: 300px;
     border: 1px solid black;
     padding: 8px 16px;
-    text-align: center; /* Optional: centers text inside */
+    text-align: center;
 }
 
-/* New Flexbox for Portfolio Samples and Heart Section */
+/* Flexbox for Portfolio Samples and Heart Section */
 .side-by-side-container {
     display: flex;
     gap: 32px;
@@ -91,7 +91,51 @@ strong {
 #separator2 {
     border: none;
     border-top: 5px solid #FA9A30;
-    width: 80%;    /* Set a fixed width */
+    width: 80%;
     margin: 20px 0;
     z-index: 10;
+}
+
+/* Styling for the "I ❤ CSS" Box */
+#b1 {
+    position: relative;
+    height: 64px;
+    width: 64px;
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    box-shadow: 8px 8px #FA9A30;
+    border: 1px solid gray;
+    padding: 15px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    margin: 20px auto;
+}
+
+#b2, #b3 {
+    width: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#b3 {
+    color: #FA9A30;
+}
+
+#b4 {
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#b5, #b6, #b7 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
