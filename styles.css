@@ -12,8 +12,8 @@ body {
 
 /* Spinner Styling - Positioned behind "Hello World" */
 #spinner {
-    width: 90px;
-    height: 90px;
+    width: 100px;
+    height: 100px;
     animation: rotateSpinner 1.5s infinite;
     position: absolute;  /* Position the spinner absolutely */
     z-index: -1;         /* Ensure it stays behind content */
@@ -24,8 +24,8 @@ body {
     border-left-color: transparent;
     border-right-color: transparent;
     border-radius: 50%;
-    top: 5%;            /* Adjust spinner's vertical position */
-    left: 35%;           /* Center it horizontally */
+    top: 4%;            /* Adjust spinner's vertical position */
+    left: 37%;           /* Center it horizontally */
     transform: translate(-50%, -50%); /* Center it behind content */
 }
 
@@ -72,7 +72,6 @@ strong {
 #separator {
     border: none !important;
     border-top: 5px solid #FA9A30 !important; /* Adjust the thickness here */
-    height: 5px !important;
     width: 80% !important;
     margin: 20px 0 !important;
 }
