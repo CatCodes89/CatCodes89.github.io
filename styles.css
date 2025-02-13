@@ -8,8 +8,8 @@ body {
     align-items: center;
     justify-content: flex-start;
     position: relative; /* Make sure the spinner can be positioned relative to body */
-    overflow: hidden;   /* Prevent scrolling */
-    height: 100vh;      /* Ensure content fills the viewport height */
+    overflow: auto; /* Allow scrolling only if content overflows */
+    height: 100vh;  /* Ensure content fits within the viewport */
 }
 
 /* Spinner Styling - Positioned behind "Hello World" */
