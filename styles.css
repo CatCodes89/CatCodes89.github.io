@@ -7,6 +7,38 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+    position: relative; /* Make sure the spinner can be positioned relative to body */
+}
+
+/* Spinner Styling - Positioned behind "Hello World" */
+#spinner {
+    width: 90px;
+    height: 90px;
+    animation: rotateSpinner 1.5s infinite;
+    position: absolute;
+    z-index: -1; /* Ensure the spinner is behind content */
+    border-width: 6px;
+    border-style: solid;
+    border-top-color: #FA9A30;
+    border-bottom-color: #000000;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-radius: 50%;
+    top: 30%;  /* Position the spinner where you want behind the Hello World */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Adjust for exact centering */
+}
+
+/* Spinner Animation */
+@keyframes rotateSpinner {
+    from {
+        opacity: 1;
+        transform: rotate(0deg);
+    }
+    to {
+        opacity: 0;
+        transform: rotate(360deg);
+    }
 }
 
 /* Header Styling */
@@ -15,6 +47,7 @@ body {
     text-align: center;
 }
 
+/* Header Color */
 #h1color {
     font-size: 28px;
     color: #FA9A30; /* Coral color */
@@ -66,11 +99,6 @@ strong {
     height: auto;
 }
 
-/* Header Text Inside Container */
-#header {
-    margin: 0;
-}
-
 /* Portfolio Samples Styling - Aligned to the left */
 #portfolioSamples {
     height: 100px;
@@ -88,9 +116,9 @@ strong {
     margin: 20px;
 }
 
-/* Styling for the "I ❤ CSS" Box - Aligned to the right */
+/* Styling for the "I ❤ CSS" Box */
 #b1 {
-    position: relative; /* Ensures the spinner is positioned relative to this element */
+    position: relative;
     height: 64px;
     width: 64px;
     background-color: white;
@@ -100,12 +128,12 @@ strong {
     border: 1px solid gray;
     padding: 15px;
     box-sizing: border-box;
-    display: flex;           /* Make the box a flex container */
-    flex-direction: column;  /* Arrange elements vertically */
-    align-items: center;     /* Horizontally center content */
-    justify-content: center; /* Vertically center content */
-    z-index: 10;             /* Ensure box is above spinner */
-    margin: 20px auto;       /* Add space and center the box */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    margin: 20px auto;
 }
 
 #b2, #b3 {
@@ -130,42 +158,4 @@ strong {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-#spinner {
-    width: 90px;
-    height: 90px;
-    animation: rotateSpinner 1.5s infinite;
-    position: absolute;
-    z-index: -1; /* Ensure the spinner is behind the box */
-    border-width: 6px;
-    border-style: solid;
-    border-top-color: #FA9A30;
-    border-bottom-color: #000000;
-    border-left-color: transparent;
-    border-right-color: transparent;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    top: 50%;    /* Position the spinner vertically at 50% of its container */
-    left: 50%;   /* Position the spinner horizontally at 50% of its container */
-    transform: translate(-50%, -50%); /* Adjust for exact centering behind the box */
-}
-
-/* Spinner Animation */
-@keyframes rotateSpinner {
-    from {
-        opacity: 1;
-        transform: rotate(0deg);
-    }
-    to {
-        opacity: 0;
-        transform: rotate(360deg);
-    }
-}
-
-/* Highlight Text */
-.highlight-text {
-    color: #FA9A30;
 }
