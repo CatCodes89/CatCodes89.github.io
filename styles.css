@@ -105,6 +105,7 @@ strong {
     align-items: center;     /* Horizontally center content */
     justify-content: center; /* Vertically center content */
     z-index: 10;             /* Ensure box is above spinner */
+    margin: 20px auto;       /* Add space and center the box */
 }
 
 #b2, #b3 {
