@@ -79,9 +79,15 @@ strong {
     border: 1px solid black;
     padding: 8px 16px;
     text-align: center;
+}
+
+/* Flexbox for Portfolio Samples and Heart Section */
+.side-by-side-container {
     display: flex;
+    gap: 32px;
     justify-content: center;
     align-items: center;
+    margin: 20px;
 }
 
 #separator2 {
