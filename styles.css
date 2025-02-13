@@ -7,51 +7,14 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    position: relative; /* Make sure the spinner can be positioned relative to body */
-    overflow: auto; /* Allow scrolling only if content overflows */
-    height: 100vh;  /* Ensure content fits within the viewport */
-}
-
-/* Spinner Styling - Positioned behind "Hello World" */
-#spinner {
-    width: 150px;       /* Increased size */
-    height: 150px;      /* Increased size */
-    animation: rotateSpinner 1.5s infinite;
-    position: absolute;  /* Position the spinner absolutely */
-    z-index: -1;         /* Ensure it stays behind content */
-    border-width: 6px;
-    border-style: solid;
-    border-top-color: #FA9A30;
-    border-bottom-color: #000000;
-    border-left-color: transparent;
-    border-right-color: transparent;
-    border-radius: 50%;
-    top: 8%;  /* Adjust the top position */
-    left: 50%; /* Keep the horizontal centering */
-    transform: translateX(-50%); /* Adjust horizontal center */
-}
-
-/* Spinner Animation */
-@keyframes rotateSpinner {
-    from {
-        opacity: 1;
-        transform: rotate(0deg);
-    }
-    to {
-        opacity: 0;
-        transform: rotate(360deg);
-    }
 }
 
 /* Header Styling */
 #h1strong {
     font-size: 24px;
     text-align: center;
-    position: relative; /* Makes the spinner position relative to this */
-    z-index: 1;         /* Ensures text stays above the spinner */
 }
 
-/* Header Color */
 #h1color {
     font-size: 28px;
     color: #FA9A30; /* Coral color */
@@ -74,8 +37,9 @@ strong {
 #separator {
     border: none !important;
     border-top: 5px solid #FA9A30 !important; /* Adjust the thickness here */
+    height: 5px !important;
     width: 80% !important;
-    margin: 10px 0 !important;  /* Reduce margin-top for closer positioning */
+    margin: 20px 0 !important;
 }
 
 /* Containers Section Styling */
@@ -91,7 +55,6 @@ strong {
     width: 300px;
     border: 1px solid black;
     padding: 8px 16px;
-    margin-top: 30px;
 }
 
 #container {
@@ -103,13 +66,17 @@ strong {
     height: auto;
 }
 
+/* Header Text Inside Container */
+#header {
+    margin: 0;
+}
+
 /* Portfolio Samples Styling - Aligned to the left */
 #portfolioSamples {
     height: 100px;
     width: 300px;
     border: 1px solid black;
     padding: 8px 16px;
-    text-align: center;          /* Optional: centers text inside */
 }
 
 /* New Flexbox for Portfolio Samples and Heart Section */
@@ -121,9 +88,9 @@ strong {
     margin: 20px;
 }
 
-/* Styling for the "I ❤ CSS" Box */
+/* Styling for the "I ❤ CSS" Box - Aligned to the right */
 #b1 {
-    position: relative;
+    position: relative; /* Ensures the spinner is positioned relative to this element */
     height: 64px;
     width: 64px;
     background-color: white;
@@ -133,12 +100,11 @@ strong {
     border: 1px solid gray;
     padding: 15px;
     box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    z-index: 10;
-    margin: 20px auto;
+    display: flex;           /* Make the box a flex container */
+    flex-direction: column;  /* Arrange elements vertically */
+    align-items: center;     /* Horizontally center content */
+    justify-content: center; /* Vertically center content */
+    z-index: 10;             /* Ensure box is above spinner */
 }
 
 #b2, #b3 {
@@ -165,10 +131,40 @@ strong {
     justify-content: center;
 }
 
-#separator2 {
-    border: none !important;
-    border-top: 5px solid #FA9A30 !important; /* Adjust the thickness here */
-    width: 80% !important;    /* Set a fixed width */
-    margin: 20px 0 !important; /* Ensure there's space around it */
-    z-index: 10;              /* Ensure it's not covered by other elements */
+#spinner {
+    width: 90px;
+    height: 90px;
+    animation: rotateSpinner 1.5s infinite;
+    position: absolute;
+    z-index: -1; /* Ensure the spinner is behind the box */
+    border-width: 6px;
+    border-style: solid;
+    border-top-color: #FA9A30;
+    border-bottom-color: #000000;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 50%;    /* Position the spinner vertically at 50% of its container */
+    left: 50%;   /* Position the spinner horizontally at 50% of its container */
+    transform: translate(-50%, -50%); /* Adjust for exact centering behind the box */
+}
+
+/* Spinner Animation */
+@keyframes rotateSpinner {
+    from {
+        opacity: 1;
+        transform: rotate(0deg);
+    }
+    to {
+        opacity: 0;
+        transform: rotate(360deg);
+    }
+}
+
+/* Highlight Text */
+.highlight-text {
+    color: #FA9A30;
 }
