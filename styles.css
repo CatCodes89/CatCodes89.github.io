@@ -8,12 +8,14 @@ body {
     align-items: center;
     justify-content: flex-start;
     position: relative; /* Make sure the spinner can be positioned relative to body */
+    overflow: hidden;   /* Prevent scrolling */
+    height: 100vh;      /* Ensure content fills the viewport height */
 }
 
 /* Spinner Styling - Positioned behind "Hello World" */
 #spinner {
-    width: 100px;
-    height: 100px;
+    width: 150px;       /* Increased size */
+    height: 150px;      /* Increased size */
     animation: rotateSpinner 1.5s infinite;
     position: absolute;  /* Position the spinner absolutely */
     z-index: -1;         /* Ensure it stays behind content */
@@ -73,7 +75,7 @@ strong {
     border: none !important;
     border-top: 5px solid #FA9A30 !important; /* Adjust the thickness here */
     width: 80% !important;
-    margin: 20px 0 !important;
+    margin: 10px 0 !important;  /* Reduce margin-top for closer positioning */
 }
 
 /* Containers Section Styling */
