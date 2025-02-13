@@ -7,48 +7,15 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    position: relative; /* Make sure the spinner can be positioned relative to body */
-    overflow: auto; /* Allow scrolling only if content overflows */
-    height: 100vh;  /* Ensure content fits within the viewport */
-}
-
-/* Spinner Styling - Positioned behind "Hello World" */
-#spinner {
-    width: 150px;       /* Increased size */
-    height: 150px;      /* Increased size */
-    animation: rotateSpinner 1.5s infinite;
-    position: absolute;  /* Position the spinner absolutely */
-    z-index: -1;         /* Ensure it stays behind content */
-    border-width: 6px;
-    border-style: solid;
-    border-top-color: #FA9A30;
-    border-bottom-color: #000000;
-    border-left-color: transparent;
-    border-right-color: transparent;
-    border-radius: 50%;
-    top: 8%;  /* Adjust the top position */
-    left: 50%; /* Keep the horizontal centering */
-    transform: translateX(-50%); /* Adjust horizontal center */
-}
-
-/* Spinner Animation */
-@keyframes rotateSpinner {
-    from {
-        opacity: 1;
-        transform: rotate(0deg);
-    }
-    to {
-        opacity: 0;
-        transform: rotate(360deg);
-    }
+    position: relative; /* Keep position relative for layout */
 }
 
 /* Header Styling */
 #h1strong {
     font-size: 24px;
     text-align: center;
-    position: relative; /* Makes the spinner position relative to this */
-    z-index: 1;         /* Ensures text stays above the spinner */
+    position: relative;
+    z-index: 1;
 }
 
 /* Header Color */
@@ -72,10 +39,10 @@ strong {
 
 /* Horizontal Line (Separator) Styling */
 #separator {
-    border: none !important;
-    border-top: 5px solid #FA9A30 !important; /* Adjust the thickness here */
-    width: 80% !important;
-    margin: 10px 0 !important;  /* Reduce margin-top for closer positioning */
+    border: none;
+    border-top: 5px solid #FA9A30;
+    width: 80%;
+    margin: 10px 0;
 }
 
 /* Containers Section Styling */
@@ -91,7 +58,7 @@ strong {
     width: 300px;
     border: 1px solid black;
     padding: 8px 16px;
-    margin-top: 30px;
+    margin-top: 0px; /* Adjusted margin */
 }
 
 #container {
@@ -109,66 +76,22 @@ strong {
     width: 300px;
     border: 1px solid black;
     padding: 8px 16px;
-    text-align: center;          /* Optional: centers text inside */
+    text-align: center; /* Optional: centers text inside */
 }
 
 /* New Flexbox for Portfolio Samples and Heart Section */
 .side-by-side-container {
     display: flex;
     gap: 32px;
-    justify-content: center; /* Center the items horizontally */
-    align-items: center;     /* Center the items vertically */
+    justify-content: center;
+    align-items: center;
     margin: 20px;
 }
 
-/* Styling for the "I ❤ CSS" Box */
-#b1 {
-    position: relative;
-    height: 64px;
-    width: 64px;
-    background-color: white;
-    color: black;
-    border-radius: 10px;
-    box-shadow: 8px 8px #FA9A30;
-    border: 1px solid gray;
-    padding: 15px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    z-index: 10;
-    margin: 20px auto;
-}
-
-#b2, #b3 {
-    width: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#b3 {
-    color: #FA9A30;
-}
-
-#b4 {
-    width: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#b5, #b6, #b7 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 #separator2 {
-    border: none !important;
-    border-top: 5px solid #FA9A30 !important; /* Adjust the thickness here */
-    width: 80% !important;    /* Set a fixed width */
-    margin: 20px 0 !important; /* Ensure there's space around it */
-    z-index: 10;              /* Ensure it's not covered by other elements */
+    border: none;
+    border-top: 5px solid #FA9A30;
+    width: 80%;    /* Set a fixed width */
+    margin: 20px 0;
+    z-index: 10;
 }
