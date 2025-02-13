@@ -161,3 +161,11 @@ strong {
     align-items: center;
     justify-content: center;
 }
+
+#separator2 {
+    border: none !important;
+    border-top: 5px solid #FA9A30 !important; /* Adjust the thickness here */
+    height: 5px !important;
+    width: 80% !important;
+    margin: 20px 0 !important;
+}
