@@ -166,7 +166,6 @@ strong {
 #separator2 {
     border: none !important;
     border-top: 5px solid #FA9A30 !important; /* Adjust the thickness here */
-    height: 5px !important;  /* Set a fixed height */
     width: 80% !important;    /* Set a fixed width */
     margin: 20px 0 !important; /* Ensure there's space around it */
     z-index: 10;              /* Ensure it's not covered by other elements */
