@@ -15,3 +15,27 @@ body {
     height: 100vh; /* Ensures the body covers the full viewport */
     color: white; /* Optional: If you want text to be visible on the background */
 }
+
+#spinner {
+    width: 64px;
+    height: 64px;
+    background-color: pink;
+    animation: rotateSpinner 1.5s infinite;
+    border-width: 6px;
+    border-style: solid;
+    border-top-color: red;
+    border-bottom-color: blue;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-radius: 50%;
+}
+
+@keyframes rotateSpinner {
+    from {
+        opacity: 1;
+        transform: rotate(0deg);    }
+    to {
+        opacity: 0;
+        transform: rotate(360deg);
+    }
+}
