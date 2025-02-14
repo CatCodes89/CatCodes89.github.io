@@ -17,9 +17,9 @@ body {
 }
 
 #spinner {
-    width: 64px;
-    height: 64px;
-    background-color: pink;
+    width: 200px;
+    height: 200px;
+    background-color: transparent;
     animation: rotateSpinner 1.5s infinite;
     border-width: 6px;
     border-style: solid;
