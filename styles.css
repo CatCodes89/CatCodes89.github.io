@@ -96,8 +96,10 @@ strong {
     border: none;
     border-top: 5px solid #FA9A30;
     width: 80%;
-    margin: 20px 0;
+    margin: 20px 0;  /* Adjusted margin */
     z-index: 10;
+    position: relative;  /* Ensure it's properly positioned */
+    clear: both;  /* Ensures it clears any floating content */
 }
 
 /* Styling for the "I ❤ CSS" Box */
