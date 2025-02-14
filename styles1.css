@@ -1,8 +1,8 @@
 /* Apply Image Background to the Whole Page */
 body {
-    background-image: url('https://i.ibb.co/kdYwDf6/Gypsy-Girl-1.png'); /* Image URL */
+    background-image: url('https://i.ibb.co/kdYwDf6/Gypsy-Girl-1.png'); /* New Image URL */
     background-size: cover; /* Makes the image cover the entire screen */
-    background-position: center center; /* Centers the image */
+    background-position: center 30%; /* Adjust vertical position */
     background-attachment: fixed; /* Keeps the background fixed during scrolling */
     padding: 40px;
     margin: 0;
