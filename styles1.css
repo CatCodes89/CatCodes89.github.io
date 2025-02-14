@@ -1,8 +1,9 @@
-/* Set Image as Background for the Entire Page */
+/* Apply Image Background to the Whole Page */
 body {
-    background-image: url('https://i.ibb.co/prMLdPxP/Gypsy-Girl.jpg');
-    background-size: cover; /* Ensure the image covers the entire viewport */
-    background-position: center center; /* Center the image */
+    background-image: url('https://i.ibb.co/prMLdPxP/Gypsy-Girl.jpg'); /* Image URL */
+    background-size: cover; /* Makes the image cover the entire screen */
+    background-position: center center; /* Centers the image */
+    background-attachment: fixed; /* Keeps the background fixed during scrolling */
     padding: 40px;
     margin: 0;
     display: flex;
@@ -11,6 +12,6 @@ body {
     justify-content: flex-start;
     position: relative;
     overflow: auto;
-    height: 100vh;
+    height: 100vh; /* Ensures the body covers the full viewport */
     color: white; /* Optional: If you want text to be visible on the background */
 }
