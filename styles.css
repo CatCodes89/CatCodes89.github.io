@@ -90,12 +90,17 @@ strong {
     margin: 20px;
 }
 
+/* Horizontal Line (Separator 2) Styling */
 #separator2 {
     border: none;
-    border-top: 5px solid #FA9A30;
+    border-top: 5px solid #FA9A30; /* Orange color for the separator */
     width: 80%;
     margin: 20px 0;
-    z-index: 10;
+    background-color: transparent; /* Ensure it's transparent */
+    height: 5px; /* Set height for better visibility */
+    display: block; /* Ensure it is rendered properly */
+    z-index: 1; /* Make sure it is in front of other content */
+    position: relative; /* Ensure it is properly placed in the layout */
 }
 
 /* Styling for the "I ❤ CSS" Box */
