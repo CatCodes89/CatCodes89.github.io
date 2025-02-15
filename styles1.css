@@ -99,6 +99,7 @@ input[type="text"] {
     background-color: #fff;
     color: #333;
     margin-top: 20px;
+    display: block; /* Ensure input field is displayed */
 }
 
 button {
@@ -110,6 +111,7 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    display: block; /* Ensure button is displayed */
 }
 
 button:hover {
@@ -121,6 +123,19 @@ button:hover {
     margin-top: 20px;
     font-weight: bold;
     color: yellow;
+    display: none; /* Initially hidden */
+}
+
+#try-again-button {
+    padding: 10px 20px;
+    font-size: 18px;
+    margin-top: 10px;
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none; /* Initially hidden */
 }
 
 a {
@@ -134,3 +149,4 @@ a:hover {
     color: #ffcc00;
     text-decoration: underline;
 }
+
