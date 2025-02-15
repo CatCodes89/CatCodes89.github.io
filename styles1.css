@@ -73,6 +73,7 @@ body {
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
     z-index: 1;
     transition: opacity 1s ease-out;
+    cursor: pointer; /* Make it feel clickable */
 }
 
 /* Center the question container (ask question) */
@@ -97,7 +98,7 @@ body {
     transition: opacity 1s ease-out;
 }
 
-/* Ensure buttons are centered inside the question container */
+/* Buttons Styling */
 #question-container button, #try-again-button {
     padding: 10px 20px;
     font-size: 18px;
@@ -110,10 +111,19 @@ body {
     display: block;
     margin-left: auto;
     margin-right: auto; /* Center the button horizontally */
+    transition: background-color 0.3s, transform 0.2s ease;
 }
 
-button:hover {
+/* Button Hover and Focus Effects */
+button:hover, button:focus {
     background-color: #45a049;
+    outline: none; /* Remove default focus outline */
+    transform: scale(1.05); /* Slightly increase button size on hover/focus */
+}
+
+/* Focus ring for accessibility */
+button:focus {
+    box-shadow: 0 0 0 3px rgba(255, 165, 0, 0.7); /* Orange outline for focus */
 }
 
 /* Initially hide the answer text */
@@ -123,6 +133,17 @@ button:hover {
     font-weight: bold;
     color: yellow;
     display: none; /* Initially hidden */
+    animation: fadeIn 1s ease-out; /* Fade-in animation */
+}
+
+/* Answer Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 /* Make the 'Try again?' button blue and center it */
@@ -147,4 +168,25 @@ a {
 a:hover {
     color: #ffcc00;
     text-decoration: underline;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+    #spinner-text {
+        font-size: 24px; /* Smaller text on mobile */
+    }
+
+    #question-container {
+        width: 90%;
+        padding: 10px; /* Less padding on smaller screens */
+    }
+
+    #spinner {
+        width: 300px;
+        height: 300px;
+    }
+
+    #answer-text {
+        font-size: 20px;
+    }
 }
