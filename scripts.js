@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
         spinnerText.style.transition = "opacity 1s ease-out";
         spinnerText.style.opacity = 0;
 
-        // After 1 second (fade duration), hide the spinner and show the question input
+        // After 1 second (fade duration), hide the spinner text and show the question input
         setTimeout(() => {
             spinnerText.style.display = 'none';
             questionContainer.style.display = 'block';  // Show the question container
