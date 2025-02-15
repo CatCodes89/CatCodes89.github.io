@@ -71,11 +71,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Clear the previous question input
         document.querySelector('#question-input').value = '';
-
-        // Show the "Click to Begin" text again
-        questionContainer.style.display = 'none';
-        spinnerText.style.display = 'block';
-        spinnerText.style.opacity = 1;
     }
 
     // Add event listener to "Click to Begin" text
@@ -89,3 +84,4 @@ document.addEventListener('DOMContentLoaded', function () {
 
     console.log("Script loaded and ready!");
 });
+
