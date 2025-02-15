@@ -20,15 +20,16 @@ body {
     width: 700px;
     height: 700px;
     background-color: transparent;
-    animation: rotateSpinner 1.5s infinite;
-    border-width: 10px; /* Adjusted border width for clarity */
+    animation: rotateSpinner 1.5s infinite linear;
+    border-width: 20px; /* Increase border width for better visibility */
     border-style: solid;
     border-top-color: red;
     border-bottom-color: blue;
     border-left-color: transparent;
     border-right-color: transparent;
-    border-radius: 50%; /* Ensures it's a perfect circle */
-    display: inline-block; /* Keeps the circle centered */
+    border-radius: 50%; /* Ensures the circle shape */
+    display: block; /* Ensures no other elements affect the layout */
+    margin: auto; /* Centers the spinner */
 }
 
 @keyframes rotateSpinner {
