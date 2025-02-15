@@ -24,8 +24,8 @@ body {
     animation: rotateSpinner 3.5s infinite linear; /* Slow rotation */
     border-width: 20px;   /* Border width */
     border-style: solid;
-    border-top-color: red;
-    border-bottom-color: blue;
+    border-top-color: #dee2ef;
+    border-bottom-color: #dee2ef;
     border-left-color: transparent;
     border-right-color: transparent;
     border-radius: 50%;   /* Ensures it's a circle */
