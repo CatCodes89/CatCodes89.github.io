@@ -1,3 +1,4 @@
+
 body {
     background-image: url('https://i.ibb.co/kdYwDf6/Gypsy-Girl-1.png'); /* Background Image */
     background-size: cover;
@@ -23,12 +24,20 @@ body {
     align-items: center;
 }
 
-/* Spinner Styles */
+/* New container for the rotating spinner */
+#rotating-spinner {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: rotateSpinner 3.5s infinite linear;
+}
+
+/* Spinner Styles (without animation anymore) */
 #spinner {
     width: 500px;
     height: 500px;
     background-color: transparent;
-    animation: rotateSpinner 3.5s infinite linear;
     border-width: 15px;
     border-style: solid;
     border-top-color: #dee2ef;
@@ -42,7 +51,7 @@ body {
     overflow: hidden;  /* Hide anything outside the spinner */
 }
 
-/* Spinner Rotation Animation */
+/* Spinner Rotation Animation (only for the rotating container) */
 @keyframes rotateSpinner {
     from {
         opacity: 1;
@@ -119,11 +128,6 @@ a {
     text-decoration: none;
     font-weight: bold;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
-}
-
-a:hover {
-    color: #ffcc00;
-    text-decoration: underline;
 }
 
 a:hover {
