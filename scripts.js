@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
         // After 1 second (fade duration), hide the spinner and show the question input
         setTimeout(() => {
             spinnerText.style.display = 'none';
-            questionContainer.style.display = 'block';
+            questionContainer.style.display = 'block';  // Show the question container
         }, 1000); // Timeout duration to match the fade-out
     }
 
@@ -48,4 +48,3 @@ document.addEventListener('DOMContentLoaded', function () {
 
     console.log("Script loaded and ready!");
 });
-
