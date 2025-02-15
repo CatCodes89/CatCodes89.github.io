@@ -47,9 +47,10 @@ body {
     top: 50%;             /* Centers vertically */
     left: 50%;            /* Centers horizontally */
     transform: translate(-50%, -50%);  /* Offsets the element to the exact center */
-    font-size: 20px;      /* Adjust text size */
+    font-size: 30px;      /* Increased text size */
     font-weight: bold;    /* Makes the text bold */
     color: white;         /* Text color */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Adds shadow to the text */
     z-index: 1;           /* Ensures it appears on top of the spinner */
 }
 
