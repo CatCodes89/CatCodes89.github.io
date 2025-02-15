@@ -9,21 +9,22 @@
 <body>
 
 <div id="spinner-container">
-    <div id="rotating-spinner">
+    <div id="rotating-spinner" aria-hidden="true">
         <div id="spinner"></div>
     </div>
-    <span id="spinner-text">Click to Begin</span>
+    <span id="spinner-text" role="button" aria-label="Click to begin the game">Click to Begin</span>
     <!-- These elements will be centered inside the spinner -->
     <div id="question-container" style="display: none;">
-        <input type="text" id="question-input" placeholder="Ask a yes/no question..." />
-        <button id="shake-button">Shake the 8-Ball</button>
-        <p id="answer-text"></p>
+        <input type="text" id="question-input" placeholder="Ask a yes/no question..." aria-label="Enter your question here" />
+        <button id="shake-button" aria-label="Shake the 8-Ball" role="button">Shake the 8-Ball</button>
+        <p id="answer-text" role="alert" aria-live="assertive"></p>
     </div>
 </div>
 
 <h1>Ask the Magic 8-Ball...</h1>
-<p><a href="index.html">Click here to go back to the main page</a></p>
+<p><a href="index.html" aria-label="Go back to the main page">Click here to go back to the main page</a></p>
 
 <script src="scripts.js"></script> <!-- External JavaScript file -->
 </body>
 </html>
+
