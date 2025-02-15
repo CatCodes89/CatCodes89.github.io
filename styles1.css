@@ -17,8 +17,8 @@ body {
 }
 
 #spinner {
-    width: 700px;         /* Ensures the spinner is 700px in width */
-    height: 700px;        /* Ensures the spinner is 700px in height */
+    width: 500px;         /* Ensures the spinner is 700px in width */
+    height: 500px;        /* Ensures the spinner is 700px in height */
     background-color: transparent;
     animation: rotateSpinner 1.5s infinite linear;
     border-width: 20px;   /* Border width */
