@@ -88,11 +88,9 @@ body {
     font-size: 20px;
     z-index: 2;
     display: none; /* Initially hidden */
-    width: 80%; /* Increase the width */
+    width: 80%; /* Increase the width for better spacing */
     max-width: 400px; /* Maximum width */
-    padding: 20px; /* Add padding to make it larger */
-    border-radius: 10px; /* Rounded corners */
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 20px; /* Add padding to make the container more spacious */
 }
 
 /* Ensure buttons are centered inside the question container */
@@ -105,9 +103,9 @@ body {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    width: auto; /* Keep the button size unchanged */
-    display: inline-block; /* Keep buttons inline */
-    margin: 10px auto; /* Center the button horizontally */
+    display: block;
+    margin-left: auto;
+    margin-right: auto; /* Center the button horizontally */
 }
 
 button:hover {
@@ -120,7 +118,7 @@ button:hover {
     margin-top: 20px;
     font-weight: bold;
     color: yellow;
-    display: none;
+    display: none; /* Initially hidden */
 }
 
 /* Make the 'Try again?' button blue and center it */
