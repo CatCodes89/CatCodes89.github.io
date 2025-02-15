@@ -68,9 +68,20 @@ body {
 }
 
 /* Initially hide the instructions and the dropdown */
+/* Make sure the instructions are also centered the same way as the spinner */
 #instructions {
     display: none;
-    transition: opacity 1s ease-in; /* Smooth fade-in */
+    position: absolute; /* Use absolute positioning */
+    top: 50%;            /* Center vertically */
+    left: 50%;           /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust for perfect centering */
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    z-index: 1; /* Ensure it is on top of the spinner */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 1s ease-in; /* Smooth fade-in effect */
 }
 
 /* Style for the dropdown menu */
