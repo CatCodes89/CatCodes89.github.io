@@ -16,16 +16,6 @@ body {
     color: white; /* Optional: If you want text to be visible on the background */
 }
 
-/* Add a semi-transparent background behind the text to improve visibility */
-h1, p {
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
-    padding: 10px 20px;  /* Add some padding to make the text more readable */
-    border-radius: 10px;  /* Rounded corners */
-    text-align: center;  /* Center text */
-    max-width: 90%; /* Ensures text does not stretch too wide */
-    margin: 10px 0;  /* Space between text blocks */
-}
-
 /* Spinner Styles */
 #spinner {
     width: 500px;         /* Spinner width */
@@ -53,4 +43,26 @@ h1, p {
         opacity: 0;
         transform: rotate(360deg);
     }
+}
+
+/* Add a semi-transparent background behind the text to improve visibility */
+h1, p {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    padding: 10px 20px;  /* Add some padding to make the text more readable */
+    border-radius: 10px;  /* Rounded corners */
+    text-align: center;  /* Center text */
+    max-width: 90%; /* Ensures text does not stretch too wide */
+    margin: 10px 0;  /* Space between text blocks */
+}
+
+/* Style for the link */
+a {
+    color: white; /* Sets the link text color to white */
+    text-decoration: none; /* Removes underline from links */
+    font-weight: bold; /* Makes the link text bold */
+}
+
+a:hover {
+    color: #ffcc00; /* Changes link color to gold/yellow when hovered */
+    text-decoration: underline; /* Adds underline on hover for better visibility */
 }
