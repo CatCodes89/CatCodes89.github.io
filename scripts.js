@@ -6,6 +6,7 @@ function startGame() {
     console.log("Click to Begin clicked!");  // Debugging log to ensure the function is firing
 
     // Fade out the "Click to Begin" text smoothly
+    spinnerText.style.transition = "opacity 1s ease-out"; // Add a smooth transition for the fade-out effect
     spinnerText.style.opacity = 0;
 
     // After 1 second (fade duration), hide the spinner and show instructions
@@ -18,3 +19,6 @@ function startGame() {
 
 // Add event listener to "Click to Begin" text
 spinnerText.addEventListener('click', startGame);
+
+// Ensure the script is executing by logging this in the console
+console.log("Script loaded and ready!");
