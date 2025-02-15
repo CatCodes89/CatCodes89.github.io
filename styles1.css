@@ -66,14 +66,15 @@ body {
     }
 }
 
-/* Add a semi-transparent background behind the text to improve visibility */
+/* Style for h1 and p text (improved visibility, added text shadow) */
 h1, p {
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
-    padding: 10px 20px;  /* Add some padding to make the text more readable */
-    border-radius: 10px;  /* Rounded corners */
-    text-align: center;  /* Center text */
+    font-size: 30px; /* Increased font size for better visibility */
+    font-weight: bold; /* Makes the text bold */
+    color: white; /* Text color */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Adds shadow to the text */
+    text-align: center; /* Center text */
+    margin: 10px 0; /* Space between text blocks */
     max-width: 90%; /* Ensures text does not stretch too wide */
-    margin: 10px 0;  /* Space between text blocks */
 }
 
 /* Style for the link */
@@ -81,6 +82,7 @@ a {
     color: white; /* Sets the link text color to white */
     text-decoration: none; /* Removes underline from links */
     font-weight: bold; /* Makes the link text bold */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Adds shadow to the link text */
 }
 
 a:hover {
