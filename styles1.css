@@ -11,7 +11,7 @@ body, html {
     width: 500px;
     height: 500px;
     background-color: transparent;
-    animation: rotateSpinner 3s infinite linear; /* Slow rotation */
+    animation: rotateSpinner 3.5s infinite linear; /* Slow rotation */
     border-width: 20px;
     border-style: solid;
     border-top-color: red;
