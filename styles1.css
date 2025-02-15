@@ -41,6 +41,18 @@ body {
     margin: 0 auto;       /* Centers the spinner */
 }
 
+/* Spinner Rotation Animation */
+@keyframes rotateSpinner {
+    from {
+        opacity: 1;
+        transform: rotate(0deg);
+    }
+    to {
+        opacity: 0;
+        transform: rotate(360deg);
+    }
+}
+
 /* Text inside the spinner (fixed, does not rotate) */
 #spinner-text {
     position: absolute;   /* Position it inside the spinner */
@@ -52,18 +64,29 @@ body {
     color: white;         /* Text color */
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Adds shadow to the text */
     z-index: 1;           /* Ensures it appears on top of the spinner */
+    transition: opacity 1s ease-out; /* Smooth fade-out */
 }
 
-/* Spinner Rotation Animation */
-@keyframes rotateSpinner {
-    from {
-        opacity: 1;
-        transform: rotate(0deg);
-    }
-    to {
-        opacity: 0;
-        transform: rotate(360deg);
-    }
+/* Initially hide the instructions and the dropdown */
+#instructions {
+    display: none;
+    transition: opacity 1s ease-in; /* Smooth fade-in */
+}
+
+/* Style for the dropdown menu */
+select {
+    font-size: 20px;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+    border: 2px solid #ddd;
+    background-color: #fff;
+    color: #333;
+}
+
+select:focus {
+    outline: none;
+    border-color: #ffcc00; /* Highlight border color when focused */
 }
 
 /* Style for h1 and p text (improved visibility, added text shadow) */
