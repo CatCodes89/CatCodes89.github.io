@@ -1,4 +1,3 @@
-// Get elements using querySelector
 const spinnerText = document.querySelector('#spinner-text');
 const instructions = document.querySelector('#instructions');
 
