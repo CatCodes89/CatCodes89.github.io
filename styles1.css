@@ -30,7 +30,7 @@ body {
     height: 500px;        /* Spinner height */
     background-color: transparent;
     animation: rotateSpinner 3.5s infinite linear; /* Slow rotation */
-    border-width: 10px;   /* Border width */
+    border-width: 15px;   /* Border width */
     border-style: solid;
     border-top-color: #dee2ef;
     border-bottom-color: #dee2ef;
