@@ -1,19 +1,18 @@
-
 body {
-    background-image: url('https://i.ibb.co/kdYwDf6/Gypsy-Girl-1.png'); /* New Image URL */
-    background-size: cover; /* Makes the image cover the entire screen */
-    background-position: center 30%; /* Adjust vertical position */
-    background-attachment: fixed; /* Keeps the background fixed during scrolling */
+    background-image: url('https://i.ibb.co/kdYwDf6/Gypsy-Girl-1.png'); /* Background Image */
+    background-size: cover;
+    background-position: center 30%;
+    background-attachment: fixed;
     padding: 0;
     margin: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; /* Centers the spinner */
+    justify-content: center;
     position: relative;
-    overflow: hidden; /* Prevent scrolling */
-    height: 100vh; /* Ensures the body covers the full viewport */
-    color: white; /* Optional: If you want text to be visible on the background */
+    overflow: hidden;
+    height: 100vh;
+    color: white;
 }
 
 /* Container for the spinner and text */
@@ -26,19 +25,19 @@ body {
 
 /* Spinner Styles */
 #spinner {
-    width: 500px;         /* Spinner width */
-    height: 500px;        /* Spinner height */
+    width: 500px;
+    height: 500px;
     background-color: transparent;
-    animation: rotateSpinner 3.5s infinite linear; /* Slow rotation */
-    border-width: 15px;   /* Border width */
+    animation: rotateSpinner 3.5s infinite linear;
+    border-width: 15px;
     border-style: solid;
     border-top-color: #dee2ef;
     border-bottom-color: #dee2ef;
     border-left-color: transparent;
     border-right-color: transparent;
-    border-radius: 50%;   /* Ensures it's a circle */
-    display: block;       /* Prevents inline issues */
-    margin: 0 auto;       /* Centers the spinner */
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
 }
 
 /* Spinner Rotation Animation */
@@ -53,73 +52,69 @@ body {
     }
 }
 
-/* Text inside the spinner (fixed, does not rotate) */
+/* Text inside the spinner */
 #spinner-text {
-    position: absolute;   /* Position it inside the spinner */
-    top: 50%;             /* Centers vertically */
-    left: 50%;            /* Centers horizontally */
-    transform: translate(-50%, -50%);  /* Offsets the element to the exact center */
-    font-size: 30px;      /* Increased text size */
-    font-weight: bold;    /* Makes the text bold */
-    color: white;         /* Text color */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Adds shadow to the text */
-    z-index: 1;           /* Ensures it appears on top of the spinner */
-    transition: opacity 1s ease-out; /* Smooth fade-out */
-}
-
-/* Initially hide the instructions and the dropdown */
-/* Make sure the instructions are also centered the same way as the spinner */
-#instructions {
-    display: none;
-    position: absolute; /* Use absolute positioning */
-    top: 50%;            /* Center vertically */
-    left: 50%;           /* Center horizontally */
-    transform: translate(-50%, -50%); /* Adjust for perfect centering */
-    text-align: center;
-    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     font-size: 30px;
     font-weight: bold;
-    z-index: 1; /* Ensure it is on top of the spinner */
-    opacity: 0; /* Initially hidden */
-    transition: opacity 1s ease-in; /* Smooth fade-in effect */
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    transition: opacity 1s ease-out;
 }
 
-/* Style for the dropdown menu */
-select {
+/* Initially hide the instructions and input */
+#question-container {
+    display: none;
+    text-align: center;
+    color: white;
     font-size: 20px;
+}
+
+/* Input and button styling */
+input[type="text"] {
     padding: 10px;
-    margin-top: 20px;
+    font-size: 18px;
     border-radius: 5px;
     border: 2px solid #ddd;
     background-color: #fff;
     color: #333;
+    margin-top: 20px;
 }
 
-select:focus {
-    outline: none;
-    border-color: #ffcc00; /* Highlight border color when focused */
+button {
+    padding: 10px 20px;
+    font-size: 18px;
+    margin-top: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-/* Style for h1 and p text (improved visibility, added text shadow) */
-h1, p {
-    font-size: 30px; /* Increased font size for better visibility */
-    font-weight: bold; /* Makes the text bold */
-    color: white; /* Text color */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Adds shadow to the text */
-    text-align: center; /* Center text */
-    margin: 10px 0; /* Space between text blocks */
-    max-width: 90%; /* Ensures text does not stretch too wide */
+button:hover {
+    background-color: #45a049;
 }
 
-/* Style for the link */
+#answer-text {
+    font-size: 24px;
+    margin-top: 20px;
+    font-weight: bold;
+    color: yellow;
+}
+
 a {
-    color: white; /* Sets the link text color to white */
-    text-decoration: none; /* Removes underline from links */
-    font-weight: bold; /* Makes the link text bold */
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Adds shadow to the link text */
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 }
 
 a:hover {
-    color: #ffcc00; /* Changes link color to gold/yellow when hovered */
-    text-decoration: underline; /* Adds underline on hover for better visibility */
+    color: #ffcc00;
+    text-decoration: underline;
 }
