@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page 1</title>
+    <title>Magic 8-Ball Game</title>
     <link rel="stylesheet" href="styles1.css">
 </head>
 <body>
@@ -14,26 +14,13 @@
 </div>
 
 <!-- Hidden content that will appear after the user clicks "Click to Begin" -->
-<div id="instructions" style="display: none;">
-    <h1>Choose your sign</h1>
-    <select id="horoscope-sign" aria-label="Choose your sign">
-        <option value="" disabled selected>Select your sign</option>
-        <option value="aries">Aries</option>
-        <option value="taurus">Taurus</option>
-        <option value="gemini">Gemini</option>
-        <option value="cancer">Cancer</option>
-        <option value="leo">Leo</option>
-        <option value="virgo">Virgo</option>
-        <option value="libra">Libra</option>
-        <option value="scorpio">Scorpio</option>
-        <option value="sagittarius">Sagittarius</option>
-        <option value="capricorn">Capricorn</option>
-        <option value="aquarius">Aquarius</option>
-        <option value="pisces">Pisces</option>
-    </select>
+<div id="question-container" style="display: none;">
+    <input type="text" id="question-input" placeholder="Ask a yes/no question..." />
+    <button id="shake-button">Shake the 8-Ball</button>
+    <p id="answer-text"></p>
 </div>
 
-<h1>Peer into my crystal ball...</h1>
+<h1>Ask the Magic 8-Ball...</h1>
 <p><a href="index.html">Click here to go back to the main page</a></p>
 
 <script src="scripts.js"></script> <!-- External JavaScript file -->
