@@ -39,6 +39,8 @@ body {
     border-radius: 50%;
     display: block;
     margin: 0 auto;
+    position: relative; /* Add positioning for nested content */
+    overflow: hidden;  /* Hide anything outside the spinner */
 }
 
 /* Spinner Rotation Animation */
@@ -67,12 +69,16 @@ body {
     transition: opacity 1s ease-out;
 }
 
-/* Initially hide the instructions and input */
+/* Center the question and answer elements inside the spinner */
 #question-container {
-    display: none;
+    position: absolute; /* Make it inside the spinner */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
     color: white;
     font-size: 20px;
+    z-index: 2; /* Ensure it appears above the spinner */
 }
 
 /* Input and button styling */
