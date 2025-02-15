@@ -1,26 +1,39 @@
-/* Make sure the body or container covers the full viewport */
-body, html {
-    height: 100%; /* Full height of the viewport */
-    margin: 0;    /* Remove default margin */
-    display: flex; /* Enable flexbox layout */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
+/* Apply Image Background to the Whole Page */
+body {
+    background-image: url('https://i.ibb.co/kdYwDf6/Gypsy-Girl-1.png'); /* New Image URL */
+    background-size: cover; /* Makes the image cover the entire screen */
+    background-position: center 30%; /* Adjust vertical position */
+    background-attachment: fixed; /* Keeps the background fixed during scrolling */
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Centers the spinner */
+    position: relative;
+    overflow: hidden; /* Prevent scrolling */
+    height: 100vh; /* Ensures the body covers the full viewport */
+    color: white; /* Optional: If you want text to be visible on the background */
 }
 
+/* Spinner Styles */
 #spinner {
-    width: 500px;
-    height: 500px;
+    width: 500px;         /* Spinner width */
+    height: 500px;        /* Spinner height */
     background-color: transparent;
     animation: rotateSpinner 3.5s infinite linear; /* Slow rotation */
-    border-width: 20px;
+    border-width: 20px;   /* Border width */
     border-style: solid;
     border-top-color: red;
     border-bottom-color: blue;
     border-left-color: transparent;
     border-right-color: transparent;
-    border-radius: 50%;
+    border-radius: 50%;   /* Ensures it's a circle */
+    display: block;       /* Prevents inline issues */
+    margin: 0 auto;       /* Centers the spinner */
 }
 
+/* Spinner Rotation Animation */
 @keyframes rotateSpinner {
     from {
         opacity: 1;
@@ -31,4 +44,3 @@ body, html {
         transform: rotate(360deg);
     }
 }
-
