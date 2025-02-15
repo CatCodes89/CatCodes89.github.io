@@ -88,25 +88,25 @@ body {
     transform: translate(-50%, -50%);
     text-align: center;
     color: white;
-    font-size: 20px;
+    font-size: 24px; /* Increase font size for readability */
     z-index: 2;
     display: none; /* Initially hidden */
-    width: 80%; /* Increase the width for better spacing */
-    max-width: 400px; /* Maximum width */
-    padding: 20px; /* Add padding to make the container more spacious */
+    width: 85%; /* Increased width for better spacing */
+    max-width: 500px; /* Maximum width increased */
+    padding: 30px; /* More padding for a spacious container */
     opacity: 1; /* Ensure the container is always visible */
     transition: opacity 1s ease-out;
 }
 
 /* Buttons Styling */
 #question-container button, #try-again-button {
-    padding: 10px 20px;
-    font-size: 18px;
-    margin-top: 10px;
+    padding: 15px 30px; /* Larger padding for bigger buttons */
+    font-size: 22px; /* Increase font size for easier readability */
+    margin-top: 15px;
     background-color: #4CAF50;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px; /* More rounded corners */
     cursor: pointer;
     display: block;
     margin-left: auto;
@@ -128,8 +128,8 @@ button:focus {
 
 /* Initially hide the answer text */
 #answer-text {
-    font-size: 24px;
-    margin-top: 20px;
+    font-size: 30px; /* Increase font size for better readability */
+    margin-top: 25px;
     font-weight: bold;
     color: yellow;
     display: none; /* Initially hidden */
@@ -178,7 +178,7 @@ a:hover {
 
     #question-container {
         width: 90%;
-        padding: 10px; /* Less padding on smaller screens */
+        padding: 15px; /* Less padding on smaller screens */
     }
 
     #spinner {
@@ -187,6 +187,6 @@ a:hover {
     }
 
     #answer-text {
-        font-size: 20px;
+        font-size: 26px; /* Slightly smaller answer text on mobile */
     }
 }
