@@ -12,9 +12,29 @@
     <div id="spinner"></div>
     <span id="spinner-text">Click to Begin</span> <!-- Text inside the spinner -->
 </div>
-        
-    <h1>Peer into my crystal ball...</h1></h1>
+
+<!-- Hidden content that will appear after the user clicks "Click to Begin" -->
+<div id="instructions" style="display: none;">
+    <h1>Choose your sign</h1>
+    <select id="horoscope-sign" aria-label="Choose your sign">
+        <option value="" disabled selected>Select your sign</option>
+        <option value="aries">Aries</option>
+        <option value="taurus">Taurus</option>
+        <option value="gemini">Gemini</option>
+        <option value="cancer">Cancer</option>
+        <option value="leo">Leo</option>
+        <option value="virgo">Virgo</option>
+        <option value="libra">Libra</option>
+        <option value="scorpio">Scorpio</option>
+        <option value="sagittarius">Sagittarius</option>
+        <option value="capricorn">Capricorn</option>
+        <option value="aquarius">Aquarius</option>
+        <option value="pisces">Pisces</option>
+    </select>
+</div>
+
     <p><a href="index.html">Click here to go back to the main page</a></p>
     
+    <script src="script.js"></script> <!-- External JavaScript file -->
 </body>
 </html>
