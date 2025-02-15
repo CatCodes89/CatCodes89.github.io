@@ -1,6 +1,6 @@
-// Get elements
-const spinnerText = document.getElementById('spinner-text');
-const instructions = document.getElementById('instructions');
+// Get elements using querySelector
+const spinnerText = document.querySelector('#spinner-text');
+const instructions = document.querySelector('#instructions');
 
 // Function to fade out "Click to Begin" text and show instructions
 function startGame() {
