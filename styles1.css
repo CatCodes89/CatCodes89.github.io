@@ -17,8 +17,8 @@ body {
 }
 
 #spinner {
-    width: 1000px;
-    height: 500px;
+    width: 700px;
+    height: 700px;
     background-color: transparent; /* The inside area of the spinner is transparent */
     animation: rotateSpinner 1.5s infinite;
     border-width: 6px;
