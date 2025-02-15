@@ -33,7 +33,7 @@ body {
     animation: rotateSpinner 3.5s infinite linear;
 }
 
-/* Spinner Styles (without animation anymore) */
+/* Spinner Styles */
 #spinner {
     width: 500px;
     height: 500px;
@@ -47,11 +47,11 @@ body {
     border-radius: 50%;
     display: block;
     margin: 0 auto;
-    position: relative; /* Keep the spinner content inside fixed */
-    overflow: hidden;  /* Hide anything outside the spinner */
+    position: relative;
+    overflow: hidden;
 }
 
-/* Spinner Rotation Animation (only for the rotating container) */
+/* Spinner Rotation Animation */
 @keyframes rotateSpinner {
     from {
         opacity: 1;
@@ -63,7 +63,7 @@ body {
     }
 }
 
-/* Text inside the spinner (this stays fixed and doesn't spin) */
+/* Text inside the spinner (does not spin) */
 #spinner-text {
     position: absolute;
     top: 50%;
@@ -77,21 +77,21 @@ body {
     transition: opacity 1s ease-out;
 }
 
-/* Center the question and answer elements inside the spinner (they stay fixed) */
+/* Center the question and answer elements inside the spinner */
 #question-container {
-    position: absolute; /* Make it inside the spinner */
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
     color: white;
     font-size: 20px;
-    z-index: 2; /* Ensure it appears above the spinner */
-    display: none; /* Initially hidden */
+    z-index: 2;
+    display: none;
 }
 
-/* Center all buttons within the spinner container */
-button, #try-again-button {
+/* Ensure buttons are centered inside the question container */
+#question-container button, #try-again-button {
     padding: 10px 20px;
     font-size: 18px;
     margin-top: 10px;
@@ -100,9 +100,9 @@ button, #try-again-button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    display: block;
-    margin-left: auto;
-    margin-right: auto; /* This will center the button horizontally */
+    width: auto; /* Keep the button size unchanged */
+    display: inline-block; /* Keep buttons inline */
+    margin: 10px auto; /* Center the button horizontally */
 }
 
 button:hover {
@@ -115,7 +115,7 @@ button:hover {
     margin-top: 20px;
     font-weight: bold;
     color: yellow;
-    display: none; /* Initially hidden */
+    display: none;
 }
 
 /* Make the 'Try again?' button blue and center it */
