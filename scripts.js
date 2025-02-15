@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
         // After 1 second (fade duration), hide the spinner and show the question input
         setTimeout(() => {
             spinnerText.style.display = 'none';
-            questionContainer.style.display = 'flex';  // Change to flex to ensure it's centered
+            questionContainer.style.display = 'flex';  // Show the question container (with question input)
         }, 1000); // Timeout duration to match the fade-out
     }
 
@@ -59,12 +59,8 @@ document.addEventListener('DOMContentLoaded', function () {
         tryAgainButton.style.display = 'block'; // Make it visible
     }
 
-    // Function to restart the game
+    // Function to restart the game (without going back to "Click to Begin")
     function restartGame() {
-        // Reset the positioning of the question container to ensure it stays centered
-        questionContainer.style.transform = 'translate(-50%, -50%)';
-        questionContainer.style.top = '50%';
-
         // Hide the "Try again?" button and reset the answer
         tryAgainButton.style.display = 'none';
         answerText.style.display = 'none';
@@ -76,10 +72,8 @@ document.addEventListener('DOMContentLoaded', function () {
         // Clear the previous question input
         document.querySelector('#question-input').value = '';
 
-        // Show the "Click to Begin" text again
-        questionContainer.style.display = 'none';
-        spinnerText.style.display = 'block';
-        spinnerText.style.opacity = 1;
+        // Ensure the question container remains centered
+        questionContainer.style.display = 'flex';  // Ensure it stays visible as flexbox (centered)
     }
 
     // Add event listener to "Click to Begin" text
@@ -93,3 +87,4 @@ document.addEventListener('DOMContentLoaded', function () {
 
     console.log("Script loaded and ready!");
 });
+
