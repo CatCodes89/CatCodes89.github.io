@@ -1,24 +1,48 @@
 const spinnerText = document.querySelector('#spinner-text');
-const instructions = document.querySelector('#instructions');
+const questionContainer = document.querySelector('#question-container');
+const shakeButton = document.querySelector('#shake-button');
+const answerText = document.querySelector('#answer-text');
 
-// Function to fade out "Click to Begin" text and show instructions
+// List of random 8-ball answers
+const answers = [
+    "Yes",
+    "No",
+    "Unlikely",
+    "Fortune favors you",
+    "Absolutely",
+    "Not a chance",
+    "Ask again later",
+    "Definitely not",
+    "I wouldn't count on it",
+    "Outlook is good"
+];
+
+// Function to fade out the "Click to Begin" text and show the question section
 function startGame() {
-    console.log("Click to Begin clicked!");  // Debugging log to ensure the function is firing
+    console.log("Ask a question!");  // Debugging log
 
     // Fade out the "Click to Begin" text smoothly
-    spinnerText.style.transition = "opacity 1s ease-out"; // Add a smooth transition for the fade-out effect
+    spinnerText.style.transition = "opacity 1s ease-out";
     spinnerText.style.opacity = 0;
 
-    // After 1 second (fade duration), hide the spinner and show instructions
+    // After 1 second (fade duration), hide the spinner and show the question input
     setTimeout(() => {
-        spinnerText.style.display = 'none'; // Hide the spinner text
-        instructions.style.display = 'block'; // Show the instructions (dropdown)
-        instructions.style.opacity = 1; // Ensure the instructions are visible
-    }, 1000); // Timeout duration to match the fade-out duration
+        spinnerText.style.display = 'none';
+        questionContainer.style.display = 'block';
+    }, 1000); // Timeout duration to match the fade-out
+}
+
+// Function to generate a random 8-ball answer
+function shake8Ball() {
+    // Get a random answer from the array
+    const randomAnswer = answers[Math.floor(Math.random() * answers.length)];
+    answerText.textContent = randomAnswer;
 }
 
 // Add event listener to "Click to Begin" text
 spinnerText.addEventListener('click', startGame);
 
-// Ensure the script is executing by logging this in the console
+// Add event listener to the "Shake the 8-Ball" button
+shakeButton.addEventListener('click', shake8Ball);
+
 console.log("Script loaded and ready!");
