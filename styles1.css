@@ -61,18 +61,52 @@ body {
 }
 
 /* Text inside the spinner (does not spin) */
+/* Spinner Text Button (Click to Begin) Styling */
 #spinner-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 30px;
-    font-weight: bold;
+    padding: 20px 40px; /* Bigger padding for a more elegant feel */
+    font-size: 26px; /* Slightly larger font size for prominence */
+    background: linear-gradient(145deg, #6a9bcf, #35528f); /* Fancy gradient with soft blues */
     color: white;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Same shadow as the buttons */
-    z-index: 1;
-    transition: opacity 1s ease-out;
-    cursor: pointer; /* Make it feel clickable */
+    border: none;
+    border-radius: 15px; /* Rounder, more luxurious edges */
+    width: auto; /* Let width adjust based on content */
+    height: auto; /* Let height adjust based on content */
+    text-align: center;
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    transition: all 0.3s ease; /* Smooth transition for all properties */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8); /* Subtle text shadow for a glowing effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3), 0 4px 12px rgba(0, 0, 0, 0.15); /* Soft shadow for depth */
+    position: relative; /* Position for glow effect */
+    animation: fadeIn 1s ease-out; /* Add fade-in effect */
+}
+
+/* Glow Animation for "Click to Begin" */
+@keyframes glow {
+    0% {
+        text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.4), 0 0 20px rgba(255, 255, 255, 0.8);
+    }
+    100% {
+        text-shadow: 2px 2px 12px rgba(255, 255, 255, 0.7), 0 0 30px rgba(255, 255, 255, 1);
+    }
+}
+
+/* Button Hover and Focus Effects */
+#spinner-text:hover, #spinner-text:focus {
+    background: linear-gradient(145deg, #35528f, #6a9bcf); /* Reversed gradient for dynamic hover effect */
+    transform: translateY(-5px); /* Button lifts slightly on hover */
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.4), 0 8px 24px rgba(0, 0, 0, 0.2); /* Bigger shadow on hover for depth */
+    outline: none; /* Remove default focus outline */
+    text-shadow: 2px 2px 12px rgba(255, 255, 255, 0.6); /* Glowing text effect on hover */
+    animation: glow 1.5s ease-in-out infinite alternate; /* Glow animation on hover */
+}
+
+/* Button Active (Pressed) Effect */
+#spinner-text:active {
+    transform: translateY(2px); /* Button presses down when clicked */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2), 0 2px 6px rgba(0, 0, 0, 0.1); /* Smaller shadow for pressed effect */
 }
 
 /* Center the question container (ask question) */
