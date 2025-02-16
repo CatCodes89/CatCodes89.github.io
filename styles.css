@@ -1,3 +1,4 @@
+
 body {
     padding: 40px;
     margin: 0;
@@ -14,18 +15,15 @@ body {
     background-repeat: no-repeat; /* Prevents the image from repeating */
     background-attachment: fixed; /* Keeps the image fixed as you scroll */
     z-index: 0;
-    background-color: rgba(255, 255, 255, 0.0); /* Fully transparent background */
+
+    /* Make the background slightly transparent so the background image is still visible */
+    background-color: rgba(255, 255, 255, 0.5); /* 50% transparency for the background color */
 }
 
 /* To ensure the background is behind content and doesn't overlap */
 #h1strong, .container-wrapper, #portfolioSamples, #separator {
     position: relative;
     z-index: 1;
-}
-
-/* Optional: If you want the background image to be slightly less intense */
-body {
-    background-color: rgba(255, 255, 255, 1); /* Slight transparency to allow background to show through */
 }
 
 /* Header Styling */
