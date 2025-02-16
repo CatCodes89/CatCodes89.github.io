@@ -14,7 +14,7 @@ body {
     background-repeat: no-repeat; /* Prevents the image from repeating */
     background-attachment: fixed; /* Keeps the image fixed as you scroll */
     z-index: 0;
-    background-color: rgba(255, 255, 255, 0.1); /* More transparency */
+    background-color: rgba(255, 255, 255, 0.0); /* Fully transparent background */
 }
 
 /* To ensure the background is behind content and doesn't overlap */
