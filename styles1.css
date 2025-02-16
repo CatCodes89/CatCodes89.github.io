@@ -102,7 +102,7 @@ body {
     padding: 10px 20px;
     font-size: 30px; /* Match font size with 'Click to Begin' */
     margin-top: 10px;
-    background-color: #425D9B; /* Updated to your desired color */
+    background: linear-gradient(135deg, #425D9B, #35528F); /* Gradient from dark to light blue */
     color: white;
     border: none;
     border-radius: 50%; /* Make the buttons circular */
@@ -120,7 +120,7 @@ body {
 
 /* Button Hover and Focus Effects */
 button:hover, button:focus {
-    background-color: #35528F; /* Slightly darker shade for hover effect */
+    background: linear-gradient(135deg, #35528F, #2A457C); /* Darker gradient on hover */
     outline: none; /* Remove default focus outline */
     transform: scale(1.05); /* Slightly increase button size on hover/focus */
 }
@@ -141,6 +141,17 @@ button:focus {
     animation: fadeIn 1s ease-out; /* Fade-in animation */
 }
 
+/* Try Again Button Gradient */
+#try-again-button {
+    background: linear-gradient(135deg, #2196F3, #0b7dda); /* Blue gradient for 'Try again?' button */
+    display: none; /* Initially hidden */
+}
+
+/* Try Again Button Hover Effect */
+#try-again-button:hover {
+    background: linear-gradient(135deg, #0b7dda, #2196F3); /* Reversed gradient on hover */
+}
+
 /* Answer Animation */
 @keyframes fadeIn {
     0% {
@@ -149,17 +160,6 @@ button:focus {
     100% {
         opacity: 1;
     }
-}
-
-/* Make the 'Try again?' button blue and center it */
-#try-again-button {
-    background-color: #2196F3;
-    display: none; /* Initially hidden */
-}
-
-/* Try Again Button Hover Effect */
-#try-again-button:hover {
-    background-color: #0b7dda;
 }
 
 /* Additional styling for links */
