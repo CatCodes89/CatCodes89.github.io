@@ -22,16 +22,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%; /* Ensure it fills the width */
-    height: 100%; /* Ensure it fills the height */
 }
 
-/* Spinner itself, keeping it centered */
+/* New container for the rotating spinner */
 #rotating-spinner {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -52,51 +47,11 @@ body {
     border-radius: 50%;
     display: block;
     margin: 0 auto;
-    position: relative; /* Important for the positioning of the button */
+    position: relative;
     overflow: hidden;
 }
 
-/* Center the 'Click to Begin' button in the spinner */
-#spinner-text {
-    padding: 20px 40px; /* Fancy button padding */
-    font-size: 26px;
-    background: linear-gradient(145deg, #6a9bcf, #35528f);
-    color: white;
-    border: none;
-    border-radius: 15px;
-    width: auto;
-    height: auto;
-    text-align: center;
-    cursor: pointer;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    transition: all 0.3s ease;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3), 0 4px 12px rgba(0, 0, 0, 0.15);
-    position: absolute; /* Absolutely position it inside the spinner */
-    top: 50%; /* Center vertically */
-    left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Perfectly center it */
-    z-index: 2; /* Ensure it stays above the spinner */
-}
-
-/* Spinner Button Hover Effect */
-#spinner-text:hover {
-    background: linear-gradient(145deg, #35528f, #6a9bcf);
-    transform: translateY(-5px);
-    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.4), 0 8px 24px rgba(0, 0, 0, 0.2);
-    text-shadow: 2px 2px 12px rgba(255, 255, 255, 0.6);
-    animation: glow 1.5s ease-in-out infinite alternate;
-}
-
-/* Spinner Text Active Effect */
-#spinner-text:active {
-    transform: translateY(2px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2), 0 2px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Spinner Rotation Keyframe */
+/* Spinner Rotation Animation */
 @keyframes rotateSpinner {
     from {
         transform: rotate(0deg);
@@ -104,6 +59,21 @@ body {
     to {
         transform: rotate(360deg);
     }
+}
+
+/* Text inside the spinner (does not spin) */
+#spinner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Same shadow as the buttons */
+    z-index: 1;
+    transition: opacity 1s ease-out;
+    cursor: pointer; /* Make it feel clickable */
 }
 
 /* Center the question container (ask question) */
@@ -222,6 +192,19 @@ button:focus {
     }
 }
 
+/* Additional styling for links */
+a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+a:hover {
+    color: #ffcc00;
+    text-decoration: underline;
+}
+
 /* Mobile Responsiveness */
 @media (max-width: 600px) {
     #spinner-text {
@@ -242,3 +225,4 @@ button:focus {
         font-size: 20px;
     }
 }
+
