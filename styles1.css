@@ -106,6 +106,10 @@ body {
     color: white;
     border: none;
     border-radius: 50%; /* Make the buttons circular */
+    width: 100px; /* Set a fixed width */
+    height: 100px; /* Set a fixed height */
+    line-height: 60px; /* Align text vertically in the button */
+    text-align: center; /* Ensure text is centered horizontally */
     cursor: pointer;
     display: block;
     margin-left: auto;
