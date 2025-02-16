@@ -105,7 +105,7 @@ body {
     background-color: #425D9B; /* Updated to your desired color */
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 50%; /* Make the buttons circular */
     cursor: pointer;
     display: block;
     margin-left: auto;
