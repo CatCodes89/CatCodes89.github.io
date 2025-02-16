@@ -1,3 +1,4 @@
+
 body {
     background-image: url('https://i.ibb.co/kdYwDf6/Gypsy-Girl-1.png'); /* Background Image */
     background-size: cover;
@@ -21,9 +22,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%; /* Ensure it fills the width */
+    height: 100%; /* Ensure it fills the height */
 }
 
-/* Ensure the spinner stays centered */
+/* Spinner itself, keeping it centered */
 #rotating-spinner {
     position: absolute;
     top: 50%;
@@ -35,7 +38,7 @@ body {
     animation: rotateSpinner 3.5s infinite linear;
 }
 
-/* Spinner itself, keeping it centered */
+/* Spinner Styles */
 #spinner {
     width: 500px;
     height: 500px;
@@ -49,9 +52,8 @@ body {
     border-radius: 50%;
     display: block;
     margin: 0 auto;
-    position: relative;
+    position: relative; /* Important for the positioning of the button */
     overflow: hidden;
-    position: relative;
 }
 
 /* Center the 'Click to Begin' button in the spinner */
@@ -73,6 +75,9 @@ body {
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3), 0 4px 12px rgba(0, 0, 0, 0.15);
     position: absolute; /* Absolutely position it inside the spinner */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Perfectly center it */
     z-index: 2; /* Ensure it stays above the spinner */
 }
 
@@ -215,19 +220,6 @@ button:focus {
     100% {
         opacity: 1;
     }
-}
-
-/* Additional styling for links */
-a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
-}
-
-a:hover {
-    color: #ffcc00;
-    text-decoration: underline;
 }
 
 /* Mobile Responsiveness */
