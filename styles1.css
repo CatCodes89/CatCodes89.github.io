@@ -69,7 +69,7 @@ body {
     font-size: 30px;
     font-weight: bold;
     color: white;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Same shadow as the buttons */
     z-index: 1;
     transition: opacity 1s ease-out;
     cursor: pointer; /* Make it feel clickable */
@@ -100,7 +100,7 @@ body {
 /* Buttons Styling */
 #question-container button, #try-again-button {
     padding: 10px 20px;
-    font-size: 18px;
+    font-size: 30px; /* Match font size with 'Click to Begin' */
     margin-top: 10px;
     background-color: #4CAF50;
     color: white;
@@ -111,6 +111,7 @@ body {
     margin-left: auto;
     margin-right: auto; /* Center the button horizontally */
     transition: background-color 0.3s, transform 0.2s ease;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Same text shadow */
 }
 
 /* Button Hover and Focus Effects */
@@ -125,12 +126,13 @@ button:focus {
     box-shadow: 0 0 0 3px rgba(255, 165, 0, 0.7); /* Orange outline for focus */
 }
 
-/* Initially hide the answer text */
+/* Random Answer Styling */
 #answer-text {
-    font-size: 24px;
+    font-size: 30px; /* Match font size with 'Click to Begin' */
     margin-top: 20px;
     font-weight: bold;
-    color: yellow;
+    color: white; /* Match color */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Same text shadow */
     display: none; /* Initially hidden */
     animation: fadeIn 1s ease-out; /* Fade-in animation */
 }
