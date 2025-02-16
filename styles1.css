@@ -98,63 +98,76 @@ body {
 }
 
 /* Buttons Styling */
-/* Buttons Styling */
 #question-container button, #try-again-button {
-    padding: 15px 30px; /* Increased padding for more space */
-    font-size: 25px; /* Adjust font size slightly smaller for better balance */
+    padding: 20px 40px; /* Bigger padding for a more elegant feel */
+    font-size: 26px; /* Slightly larger font size for prominence */
     margin-top: 10px;
-    background: linear-gradient(135deg, #425D9B, #35528F); /* Gradient from dark to light blue */
+    background: linear-gradient(145deg, #6a9bcf, #35528f); /* Fancy gradient with soft blues */
     color: white;
     border: none;
-    border-radius: 12px; /* Rounded corners */
+    border-radius: 15px; /* Rounder, more luxurious edges */
     width: auto; /* Let width adjust based on content */
     height: auto; /* Let height adjust based on content */
-    line-height: normal; /* Remove the line-height to avoid forcing text alignment */
-    text-align: center; /* Ensure text is centered horizontally */
+    text-align: center;
     cursor: pointer;
     display: block;
     margin-left: auto;
-    margin-right: auto; /* Center the button horizontally */
-    transition: all 0.3s ease; /* Smooth transition for all changes */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Same text shadow */
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    margin-right: auto;
+    transition: all 0.3s ease; /* Smooth transition for all properties */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8); /* Subtle text shadow for a glowing effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3), 0 4px 12px rgba(0, 0, 0, 0.15); /* Soft shadow for depth */
+    position: relative; /* Position for glow effect */
 }
 
 /* Button Hover and Focus Effects */
 button:hover, button:focus {
-    background: linear-gradient(135deg, #35528F, #2A457C); /* Darker gradient on hover */
-    transform: scale(1.05); /* Slightly increase button size */
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3); /* Deepened shadow on hover */
+    background: linear-gradient(145deg, #35528f, #6a9bcf); /* Reversed gradient for dynamic hover effect */
+    transform: translateY(-5px); /* Button lifts slightly on hover */
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.4), 0 8px 24px rgba(0, 0, 0, 0.2); /* Bigger shadow on hover for depth */
     outline: none; /* Remove default focus outline */
+    text-shadow: 2px 2px 12px rgba(255, 255, 255, 0.6); /* Glowing text effect on hover */
+    animation: glow 1.5s ease-in-out infinite alternate; /* Glow animation on hover */
+}
+
+/* Glow Animation */
+@keyframes glow {
+    0% {
+        text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.4), 0 0 20px rgba(255, 255, 255, 0.8);
+    }
+    100% {
+        text-shadow: 2px 2px 12px rgba(255, 255, 255, 0.7), 0 0 30px rgba(255, 255, 255, 1);
+    }
 }
 
 /* Button Active (Pressed) Effect */
 button:active {
-    transform: scale(0.98); /* Slightly shrink the button when pressed */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Smaller shadow for pressed effect */
+    transform: translateY(2px); /* Button presses down when clicked */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2), 0 2px 6px rgba(0, 0, 0, 0.1); /* Smaller shadow for pressed effect */
 }
 
 /* Focus ring for accessibility */
 button:focus {
-    box-shadow: 0 0 0 3px rgba(255, 165, 0, 0.7); /* Orange outline for focus */
+    box-shadow: 0 0 0 4px rgba(255, 165, 0, 0.7); /* Orange outline for focus */
 }
 
 /* Try Again Button Gradient */
 #try-again-button {
-    background: linear-gradient(135deg, #2196F3, #0b7dda); /* Blue gradient for 'Try again?' button */
+    background: linear-gradient(145deg, #3b9eff, #2196F3); /* Bright blue gradient */
     display: none; /* Initially hidden */
 }
 
 /* Try Again Button Hover Effect */
 #try-again-button:hover {
-    background: linear-gradient(135deg, #0b7dda, #2196F3); /* Reversed gradient on hover */
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3); /* Deepened shadow on hover */
+    background: linear-gradient(145deg, #2196F3, #3b9eff); /* Inverted gradient for hover */
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.4), 0 8px 24px rgba(0, 0, 0, 0.2); /* Big shadow for hover */
+    text-shadow: 2px 2px 12px rgba(255, 255, 255, 0.6); /* Glowing text effect */
+    animation: glow 1.5s ease-in-out infinite alternate; /* Glow effect on hover */
 }
 
 /* Try Again Button Active Effect */
 #try-again-button:active {
-    transform: scale(0.98); /* Shrink when pressed */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Smaller shadow on press */
+    transform: translateY(2px); /* Shrinks slightly when clicked */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Smaller shadow when pressed */
 }
 
 /* Random Answer Styling */
