@@ -1,6 +1,6 @@
 
 body {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.5); /* White background with 50% transparency */
     padding: 40px;
     margin: 0;
     display: flex;
@@ -10,14 +10,29 @@ body {
     position: relative; /* Ensures the layout remains fixed */
     overflow: auto; /* Enable scrolling if needed */
     height: 100vh;  /* Ensures the body covers the full viewport */
+    background-image: url('https://i.ibb.co/FL8bMJLv/White-Yellow-Decorative-Chrysanthemum-Line-Border-Background-Your-Story.png');
+    background-size: cover; /* Ensures the image covers the entire viewport */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    z-index: 0; /* Ensures the background stays behind other content */
 }
+
+/* To ensure the background is behind content and doesn't overlap */
+#h1strong, .container-wrapper, #portfolioSamples, #separator {
+    position: relative;
+    z-index: 1;
+}
+
+/* Optional: If you want the background image to be slightly less intense */
+body {
+    background-color: rgba(255, 255, 255, 0.4); /* Slight transparency to allow background to show through */
+}
+
 
 /* Header Styling */
 #h1strong {
     font-size: 24px;
     text-align: center;
-    position: relative;
-    z-index: 1; /* Ensures text stays above other content */
 }
 
 /* Header Color */
