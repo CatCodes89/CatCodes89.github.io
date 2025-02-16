@@ -102,7 +102,7 @@ body {
     padding: 10px 20px;
     font-size: 30px; /* Match font size with 'Click to Begin' */
     margin-top: 10px;
-    background-color: #4CAF50;
+    background-color: #425D9B; /* Updated to your desired color */
     color: white;
     border: none;
     border-radius: 5px;
@@ -116,7 +116,7 @@ body {
 
 /* Button Hover and Focus Effects */
 button:hover, button:focus {
-    background-color: #45a049;
+    background-color: #35528F; /* Slightly darker shade for hover effect */
     outline: none; /* Remove default focus outline */
     transform: scale(1.05); /* Slightly increase button size on hover/focus */
 }
