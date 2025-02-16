@@ -8,7 +8,7 @@ body {
     position: relative;
     overflow: auto; /* Enable scrolling if needed */
     height: 100vh;  /* Ensures the body covers the full viewport */
-    background-image: url('https://th.bing.com/th/id/R.6fa4a64b0186a7b25bf439755141e8a9?rik=pucAw14AtD%2bLfQ&riu=http%3a%2f%2fwww.clipartbest.com%2fcliparts%2f7ia%2f69p%2f7ia69pb4T.png&ehk=rT4fMd2ndZAH4YvJr7EdZpwhf5cRmlRNFgG2aOJXN7c%3d&risl=1&pid=ImgRaw&r=0');
+    background-image: url('https://th.bing.com/th/id/R.57cb7625d66a1d3f782b090a4fed87a9?rik=4vNm%2buGrzO2aPQ&pid=ImgRaw&r=0');
     background-size: cover; /* Ensures the image covers the entire screen */
     background-position: center; /* Centers the background image */
     background-repeat: no-repeat; /* Prevents the image from repeating */
