@@ -8,7 +8,7 @@ body {
     position: relative;
     overflow: auto; /* Enable scrolling if needed */
     height: 100vh;  /* Ensures the body covers the full viewport */
-    background-image: url('https://th.bing.com/th/id/R.57cb7625d66a1d3f782b090a4fed87a9?rik=4vNm%2buGrzO2aPQ&pid=ImgRaw&r=0');
+    background-image: url('https://images.twinkl.co.uk/tw1n/image/private/t_630/image_repo/1a/1e/T-T-4960-Sunflower-Page-Border-Full-Portrait.jpg');
     background-size: cover; /* Ensures the image covers the entire screen */
     background-position: center; /* Centers the background image */
     background-repeat: no-repeat; /* Prevents the image from repeating */
