@@ -1,6 +1,5 @@
 
 body {
-    background-color: rgba(255, 255, 255, 0.5); /* White background with 50% transparency */
     padding: 40px;
     margin: 0;
     display: flex;
@@ -11,7 +10,7 @@ body {
     overflow: auto; /* Enable scrolling if needed */
     height: 100vh;  /* Ensures the body covers the full viewport */
     background-image: url('https://i.ibb.co/Qj7zvDY6/White-Yellow-Decorative-Chrysanthemum-Line-Border-Background-Your-Story-1.png');
-    background-size: cover; /* Ensures the image covers the entire viewport */
+    background-size: contain; /* Ensures the image retains its aspect ratio without stretching */
     background-position: center; /* Centers the background image */
     background-repeat: no-repeat; /* Prevents the image from repeating */
     z-index: 0; /* Ensures the background stays behind other content */
