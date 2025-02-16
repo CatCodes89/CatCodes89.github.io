@@ -66,13 +66,13 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); /* Keep it centered */
     font-size: 30px;
     font-weight: bold;
     color: white;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Same shadow as the buttons */
     z-index: 1;
-    transition: opacity 1s ease-out;
+    transition: opacity 1s ease-out, transform 0.3s ease, box-shadow 0.3s ease; /* Add smooth transitions */
     cursor: pointer; /* Make it feel clickable */
     padding: 20px 40px; /* Padding to make it look like a button */
     background: linear-gradient(145deg, #6a9bcf, #35528f); /* Fancy gradient with soft blues */
@@ -82,7 +82,6 @@ body {
     display: inline-block;
     margin: 0;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3), 0 4px 12px rgba(0, 0, 0, 0.15); /* Soft shadow for depth */
-    transition: all 0.3s ease;
 }
 
 /* Hover effect without vertical movement */
@@ -90,7 +89,7 @@ body {
     background: linear-gradient(145deg, #35528f, #6a9bcf);
     box-shadow: 0 16px 32px rgba(0, 0, 0, 0.4), 0 8px 24px rgba(0, 0, 0, 0.2);
     text-shadow: 2px 2px 12px rgba(255, 255, 255, 0.6);
-    transform: scale(1.05); /* Subtle scaling effect */
+    transform: scale(1.05); /* Subtle scaling effect to avoid movement */
 }
 
 /* Center the question container (ask question) */
