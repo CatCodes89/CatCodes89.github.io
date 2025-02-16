@@ -84,12 +84,12 @@ body {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3), 0 4px 12px rgba(0, 0, 0, 0.15); /* Soft shadow for depth */
 }
 
-/* Hover effect with no scale or vertical movement */
+/* Hover effect: No transform, only box-shadow and text-shadow */
 #spinner-text:hover {
-    background: linear-gradient(145deg, #35528f, #6a9bcf);
-    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.4), 0 8px 24px rgba(0, 0, 0, 0.2);
-    text-shadow: 2px 2px 12px rgba(255, 255, 255, 0.6); /* Glowing effect on hover */
-    transform: none; /* No transform, so no scaling or translation */
+    background: linear-gradient(145deg, #35528f, #6a9bcf); /* Change background */
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.4), 0 8px 24px rgba(0, 0, 0, 0.2); /* More intense shadow */
+    text-shadow: 2px 2px 12px rgba(255, 255, 255, 0.6); /* Glowing text effect */
+    /* Removed any transforms like scale or translate */
 }
 
 /* Center the question container (ask question) */
