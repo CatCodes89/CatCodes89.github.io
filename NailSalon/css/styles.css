@@ -1,4 +1,4 @@
-/* Body */
+
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -343,64 +343,109 @@ button {
 @media (max-width: 768px) {
     body {
         overflow-x: hidden; /* Prevent horizontal scroll */
-    }
-
-    .services-reviews {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .services, .testimonials {
-        min-width: 100%;
-        max-width: 100%;
-    }
-
-    .service-list {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .container {
-        width: 100%;
-        padding: 20px;
-    }
-
-    .navbar {
-        flex-direction: column;
-        text-align: center;
+        padding: 0 15px; /* Adjust the padding for mobile */
     }
 
     .hero {
-        height: 50vh;
+        height: 50vh; /* Reduce height on mobile for better visibility */
     }
 
     .hero-content {
-        font-size: 16px;
+        font-size: 16px; /* Adjust font size for smaller screens */
+        padding: 0 10px; /* Add some padding for better spacing */
+    }
+
+    .services-reviews {
+        flex-direction: column; /* Stack services and testimonials */
+        align-items: center;
+        text-align: center;
+        gap: 20px; /* Add some gap for better separation */
+    }
+
+    .services, .testimonials {
+        min-width: 100%; /* Take full width */
+        max-width: 100%;
+        padding: 20px; /* Reduce padding to fit smaller screens */
+    }
+
+    .service-list {
+        flex-direction: column; /* Stack services vertically */
+        align-items: center;
+    }
+
+    .service-icon img {
+        width: 80px; /* Smaller icons for mobile */
+        height: 80px;
+    }
+
+    .price {
+        font-size: 14px; /* Reduce font size for pricing */
+    }
+
+    .carousel img {
+        width: 80px; /* Smaller images in the carousel */
+        height: 80px;
+    }
+
+    .contact form {
+        width: 100%;
+        max-width: 100%; /* Take full width */
+        height: auto;
+        padding: 20px;
+    }
+
+    .contact input, .contact textarea {
+        width: 90%; /* Make input fields slightly wider */
+        padding: 12px; /* Reduce padding for mobile */
+    }
+
+    .contact button {
+        width: 95%; /* Make button take up more space */
+        font-size: 14px;
+        padding: 14px;
     }
 
     .map-container iframe {
-        width: 100%;
+        width: 100%; /* Make the map take up the full width */
+        height: 300px; /* Adjust height for better fit */
     }
 }
 
 @media (max-width: 600px) {
-    .carousel img {
-        width: 80px;
-        height: 80px;
+    .hero {
+        height: 40vh; /* Further reduce height on smaller screens */
+    }
+
+    .hero-content {
+        font-size: 14px; /* Even smaller font size */
+        padding: 0 5px; /* Further reduce padding */
+    }
+
+    .service-list {
+        gap: 15px; /* Slightly reduce the gap between services */
     }
 
     .service-icon img {
-        width: 80px;
-        height: 80px;
-    }
-
-    .contact button {
-        width: 80%;
-        font-size: 14px;
+        width: 70px; /* Even smaller icons */
+        height: 70px;
     }
 
     .price {
-        font-size: 14px;
+        font-size: 13px; /* Reduce font size even further */
+    }
+
+    .contact input, .contact textarea {
+        width: 95%; /* Increase width of inputs */
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+
+    .contact button {
+        font-size: 12px; /* Reduce font size of button */
+        padding: 12px;
+    }
+
+    .carousel img {
+        width: 70px; /* Even smaller carousel images */
+        height: 70px;
     }
 }
