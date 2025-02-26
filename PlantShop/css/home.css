@@ -290,6 +290,8 @@ footer {
     /* Header */
     header {
         padding: 10px 0;
+        border-radius: 12px; /* Rounded edges for the navigation */
+        overflow: hidden; /* Ensures rounded corners show properly */
     }
 
     nav ul {
@@ -343,14 +345,18 @@ footer {
         flex-wrap: wrap;
         justify-content: center; /* Center the items */
         gap: 20px;
-        width: 100%;
-        overflow: hidden; /* Prevent horizontal scrolling */
+        width: 95%; /* Reduce width to prevent horizontal scroll */
+        max-width: 100%;
+        overflow: hidden; /* Remove any extra horizontal scrolling */
+        border-radius: 12px; /* Rounded corners */
+        padding: 15px; /* Add padding so content doesn't touch edges */
     }
 
     .why-order-item {
-        width: 45%; /* Adjust item width for tablets */
-        max-width: 320px; /* Ensure items don't get too large */
+        width: 42%; /* Slightly smaller items */
+        max-width: 300px; /* Ensure items don’t get too large */
         margin: 0 auto; /* Center the items */
+        border-radius: 10px; /* Rounded edges */
     }
 
     .why-order-item h3 {
@@ -371,16 +377,20 @@ footer {
     /* Header */
     header {
         padding: 5px 0;
+        border-radius: 12px; /* Rounded edges for the navigation */
+        overflow: hidden; /* Ensures rounded corners show properly */
     }
 
     nav ul {
         flex-direction: column;
         align-items: center;
         gap: 10px;
+        text-align: center; /* Center text */
     }
 
     nav ul li {
-        margin: 0;
+        width: 100%; /* Make sure nav items are centered */
+        text-align: center;
     }
 
     /* Main Section */
@@ -425,16 +435,20 @@ footer {
     /* "Why Order Plants Online" Section */
     .why-order-container {
         flex-direction: column;
-        gap: 20px;
+        gap: 15px;
         justify-content: center; /* Center the items */
-        width: 100%;
-        overflow: hidden; /* Prevent horizontal scrolling */
+        width: 90%; /* Make container smaller to prevent horizontal scroll */
+        max-width: 100%;
+        overflow: hidden; /* Remove any extra horizontal scrolling */
+        border-radius: 12px; /* Rounded corners */
+        padding: 10px; /* Add padding */
     }
 
     .why-order-item {
-        width: 90%; /* Make items full width on mobile */
-        max-width: 280px; /* Ensure items don't get too large */
+        width: 85%; /* Reduce width slightly to prevent overflow */
+        max-width: 280px; /* Ensure items don’t get too large */
         margin: 0 auto; /* Center the items */
+        border-radius: 10px; /* Rounded edges */
     }
 
     .why-order-item h3 {
