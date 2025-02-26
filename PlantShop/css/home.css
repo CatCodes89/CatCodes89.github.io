@@ -344,11 +344,13 @@ footer {
         justify-content: center; /* Center the items */
         gap: 20px;
         width: 100%;
+        overflow: hidden; /* Prevent horizontal scrolling */
     }
 
     .why-order-item {
         width: 45%; /* Adjust item width for tablets */
         max-width: 320px; /* Ensure items don't get too large */
+        margin: 0 auto; /* Center the items */
     }
 
     .why-order-item h3 {
@@ -426,10 +428,13 @@ footer {
         gap: 20px;
         justify-content: center; /* Center the items */
         width: 100%;
+        overflow: hidden; /* Prevent horizontal scrolling */
     }
 
     .why-order-item {
         width: 90%; /* Make items full width on mobile */
+        max-width: 280px; /* Ensure items don't get too large */
+        margin: 0 auto; /* Center the items */
     }
 
     .why-order-item h3 {
