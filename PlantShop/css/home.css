@@ -296,6 +296,7 @@ footer {
 
     nav ul {
         gap: 15px;
+        display: flex; /* Ensure the nav items are displayed in a row */
     }
 
     nav ul li {
