@@ -311,6 +311,7 @@ footer {
     /* Main Container */
     .main-container {
         height: auto;
+        width: auto;
         flex-direction: column;
         align-items: center;
         padding: 20px;
@@ -344,40 +345,11 @@ footer {
         flex-direction: column;
         align-items: center;
         gap: 20px;
-        overflow-x: hidden; /* Prevent horizontal scrolling */
+        overflow-x: hidden; 
     }
 
     .why-order-item {
         width: 100%;
-    }
-
-    /* "Your Plant Shop" Section */
-    .your-plant-shop-container {
-        all: unset;  /* Reset all inherited styles */
-        display: block;  /* Reset to block-level element */
-        width: auto;  /* Reset to default width */
-        margin: 0;  /* Remove margin */
-        padding: 0;  /* Remove padding */
-        text-align: left;  /* Reset text alignment */
-        position: relative;  /* Ensure it's positioned normally */
-        overflow: hidden; /* Prevent unwanted overflow */
-    }
-
-    /* "Your Plant Shop" Item */
-    .your-plant-shop-item {
-        all: unset;  /* Remove all inherited styles */
-        margin: 0;  /* Reset margin */
-        padding: 0;  /* Reset padding */
-        width: auto;  /* Reset to default width */
-        display: block;  /* Reset to block-level element */
-    }
-
-    /* "Your Plant Shop" Image */
-    .your-plant-shop-item img {
-        max-width: 100%;  /* Ensure image uses full width */
-        height: auto;  /* Retain aspect ratio */
-        display: block;  /* Ensure image is block-level */
-        width: 100% !important; /* Force full width on mobile */
     }
 
     /* "Our Top 5 Picks" Section */
@@ -436,40 +408,11 @@ footer {
         flex-direction: column;
         align-items: center;
         gap: 20px;
-        overflow-x: hidden; /* Prevent horizontal scrolling */
+        overflow-x: hidden; 
     }
 
     .why-order-item {
         width: 100%;
-    }
-
-    /* "Your Plant Shop" Section */
-    .your-plant-shop-container {
-        all: unset;  /* Reset all inherited styles */
-        display: block;  /* Reset to block-level element */
-        width: auto;  /* Reset to default width */
-        margin: 0;  /* Remove margin */
-        padding: 0;  /* Remove padding */
-        text-align: left;  /* Reset text alignment */
-        position: relative;  /* Ensure it's positioned normally */
-        overflow: hidden; /* Prevent unwanted overflow */
-    }
-
-    /* "Your Plant Shop" Item */
-    .your-plant-shop-item {
-        all: unset;  /* Remove all inherited styles */
-        margin: 0;  /* Reset margin */
-        padding: 0;  /* Reset padding */
-        width: auto;  /* Reset to default width */
-        display: block;  /* Reset to block-level element */
-    }
-
-    /* "Your Plant Shop" Image */
-    .your-plant-shop-item img {
-        max-width: 100%;  /* Ensure image uses full width */
-        height: auto;  /* Retain aspect ratio */
-        display: block;  /* Ensure image is block-level */
-        width: 100% !important; /* Force full width on mobile */
     }
 
     /* "Our Top 5 Picks" Section */
