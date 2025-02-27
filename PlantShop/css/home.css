@@ -295,12 +295,17 @@ footer {
     }
 
     nav ul {
+        display: flex; /* Ensure navigation items are displayed */
         gap: 15px;
-        display: flex; /* Ensure the nav items are displayed in a row */
+        justify-content: center; /* Center the navigation items */
+        margin: 0;
+        padding: 0;
+        list-style: none; /* Remove default list styling */
     }
 
     nav ul li {
         margin: 0;
+        padding: 0;
     }
 
     /* Main Section */
@@ -389,6 +394,8 @@ footer {
         padding: 10px;
         background-color: white; /* Ensure visibility */
         border-radius: 12px; /* Rounded edges */
+        display: block; /* Ensure it is visible */
+        visibility: visible; /* Ensure navigation is not hidden */
     }
 
     nav ul li {
