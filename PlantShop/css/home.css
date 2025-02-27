@@ -352,9 +352,13 @@ footer {
 
     /* Adjust "Your Plant Shop" container size */
     .your-plant-shop-container {
-        width: 100%; /* Ensure full width on smaller screens */
-        max-width: 90%; /* Ensure it doesn't get too wide */
+        width: 100%;
+        max-width: 90%; /* Ensure same width as "Our Top 5 Picks" */
         margin: 20px auto; /* Center the container */
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     /* Top Picks Section */
@@ -362,6 +366,7 @@ footer {
         flex-direction: column;
         align-items: center;
         width: 100%;
+        max-width: 90%; /* Match "Your Plant Shop" */
         padding: 0 10px;
     }
 
@@ -414,9 +419,10 @@ footer {
 
     /* Adjust "Your Plant Shop" container size */
     .your-plant-shop-container {
-        width: 100%; /* Ensure full width on smaller screens */
+        width: 100%;
         max-width: 95%; /* Make sure it fits well on mobile */
         margin: 15px auto; /* Center the container */
+        padding: 20px;
     }
 
     /* Top Picks Section */
@@ -424,6 +430,7 @@ footer {
         flex-direction: column;
         align-items: center;
         width: 100%;
+        max-width: 95%; /* Match "Your Plant Shop" */
         padding: 0 10px;
     }
 
@@ -431,7 +438,4 @@ footer {
         width: 90%; /* Adjust width for mobile */
         margin-bottom: 20px;
     }
-}
-@media (min-width: 1025px) {
-    /* Keep your desktop layout unchanged here */
 }
