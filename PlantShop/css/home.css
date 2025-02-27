@@ -283,10 +283,37 @@ footer {
 
 /* Mobile and Tablet Layout Adjustments */
 @media (max-width: 768px) {
+    /* Centering the navigation */
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center; /* Ensure the items are centered */
+        padding: 0;
+        margin: 0; /* Remove any default margin or padding */
+        width: 100%; /* Ensure the width spans full screen */
+    }
+
+    nav ul li {
+        margin: 0 10px; /* Adjust spacing between navigation items */
+    }
+
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+    }
+
+    nav ul li a:hover {
+        border-bottom: 3px solid #355640;
+        padding-bottom: 4px;
+    }
+
+    /* Main Container */
     .main-container {
         height: auto; /* Let the height adjust for smaller screens */
-        flex-direction: column; /* Stack the left and right side sections */
-        align-items: center; /* Center them horizontally */
+        flex-direction: column; /* Stack left and right sections */
+        align-items: center; /* Center content */
+        padding: 20px; /* Add padding to prevent content from touching edges */
     }
 
     /* Left Side - Hero Section */
@@ -308,8 +335,8 @@ footer {
     /* Right Side - Carousel */
     .right-side {
         width: 100%;
-        margin-top: 20px; /* Add space for stacking the hero and carousel */
-        padding: 0 10px; /* Add padding for responsiveness */
+        margin-top: 20px;
+        padding: 0 10px;
     }
 
     /* "Why Order Plants Online" Section */
@@ -323,10 +350,19 @@ footer {
         width: 80%; /* Reduce width for mobile */
     }
 
-    /* Top Picks Section (Mobile adjustments) */
+    /* Adjust "Your Plant Shop" container size */
+    .your-plant-shop-container {
+        width: 100%; /* Ensure full width on smaller screens */
+        max-width: 90%; /* Ensure it doesn't get too wide */
+        margin: 20px auto; /* Center the container */
+    }
+
+    /* Top Picks Section */
     .top-picks-container {
         flex-direction: column;
         align-items: center;
+        width: 100%;
+        padding: 0 10px;
     }
 
     .top-pick-item {
@@ -376,19 +412,26 @@ footer {
         width: 90%; /* Even smaller width for mobile */
     }
 
-    /* Top Picks Section (Mobile adjustments) */
+    /* Adjust "Your Plant Shop" container size */
+    .your-plant-shop-container {
+        width: 100%; /* Ensure full width on smaller screens */
+        max-width: 95%; /* Make sure it fits well on mobile */
+        margin: 15px auto; /* Center the container */
+    }
+
+    /* Top Picks Section */
     .top-picks-container {
         flex-direction: column;
         align-items: center;
+        width: 100%;
+        padding: 0 10px;
     }
 
     .top-pick-item {
         width: 90%; /* Adjust width for mobile */
-        margin-bottom: 20px; /* Add spacing between items */
+        margin-bottom: 20px;
     }
 }
-
-/* Desktop Layout */
 @media (min-width: 1025px) {
     /* Keep your desktop layout unchanged here */
 }
