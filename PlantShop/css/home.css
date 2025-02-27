@@ -281,155 +281,82 @@ footer {
     line-height: 1.5;
 }
 
-/* Mobile and Tablet Breakpoints */
-@media (max-width: 1024px) {
-    body {
-        padding: 20px; /* Reduce body padding on tablets */
-    }
-
-    /* Header */
-    header {
-        padding: 10px 0;
-        border-radius: 12px; /* Rounded edges for the navigation */
-        background-color: white; /* Ensure it has a background */
-    }
-
-    nav ul {
-        display: flex; /* Ensure navigation items are displayed */
-        gap: 15px;
-        justify-content: center; /* Center the navigation items */
-        margin: 0;
-        padding: 0;
-        list-style: none; /* Remove default list styling */
-    }
-
-    nav ul li {
-        margin: 0;
-        padding: 0;
-    }
-
-    /* Main Section */
+/* Mobile and Tablet Layout Adjustments */
+@media (max-width: 768px) {
     .main-container {
-        flex-direction: column;
-        align-items: center;
-        padding: 20px;
-        width: 90%; /* Make the main container smaller */
-        margin: 0 auto; /* Center the container */
+        height: auto; /* Let the height adjust for smaller screens */
+        flex-direction: column; /* Stack the left and right side sections */
+        align-items: center; /* Center them horizontally */
     }
 
+    /* Left Side - Hero Section */
     .left-side {
-        width: 100%;
-        height: 350px;
-        margin-left: 0;
+        max-width: 90%; /* Allow more space on smaller screens */
+        height: 60vh;
+        margin-left: 0; /* Remove left margin for better alignment */
+        text-align: center; /* Center text on smaller screens */
     }
 
     .left-side h1 {
-        font-size: 40px; /* Adjust title font size for tablet */
-    }
-
-    .left-side p {
-        font-size: 18px; /* Adjust text size */
-    }
-
-    .shop-btn {
-        font-size: 18px;
-        padding: 10px 18px;
-    }
-
-    /* Right Side - Carousel */
-    .right-side {
-        width: 100%;
-        margin-top: 20px;
-    }
-
-    .product-item {
-        height: 270px;
-    }
-
-    /* "Why Order Plants Online" Section */
-    .why-order-container {
-        flex-wrap: wrap;
-        justify-content: center; /* Center the items */
-        gap: 20px;
-        width: 95%; /* Reduce width to prevent horizontal scroll */
-        max-width: 100%;
-        border-radius: 12px; /* Rounded corners */
-        padding: 15px; /* Add padding so content doesn't touch edges */
-    }
-
-    .why-order-item {
-        width: 42%; /* Slightly smaller items */
-        max-width: 300px; /* Ensure items don’t get too large */
-        margin: 0 auto; /* Center the items */
-        border-radius: 10px; /* Rounded edges */
-    }
-
-    .why-order-item h3 {
-        font-size: 22px;
-    }
-
-    /* Footer */
-    footer {
-        padding: 20px;
-    }
-}
-
-@media (max-width: 767px) {
-    body {
-        padding: 10px; /* Reduce body padding on mobile */
-    }
-
-    /* Header */
-    header {
-        padding: 5px 0;
-        border-radius: 12px; /* Rounded edges for the navigation */
-        background-color: white; /* Ensure it has a background */
-    }
-
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-        text-align: center; /* Center text */
-        padding: 10px;
-        background-color: white; /* Ensure visibility */
-        border-radius: 12px; /* Rounded edges */
-        display: block; /* Ensure it is visible */
-        visibility: visible; /* Ensure navigation is not hidden */
-    }
-
-    nav ul li {
-        width: 100%; /* Make sure nav items are centered */
-        text-align: center;
-    }
-
-    /* Main Section */
-    .main-container {
-        flex-direction: column;
-        align-items: center;
-        height: auto;
-        padding: 15px;
-        width: 90%; /* Make the main container smaller */
-        margin: 0 auto; /* Center the container */
-    }
-
-    .left-side {
-        width: 100%;
-        height: 300px;
-        margin-left: 0;
-    }
-
-    .left-side h1 {
-        font-size: 32px; /* Adjust title font size */
+        font-size: 28px; /* Reduce font size for mobile */
     }
 
     .left-side p {
         font-size: 16px; /* Adjust text size */
     }
 
-    .shop-btn {
-        font-size: 16px;
-        padding: 8px 16px;
+    /* Right Side - Carousel */
+    .right-side {
+        width: 100%;
+        margin-top: 20px; /* Add space for stacking the hero and carousel */
+        padding: 0 10px; /* Add padding for responsiveness */
+    }
+
+    /* "Why Order Plants Online" Section */
+    .why-order-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .why-order-item {
+        width: 80%; /* Reduce width for mobile */
+    }
+
+    /* Top Picks Section (Mobile adjustments) */
+    .top-picks-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .top-pick-item {
+        width: 80%; /* Adjust width for mobile */
+        margin-bottom: 20px; /* Add spacing between items */
+    }
+}
+
+/* Mobile Layout Adjustments */
+@media (max-width: 480px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    /* Left Side - Hero Section */
+    .left-side {
+        height: 50vh; /* Adjust height further for smaller screens */
+    }
+
+    .left-side h1 {
+        font-size: 24px; /* Even smaller font size */
+    }
+
+    .left-side p {
+        font-size: 14px; /* Adjust text size */
     }
 
     /* Right Side - Carousel */
@@ -438,34 +365,30 @@ footer {
         margin-top: 20px;
     }
 
-    .product-item {
-        height: 250px; /* Reduce carousel item size */
-    }
-
     /* "Why Order Plants Online" Section */
     .why-order-container {
         flex-direction: column;
-        gap: 15px;
-        justify-content: center; /* Center the items */
-        width: 90%; /* Make container smaller to prevent horizontal scroll */
-        max-width: 100%;
-        border-radius: 12px; /* Rounded corners */
-        padding: 10px; /* Add padding */
+        align-items: center;
+        gap: 20px;
     }
 
     .why-order-item {
-        width: 85%; /* Reduce width slightly to prevent overflow */
-        max-width: 280px; /* Ensure items don’t get too large */
-        margin: 0 auto; /* Center the items */
-        border-radius: 10px; /* Rounded edges */
+        width: 90%; /* Even smaller width for mobile */
     }
 
-    .why-order-item h3 {
-        font-size: 20px;
+    /* Top Picks Section (Mobile adjustments) */
+    .top-picks-container {
+        flex-direction: column;
+        align-items: center;
     }
 
-    /* Footer */
-    footer {
-        padding: 15px;
+    .top-pick-item {
+        width: 90%; /* Adjust width for mobile */
+        margin-bottom: 20px; /* Add spacing between items */
     }
+}
+
+/* Desktop Layout */
+@media (min-width: 1025px) {
+    /* Keep your desktop layout unchanged here */
 }
