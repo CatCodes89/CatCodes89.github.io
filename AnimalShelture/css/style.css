@@ -40,9 +40,12 @@ body, html {
 /* Video Slide */
 .carousel-slide.slide-video {
   position: relative;
-  background-color: black;
+  width: 100%;
+  height: 100vh; /* Ensure full screen on desktop */
   overflow: hidden;
-  border-radius: 10px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Video Styling */
@@ -52,9 +55,8 @@ body, html {
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover; /* Prevents cropping issues */
   z-index: -1; 
-  border-radius: 10px; 
 }
 
 /* Overlay Content */
@@ -69,7 +71,7 @@ body, html {
   background: rgba(0, 0, 0, 0.6);
   padding: 30px;
   border-radius: 10px;
-  z-index: 1; 
+  z-index: 1;
 }
 
 /* Heading */
@@ -130,42 +132,21 @@ button.prev:hover, button.next:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* Media Queries for Tablets and Phones */
+/* Mobile & Tablet Adjustments */
 @media screen and (max-width: 768px) {
-  /* Center text in slides 1 to 4 and keep it at the top */
-  .carousel-slide {
-    justify-content: space-between; 
-    padding-top: 20px; 
+  /* Adjust video slide */
+  .carousel-slide.slide-video {
+    height: 60vh; /* Reduce height for better mobile fit */
   }
 
-  .carousel-slide .overlay {
-    text-align: center;
+  /* Ensure the video inside the slide is correctly positioned */
+  .hero-video {
     width: 100%;
-    margin-bottom: auto; 
+    height: 100%;
+    object-fit: cover;
   }
 
-  .overlay h1 {
-    font-size: 2.5em;
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
-  }
-
-  .overlay p {
-    font-size: 1.4em; 
-    margin-bottom: 20px;
-  }
-
-  .cta-button {
-    font-size: 1.3em; 
-    padding: 12px 25px; 
-  }
-
-  /* Adjust font size and padding for navigation arrows */
-  button.prev, button.next {
-    font-size: 1.5em;
-    padding: 8px;
-  }
-
-  /* Hero overlay content adjustments for tablets and phones */
+  /* Adjust font size and layout */
   .hero-overlay-content h1 {
     font-size: 2.5em;
   }
@@ -179,25 +160,9 @@ button.prev:hover, button.next:hover {
     padding: 10px 20px;
   }
 
-  /* Adjust video slide for mobile */
-  .carousel-slide.slide-video {
-    position: relative;
-    width: 100%; 
-    height: 60vh; 
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  /* Ensure the video inside the slide is correctly positioned */
-  .hero-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; 
-    z-index: -1; 
+  /* Adjust navigation arrow sizes */
+  button.prev, button.next {
+    font-size: 1.5em;
+    padding: 8px;
   }
 }
