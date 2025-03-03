@@ -134,7 +134,7 @@ button.prev:hover, button.next:hover {
 @media (max-width: 768px) {
   /* Carousel section */
   .carousel {
-    height: 80vh;
+    height: 80vh; 
   }
 
   /* Carousel Slide (Slides 1-4 only) */
@@ -143,32 +143,33 @@ button.prev:hover, button.next:hover {
     align-items: center;  
     justify-content: center; 
     text-align: center;  
+    position: relative; /* Allows positioning of navigation buttons */
   }
 
   /* Hero Video for smaller devices */
   .hero-video {
     object-fit: cover;
-    height: 100%;
+    height: 100%; 
     width: 100%;
   }
 
   /* Overlay content */
   .hero-overlay {
     width: 90%; 
-    padding: 20px;
+    padding: 20px; 
   }
 
   /* Heading within Overlay */
   .carousel-slide .overlay h1 {
     font-size: 2.3em;  
-    padding: 0 15px;  
+    padding: 0 15px; 
     text-align: center;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
   }
 
   /* Paragraph */
   .hero-overlay-content p {
-    font-size: 1.4em; 
+    font-size: 1.4em;
     margin-bottom: 20px;
     text-align: center;
   }
@@ -183,6 +184,8 @@ button.prev:hover, button.next:hover {
   button.prev, button.next {
     font-size: 1.5em; 
     padding: 8px;
+    position: absolute; /* Position buttons at the bottom */
+    bottom: 20px; /* Move buttons lower */
   }
 }
 
@@ -196,9 +199,10 @@ button.prev:hover, button.next:hover {
   /* Carousel Slide (Slides 1-4 only) */
   .carousel-slide:nth-child(-n+4) {
     display: flex;
-    align-items: center;  
-    justify-content: center; 
+    align-items: center; 
+    justify-content: center;
     text-align: center;  
+    position: relative; /* Allows positioning of navigation buttons */
   }
 
   .hero-overlay {
@@ -209,7 +213,7 @@ button.prev:hover, button.next:hover {
   /* Heading within Overlay */
   .carousel-slide .overlay h1 {
     font-size: 3em;  
-    padding: 0 25px; 
+    padding: 0 25px;  
     text-align: center;
     text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.8);
   }
@@ -223,8 +227,11 @@ button.prev:hover, button.next:hover {
     font-size: 1.4em;
   }
 
+  /* Navigation Arrows */
   button.prev, button.next {
     font-size: 1.8em;
     padding: 12px;
+    position: absolute; /* Position buttons at the bottom */
+    bottom: 30px; /* Move buttons lower */
   }
 }
