@@ -1,5 +1,6 @@
-let slideIndex = 0;
-const slides = document.querySelectorAll('.carousel-slide');
+document.addEventListener("DOMContentLoaded", function () {
+  let slideIndex = 0;
+  const slides = document.querySelectorAll('.carousel-slide');
 const totalSlides = slides.length;
 const videoElement = document.querySelector('.hero-video'); // Target the video
 let autoSlideInterval;
@@ -10,11 +11,13 @@ function showSlide(index) {
   // Ensure the index is within bounds
   slideIndex = Math.max(0, Math.min(index, totalSlides - 1));
 
-  // Hide all slides
-  slides.forEach(slide => slide.style.opacity = 0);
-
   // Show the selected slide
   slides[slideIndex].style.opacity = 1;
+
+  slides.forEach((slide, i) => {
+    slide.style.opacity = i === slideIndex ? "1" : "0";
+    slide.setAttribute("aria-hidden", i === slideIndex ? "false" : "true");
+  });
 
   // Handle video playback for the last slide
   if (slideIndex === totalSlides - 1) {
@@ -85,3 +88,4 @@ if (slideIndex < totalSlides - 1) {
 // Event listeners for navigation buttons
 document.querySelector('.prev').addEventListener('click', () => moveSlide(-1));
 document.querySelector('.next').addEventListener('click', () => moveSlide(1));
+});
