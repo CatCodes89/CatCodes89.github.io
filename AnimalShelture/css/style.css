@@ -143,7 +143,6 @@ button.prev:hover, button.next:hover {
     align-items: center;  
     justify-content: center; 
     text-align: center;  
-    position: relative; /* Allows positioning of navigation buttons */
   }
 
   /* Hero Video for smaller devices */
@@ -157,7 +156,6 @@ button.prev:hover, button.next:hover {
   .hero-overlay {
     width: 90%; 
     padding: 20px; 
-    padding-bottom: 60px; /* Add extra space at the bottom */
   }
 
   /* Heading within Overlay */
@@ -166,7 +164,6 @@ button.prev:hover, button.next:hover {
     padding: 0 15px; 
     text-align: center;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
-    margin-bottom: 30px; /* Increased bottom margin to provide space between text and navigation arrows */
   }
 
   /* Paragraph */
@@ -186,8 +183,6 @@ button.prev:hover, button.next:hover {
   button.prev, button.next {
     font-size: 1.5em; 
     padding: 8px;
-    position: absolute; /* Position buttons at the bottom */
-    bottom: 20px; /* Move buttons lower */
   }
 }
 
@@ -204,13 +199,11 @@ button.prev:hover, button.next:hover {
     align-items: center; 
     justify-content: center;
     text-align: center;  
-    position: relative; /* Allows positioning of navigation buttons */
   }
 
   .hero-overlay {
     width: 85%; 
     padding: 25px;
-    padding-bottom: 70px; /* Add extra space at the bottom */
   }
 
   /* Heading within Overlay */
@@ -219,7 +212,6 @@ button.prev:hover, button.next:hover {
     padding: 0 25px;  
     text-align: center;
     text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.8);
-    margin-bottom: 40px; /* Increased bottom margin to provide space between text and navigation arrows */
   }
 
   .hero-overlay-content p {
@@ -231,11 +223,8 @@ button.prev:hover, button.next:hover {
     font-size: 1.4em;
   }
 
-  /* Navigation Arrows */
   button.prev, button.next {
     font-size: 1.8em;
     padding: 12px;
-    position: absolute; /* Position buttons at the bottom */
-    bottom: 30px; /* Move buttons lower */
   }
 }
