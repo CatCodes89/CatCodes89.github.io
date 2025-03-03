@@ -1,9 +1,9 @@
 let slideIndex = 0;
 const slides = document.querySelectorAll('.carousel-slide');
 const totalSlides = slides.length;
-const videoElement = document.querySelector('.hero-video'); // Target the video
+const videoElement = document.querySelector('.hero-video'); 
 let autoSlideInterval;
-let isTransitioning = false; // Track if a transition is in progress
+let isTransitioning = false; 
 
 // Show the selected slide
 function showSlide(index) {
@@ -22,17 +22,17 @@ function showSlide(index) {
       videoElement.currentTime = 0;
       videoElement.play();
     }
-    clearInterval(autoSlideInterval); // Stop auto-sliding when at the last slide
+    clearInterval(autoSlideInterval); 
   } else if (videoElement) {
-    videoElement.pause(); // Pause video if not on the last slide
+    videoElement.pause(); 
   }
 }
 
 // Move to the next or previous slide
 function moveSlide(direction) {
-  if (isTransitioning) return; // Prevent moving while transitioning
+  if (isTransitioning) return; 
 
-  isTransitioning = true; // Set transition in progress
+  isTransitioning = true; 
 
   // Stop the auto-slide when user manually clicks next or prev
   clearInterval(autoSlideInterval);
@@ -72,7 +72,7 @@ function startAutoSlide() {
     if (slideIndex < totalSlides - 1) {
       moveSlide(1); // Move to the next slide
     } else {
-      clearInterval(autoSlideInterval); // Stop auto-sliding once the last slide is reached
+      clearInterval(autoSlideInterval);
     }
   }, 4000); // Change slide every 4 seconds
 }
