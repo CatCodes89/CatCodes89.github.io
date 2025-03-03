@@ -26,7 +26,7 @@ body, html {
   background-position: center;
   opacity: 0;
   transition: opacity 1s ease-in-out; 
-  transform: scale(0.98);
+  transform: none;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -34,7 +34,7 @@ body, html {
 
 .carousel-slide.active {
   opacity: 1;
-  transform: scale(1);
+  transform: scale(1); /* Ensures slides are not scaled */
 }
 
 /* Video Slide */
@@ -128,4 +128,103 @@ button.next { right: 10px; }
 
 button.prev:hover, button.next:hover {
   background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Mobile First (Smartphones, less than 768px) */
+@media (max-width: 768px) {
+  /* Carousel section */
+  .carousel {
+    height: 80vh;
+  }
+
+  /* Carousel Slide (Slides 1-4 only) */
+  .carousel-slide:nth-child(-n+4) {
+    display: flex;
+    align-items: center;  
+    justify-content: center; 
+    text-align: center;  
+  }
+
+  /* Hero Video for smaller devices */
+  .hero-video {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+
+  /* Overlay content */
+  .hero-overlay {
+    width: 90%; 
+    padding: 20px;
+  }
+
+  /* Heading within Overlay */
+  .carousel-slide .overlay h1 {
+    font-size: 2.3em;  
+    padding: 0 15px;  
+    text-align: center;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+  }
+
+  /* Paragraph */
+  .hero-overlay-content p {
+    font-size: 1.4em; 
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  /* Call to Action Button */
+  .cta-button {
+    padding: 12px 24px; 
+    font-size: 1.2em; 
+  }
+
+  /* Navigation Arrows */
+  button.prev, button.next {
+    font-size: 1.5em; 
+    padding: 8px;
+  }
+}
+
+/* For Tablet Portrait Orientation (768px to 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* Adjust carousel height and text sizes */
+  .carousel {
+    height: 90vh; 
+  }
+
+  /* Carousel Slide (Slides 1-4 only) */
+  .carousel-slide:nth-child(-n+4) {
+    display: flex;
+    align-items: center;  
+    justify-content: center; 
+    text-align: center;  
+  }
+
+  .hero-overlay {
+    width: 85%; 
+    padding: 25px;
+  }
+
+  /* Heading within Overlay */
+  .carousel-slide .overlay h1 {
+    font-size: 3em;  
+    padding: 0 25px; 
+    text-align: center;
+    text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.8);
+  }
+
+  .hero-overlay-content p {
+    font-size: 1.6em;
+  }
+
+  .cta-button {
+    padding: 14px 28px;
+    font-size: 1.4em;
+  }
+
+  button.prev, button.next {
+    font-size: 1.8em;
+    padding: 12px;
+  }
 }
