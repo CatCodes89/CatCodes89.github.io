@@ -18,14 +18,13 @@ body, html {
   display: flex;
   justify-content: center; /* Center carousel content horizontally */
   align-items: center;     /* Center carousel content vertically */
-  justify-items: center;   /* Ensure items inside the carousel are centered */
 }
 
 /* Carousel Slides */
 .carousel-slide {
-  position: absolute;
+  position: absolute;  /* Ensure they stack on top of each other */
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background-size: cover;
   background-position: center;
   opacity: 0;
@@ -50,17 +49,18 @@ body, html {
   z-index: 1;
 }
 
-/* Hero Video Styling (fixed to 600x600px with rounded edges) */
+/* Hero Video Styling (responsive with max-width) */
 .hero-video {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 800px; /* Fixed width */
-  height: 800px; /* Fixed height */
-  object-fit: cover; /* Ensure the video is correctly scaled */
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  object-fit: cover;
   z-index: -1;
-  border-radius: 15px; /* Rounded edges to match the button */
+  border-radius: 15px;
 }
 
 /* Make sure the video container and content are properly aligned */
@@ -89,7 +89,7 @@ body, html {
   color: white;
   padding: 20px;
   width: 90%;
-  max-width: 800px; /* To prevent overflow */
+  max-width: 800px;
   background: rgba(0, 0, 0, 0.6); /* Dark background to improve readability */
   border-radius: 10px;
   z-index: 2;
@@ -102,7 +102,7 @@ body, html {
   padding: 10px 0;
   text-shadow: 4px 4px 16px rgba(0, 0, 0, 0.8);
   width: 100%; /* Ensure full width */
-  text-align: center; /* Ensure heading is centered */
+  text-align: center;
 }
 
 /* Paragraph styling */
@@ -156,8 +156,118 @@ button.next { right: 10px; }
   background: #ccc;
   border-radius: 50%;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .dot.active {
   background: #ff5a5f;
+}
+
+/* For Small Mobiles (up to 480px) */
+@media (max-width: 480px) {
+  .carousel {
+      height: 60vh; /* Reduce the height of the carousel */
+  }
+
+  .overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      width: 90%; /* Adjust width for smaller screens */
+      height: auto;
+      padding: 20px;
+  }
+
+  .overlay h1 {
+      font-size: 1.8em; /* Smaller font size for smaller screens */
+  }
+
+  /* Hide Navigation Arrows */
+  button.prev, button.next {
+      display: none;
+  }
+
+  /* Adjust Dots Navigation */
+  .dots-container {
+      bottom: 10px;
+  }
+
+  .dot {
+      width: 10px;
+      height: 10px;
+  }
+}
+
+/* For Tablets (up to 1024px) */
+@media (max-width: 1024px) {
+  .carousel {
+      height: 80vh; /* Make the carousel slightly smaller for tablets */
+  }
+
+  .overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      width: 80%; /* Adjust width for tablets */
+      height: auto; /* Adjust height to fit content */
+      padding: 30px;
+  }
+
+  .overlay h1 {
+      font-size: 2.5em; /* Adjust heading size */
+  }
+
+  /* Ensure navigation arrows are visible */
+  button.prev, button.next {
+      display: block;
+  }
+
+  .dots-container {
+      bottom: 15px;
+  }
+
+  .dot {
+      width: 12px;
+      height: 12px;
+  }
+}
+
+/* For Mobile (up to 768px) */
+@media (max-width: 768px) {
+  .carousel {
+      height: 70vh; /* Make carousel smaller for mobile devices */
+  }
+
+  .overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      width: 90%; /* Adjust width for mobile */
+      height: auto;
+      padding: 20px;
+  }
+
+  .overlay h1 {
+      font-size: 2em; /* Adjust heading size */
+  }
+
+  /* Hide navigation arrows on mobile */
+  button.prev, button.next {
+      display: none;
+  }
+
+  .dots-container {
+      bottom: 15px;
+  }
+
+  .dot {
+      width: 12px;
+      height: 12px;
+  }
 }
