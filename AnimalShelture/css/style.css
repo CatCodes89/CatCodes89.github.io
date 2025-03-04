@@ -1,4 +1,4 @@
-/* General Styles */
+
 body, html {
   margin: 0;
   padding: 0;
@@ -163,7 +163,7 @@ button.next { right: 10px; }
 @media (max-width: 768px) {
   /* Carousel section */
   .carousel {
-    height: 80vh; 
+    height: 80vh;
   }
 
   /* Hero Video for smaller devices */
@@ -176,7 +176,7 @@ button.next { right: 10px; }
   /* Overlay content */
   .hero-overlay {
     width: 90%; 
-    padding: 20px; 
+    padding: 20px;
   }
 
   /* Heading within Overlay */
