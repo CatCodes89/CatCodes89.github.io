@@ -200,6 +200,10 @@ button.next { right: 10px; }
   }
 }
 
+.hero-video {
+  height: 60vh;
+}
+
 /* For Tablets (up to 1024px) */
 @media (max-width: 1024px) {
   .carousel {
