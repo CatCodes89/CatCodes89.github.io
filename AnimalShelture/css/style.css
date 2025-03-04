@@ -16,8 +16,9 @@ body, html {
   height: 100vh;
   overflow: hidden;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  justify-content: center; /* Center carousel content horizontally */
+  align-items: center;     /* Center carousel content vertically */
+  justify-items: center;   /* Ensure items inside the carousel are centered */
 }
 
 /* Carousel Slides */
@@ -100,6 +101,8 @@ body, html {
   margin: 0;
   padding: 10px 0;
   text-shadow: 4px 4px 16px rgba(0, 0, 0, 0.8);
+  width: 100%; /* Ensure full width */
+  text-align: center; /* Ensure heading is centered */
 }
 
 /* Paragraph styling */
@@ -157,79 +160,4 @@ button.next { right: 10px; }
 
 .dot.active {
   background: #ff5a5f;
-}
-
-/* Mobile First (Smartphones, less than 768px) */
-@media (max-width: 768px) {
-  /* Carousel section */
-  .carousel {
-    height: 80vh;
-  }
-
-  /* Hero Video for smaller devices */
-  .hero-video {
-    object-fit: cover;
-    height: 100%; 
-    width: 100%;
-  }
-
-  /* Overlay content */
-  .hero-overlay {
-    width: 90%; 
-    padding: 20px;
-  }
-
-  /* Heading within Overlay */
-  .hero-overlay-content h1 {
-    font-size: 2.3em;  
-  }
-
-  .cta-button {
-    padding: 12px 24px; 
-    font-size: 1.2em; 
-  }
-
-  button.prev, button.next {
-    font-size: 1.5em; 
-    padding: 8px;
-    display: none; /* Hide prev/next buttons */
-  }
-
-  .dots-container {
-    display: flex;
-    justify-content: center;
-  }
-}
-
-/* For Tablet Portrait Orientation (768px to 1024px) */
-@media (min-width: 768px) and (max-width: 1024px) {
-  .carousel {
-    height: 90vh; 
-  }
-
-  .hero-overlay {
-    width: 85%; 
-    padding: 25px;
-  }
-
-  .hero-overlay-content h1 {
-    font-size: 3em;  
-    padding: 0 25px;  
-  }
-
-  .cta-button {
-    padding: 14px 28px;
-    font-size: 1.4em;
-  }
-
-  button.prev, button.next {
-    font-size: 1.8em;
-    padding: 12px;
-    display: none; /* Hide prev/next buttons */
-  }
-
-  .dots-container {
-    display: flex;
-    justify-content: center;
-  }
 }
