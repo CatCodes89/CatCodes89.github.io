@@ -275,3 +275,7 @@ button.next { right: 10px; }
       height: 12px;
   }
 }
+
+.hero-video {
+  height: 60vh;
+}
