@@ -151,32 +151,32 @@ footer {
     body {
         padding: 10px;
         margin: 0;
-        display: block; /* Simplified to block-level layout */
+        display: block; /* Normal block-level layout */
         text-align: center;
     }
 
     #intro {
-        display: flex;  /* Flexbox to center content */
+        display: flex;  /* Use Flexbox to center content */
         justify-content: center; /* Center horizontally */
         align-items: center; /* Center vertically */
         background-image: url('assets/coffeeShop3.png');
-        background-size: contain; /* Ensures the image fits inside the container without stretching */
-        background-position: center;
+        background-size: contain; /* Ensures the image fits inside the container */
+        background-position: center center; /* Center the image */
         background-repeat: no-repeat;
         width: 100%;
-        height: 100vh;  /* Ensure it covers full screen */
+        height: 100vh;  /* Ensure it takes the full viewport height */
     }
 
     #intro-image {
-        width: 100%;
-        height: 100%; /* Make sure the image takes the full container height */
-        object-fit: contain;
+        max-width: 100%;  /* Ensure the image doesn't overflow horizontally */
+        max-height: 100%; /* Ensure the image doesn't overflow vertically */
+        object-fit: contain;  /* Keep the image within the container without stretching */
     }
 
     #content {
         max-width: 100%;
         margin-top: 20px;
-        display: block; /* Remove flex to allow content to flow normally */
+        display: block; /* Content will flow normally */
     }
 
     #welcomeText {
@@ -214,21 +214,21 @@ footer {
     }
 
     #intro {
-        display: flex;  /* Flexbox to center content */
+        display: flex;  /* Use Flexbox to center content */
         justify-content: center; /* Center horizontally */
         align-items: center; /* Center vertically */
         background-image: url('assets/coffeeShop3.png');
-        background-size: contain; /* Ensures the image fits inside the container without stretching */
-        background-position: center;
+        background-size: contain; /* Ensures the image fits inside the container */
+        background-position: center center; /* Center the image */
         background-repeat: no-repeat;
         width: 100%;
-        height: 100vh;  /* Ensure the image takes up the full height */
+        height: 100vh;  /* Ensure it takes the full viewport height */
     }
 
     #intro-image {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
+        max-width: 100%;  /* Ensure the image doesn't overflow horizontally */
+        max-height: 100%; /* Ensure the image doesn't overflow vertically */
+        object-fit: contain; /* Keep the image within the container */
     }
 
     #content {
@@ -248,7 +248,7 @@ footer {
 
     select, input[type="checkbox"], button {
         width: 100%;
-        max-width: 100%; /* Ensure form controls stretch to full width */
+        max-width: 100%; /* Full-width form controls */
     }
 
     footer {
