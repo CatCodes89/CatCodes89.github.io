@@ -198,12 +198,6 @@ strong {
     #portfolioSamples a {
         font-size: 16px; 
     }
-
-    #container {
-        width: 260px;
-        height: 300px; 
-        margin: 0 auto; 
-    }
 }
 
 @media (max-width: 480px) {
@@ -222,12 +216,6 @@ strong {
 
     #h1color {
         font-size: 20px; 
-    }
-
-    #container {
-        width: 260px;
-        height: 300px; 
-        margin: 0 auto; 
     }
 
     /* Hide the image in mobile view */
