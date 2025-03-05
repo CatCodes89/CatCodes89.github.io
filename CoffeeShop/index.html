@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Shop</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="intro">
+        <img src="assets/coffeeShop3.png" alt="Coffee Shop" id="intro-image">
+    </div>
+
+    <!-- Hidden on main page, shown on order page -->
+    <div id="orderPageBackground">
+        <img src="assets/coffeeShop3.png" alt="Coffee Shop" id="orderPageBackgroundImage">
+    </div>
+
+    <div id="content">
+        <h1 id="welcomeText">Welcome to Our Coffee Shop</h1>
+        <p>Select your favorite coffee and place an order!</p>
+
+        <form id="order-form">
+            <label for="coffee-type">Choose Your Coffee:</label>
+            <select id="coffee-type">
+                <option value="espresso">Espresso</option>
+                <option value="latte">Latte</option>
+                <option value="cappuccino">Cappuccino</option>
+                <option value="americano">Americano</option>
+            </select>
+
+            <label for="coffee-size">Size:</label>
+            <select id="coffee-size">
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+            </select>
+
+            <label>Add Extras:</label>
+            <div id="extras">
+                <input type="checkbox" id="sugar" value="sugar"> Sugar
+                <input type="checkbox" id="milk" value="milk"> Milk
+            </div>
+
+            <button type="submit">Place Order</button>
+            <button type="button" id="reset-order">Reset Order</button>
+        </form>
+
+        <p id="order-summary"></p>
+    </div>
+
+    <footer id="footer">
+        <button id="reveal-button">Enter the Coffee Shop</button>
+        <button id="home-button" style="display: none;">Return to Home</button>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
