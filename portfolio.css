@@ -190,6 +190,12 @@ strong {
     #h1strong {
         font-size: 18px; 
     }
+    
+    #container {
+        width: 260px;
+        height: 300px; 
+        margin: 0 auto; 
+    }
 
     #portfolioSamples {
         width: 100%;
@@ -212,6 +218,12 @@ strong {
 
     #h1color {
         font-size: 20px; 
+    }
+
+        #container {
+        width: 260px;
+        height: 300px; 
+        margin: 0 auto; 
     }
 
     /* Hide the image in mobile view */
