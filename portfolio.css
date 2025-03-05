@@ -90,22 +90,22 @@ strong {
 
 #portfolioSamples {
     width: 300px;
-    height: 100px; /* Keeps a fixed height to enable scrolling */
+    height: 100px; 
     border: 1px solid black;
     padding: 16px;
     text-align: center;
-    overflow-y: auto; /* Keeps the scrollbar */
+    overflow-y: auto; 
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px; /* Adds spacing between elements */
+    gap: 10px; 
 }
 
 #portfolioSamples p {
-    margin: 0; /* Removes unwanted extra margin */
-    padding-bottom: 10px; /* Adds space between the paragraph and links */
-    flex-shrink: 0; /* Prevents the paragraph from shrinking */
+    margin: 0; 
+    padding-bottom: 10px; 
+    flex-shrink: 0; 
 }
 
 #portfolioSamples a {
@@ -117,7 +117,7 @@ strong {
     text-align: center;
     padding: 5px 0;
     cursor: pointer;
-    flex-shrink: 0; /* Ensures links don't shrink when scrolling */
+    flex-shrink: 0; 
 }
 
 #portfolioSamples a:hover {
@@ -182,13 +182,13 @@ strong {
     }
 
     .container-wrapper {
-        flex-direction: column; /* Stack elements vertically */
-        justify-content: center; /* Center content */
-        align-items: center; /* Center content */
+        flex-direction: column; 
+        justify-content: center; 
+        align-items: center;
     }
 
     #h1strong {
-        font-size: 18px; /* Smaller text on mobile */
+        font-size: 18px; 
     }
 
     #portfolioSamples {
@@ -196,13 +196,13 @@ strong {
     }
 
     #portfolioSamples a {
-        font-size: 16px; /* Increase font size for easier tapping */
+        font-size: 16px; 
     }
 
     #container {
-        width: 250px; /* Smaller width for mobile */
-        height: 250px; /* Smaller height for mobile */
-        margin: 0 auto; /* Center horizontally */
+        width: 242px;
+        height: 300px; 
+        margin: 0 auto; 
     }
 }
 
@@ -221,13 +221,13 @@ strong {
     }
 
     #h1color {
-        font-size: 20px; /* Adjust font size for smaller screens */
+        font-size: 20px; 
     }
 
     #container {
-        width: 242px; /* Even smaller width for very small screens */
-        height: 300px; /* Even smaller height */
-        margin: 0 auto; /* Center horizontally */
+        width: 242px;
+        height: 300px; 
+        margin: 0 auto; 
     }
 
     /* Hide the image in mobile view */
