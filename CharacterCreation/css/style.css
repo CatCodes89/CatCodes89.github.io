@@ -1,0 +1,310 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: url("../assets/background.svg");
+    background-size: cover;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 50px;
+    gap: 50px;
+}
+
+.character-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.preview {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+    width: 200px;
+    height: 300px;
+}
+
+.preview img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.customize-border {
+    position: absolute;
+    top: -80px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+}
+
+.customize-border img {
+    display: block;
+    max-width: 500px;
+}
+
+.title {
+    position: relative;
+    top: 40px;
+}
+
+.controls {
+    padding: 15px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    height: 450px;
+    position: relative;
+    padding-top: 60px;
+    z-index: 1;
+}
+
+/* Adjusting the space between the title and thumbnails */
+.option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px; /* Increased gap between options */
+    margin-bottom: 30px; /* Adjusted margin to move thumbnails further down */
+}
+
+.thumbnail-container {
+    display: flex;
+    gap: 0px;  /* No gap */
+}
+
+/* Increasing the size of the thumbnail images */
+.thumbnail {
+    width: 80px;  /* Increased size */
+    height: 80px;  /* Increased size */
+    border: 2px solid transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease, border 0.2s ease;
+    margin-right: -10px;  /* Adjust this value to control how much closer they are */
+    margin-bottom: -20px; /* Optional: if you want to adjust the vertical space as well */
+}
+
+.thumbnail:hover {
+    transform: scale(1.1);
+}
+
+.thumbnail.selected {
+    border: none;  /* Remove any borders */
+    border-bottom: 3px solid #e6a6a6ff;  /* Add a yellow underline */
+    transform: none;  /* Ensure the thumbnail size doesn't change */
+}
+
+/* Stacking the randomize and save buttons vertically with zero gap */
+.actions {
+    display: flex;
+    flex-direction: column;  /* Stack buttons vertically */
+    align-items: center;     /* Align them to the center */
+    margin-top: 15px;        /* Optional: Adjust the top margin */
+}
+
+/* Reset margins and padding to ensure no gap between the buttons */
+#randomize, #save {
+    width: 200px;
+    height: 100px;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -20px;
+}
+
+/* Add images and hover effects */
+#randomize img, #save img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.2s ease-in-out;
+}
+
+#randomize:hover img, #save:hover img {
+    transform: scale(1.1);
+}
+
+.button-text {
+    position: absolute;
+    font-family: 'Quicksand', sans-serif;
+    color: #000000;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    z-index: 2;
+    pointer-events: none;
+}
+
+#randomize span.button-text, #save span.button-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.fade {
+    opacity: 0;
+}
+
+
+
+/* Existing styles here */
+
+/* Mobile-specific media queries (adjustments below) */
+@media (max-width: 768px) {
+    /* Adjust container to fit mobile screens */
+    .container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    /* Make the character section smaller and centered */
+    .character-section {
+        width: 150px;  /* Further reduce the width */
+        margin: 0 auto; /* Center it */
+    }
+
+    /* Make the preview container smaller */
+    .preview {
+        width: 150px;  /* Adjusted width */
+        height: 225px; /* Set fixed height */
+        padding: 10px;
+        margin-bottom: 20px; /* Space between preview and other elements */
+    }
+
+    /* Adjust the controls width and padding for mobile */
+    .controls {
+        width: 320px; /* Reduced width */
+        height: auto;
+        padding: 20px 15px;
+        padding-top: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px; /* Space between control items */
+    }
+
+    /* Adjust title positioning */
+    .title {
+        position: relative;
+        top: 20px;
+        font-size: 24px;
+        text-align: center; /* Center the title */
+        margin-bottom: 15px; /* Space below the title */
+    }
+
+    /* Adjust the thumbnails size and gap */
+    .thumbnail {
+        width: 60px;
+        height: 60px;
+        margin-right: 10px; /* Space between thumbnails */
+    }
+
+    /* Adjust margins to give more space between elements */
+    .option {
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* Stack the buttons vertically with a little space in between */
+    .actions {
+        margin-top: 10px;
+    }
+
+    /* Adjust buttons to fit mobile */
+    #randomize, #save {
+        width: 250px;  /* Increased button size */
+        height: 120px; /* Increased button height */
+        font-size: 18px; /* Larger text on buttons */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Adjust button image size */
+    #randomize img, #save img {
+        width: 85%;  /* Adjusted image size */
+        height: 85%;
+    }
+    
+    /* Adjust the background banner */
+    .customize-border img {
+        max-width: 400px; /* Reduced size for the banner */
+        height: auto;
+        display: block;
+        margin: 0 auto; /* Center the banner */
+    }
+}
+
+/* Very small screens (portrait phones, etc.) */
+@media (max-width: 480px) {
+    /* Reduce margins and make elements even more compact */
+    .container {
+        gap: 15px;
+    }
+
+    .preview {
+        width: 120px;
+        height: 180px;
+        padding: 8px;
+    }
+
+    .controls {
+        width: 100%;
+        height: auto;
+        padding: 15px 10px;
+        padding-top: 10px;
+    }
+
+    .thumbnail {
+        width: 50px;
+        height: 50px;
+    }
+
+    #randomize, #save {
+        width: 200px;  /* Increased button width */
+        height: 100px; /* Increased button height */
+    }
+
+    #randomize img, #save img {
+        width: 70%;
+        height: 70%;
+    }
+
+    .title {
+        top: 15px;
+        font-size: 20px; /* Smaller title for very small screens */
+    }
+
+    /* Adjust spacing between thumbnails for very small screens */
+    .option {
+        gap: 10px;
+        margin-bottom: 15px;
+    }
+
+    /* Adjust the background banner */
+    .customize-border img {
+        max-width: 350px; /* Reduced size for the banner */
+        height: auto;
+    }
+}
