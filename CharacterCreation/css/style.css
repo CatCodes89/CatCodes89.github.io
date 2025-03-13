@@ -166,7 +166,6 @@ body {
 
 
 
-/* Existing styles here */
 
 /* Mobile-specific media queries (adjustments below) */
 @media (max-width: 768px) {
@@ -179,7 +178,7 @@ body {
 
     /* Make the character section smaller and centered */
     .character-section {
-        width: 150px;  /* Further reduce the width */
+        width: 130px;  /* Further reduce the width */
         margin: 0 auto; /* Center it */
     }
 
@@ -193,13 +192,14 @@ body {
 
     /* Adjust the controls width and padding for mobile */
     .controls {
-        width: 320px; /* Reduced width */
+        width: 280px; /* Reduced width to create space between edges */
         height: auto;
         padding: 20px 15px;
         padding-top: 20px;
         display: flex;
         flex-direction: column;
         gap: 15px; /* Space between control items */
+        margin: 0 20px; /* Add space between container and screen edges */
     }
 
     /* Adjust title positioning */
@@ -228,7 +228,7 @@ body {
 
     /* Stack the buttons vertically with a little space in between */
     .actions {
-        margin-top: 10px;
+        margin-top: -20px; /* Move buttons closer */
     }
 
     /* Adjust buttons to fit mobile */
@@ -270,7 +270,7 @@ body {
     }
 
     .controls {
-        width: 100%;
+        width: 90%; /* Further reduce width */
         height: auto;
         padding: 15px 10px;
         padding-top: 10px;
@@ -304,6 +304,10 @@ body {
 
     /* Adjust the background banner */
     .customize-border img {
+        max-width: 350px; /* Reduced size for the banner */
+        height: auto;
+    }
+}
         max-width: 350px; /* Reduced size for the banner */
         height: auto;
     }
