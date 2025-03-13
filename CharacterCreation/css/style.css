@@ -195,14 +195,15 @@ body {
     }
 
     .thumbnail-container {
-        flex-wrap: wrap; /* Ensure thumbnails wrap on smaller screens */
+        flex-wrap: wrap;
         justify-content: center;
-        margin-top: 20px; /* Maintain thumbnails' position below the title */
+        gap: 0px; /* Completely remove the gap between thumbnails */
     }
 
     .thumbnail {
-        width: 60px;
-        height: 60px;
+        width: 80px; /* Keep the thumbnail size */
+        height: 80px;
+        margin: -2px; /* Use negative margins to overlap slightly */
     }
 
     #randomize, #save {
