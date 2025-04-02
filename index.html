@@ -1,97 +1,543 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>catcodes</title>
-    <link rel="stylesheet" href="portfolio.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cathy's Portfolio</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+  <style>
+    /* Smooth Scrolling */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Font Styling */  
+    section h1 {
+      font-size: 2rem; 
+      font-weight: bold; 
+      color: #444; 
+      text-align: center; 
+      text-transform: uppercase; 
+    }
+
+    /* Remove underline from anchor tags */
+    a {
+      text-decoration: none;
+    }
+    
+    /* Custom Navbar Styling */
+    .custom-navbar {
+      background-color: #FBA1A8;
+    }
+
+    .custom-navbar .navbar-brand,
+    .custom-navbar .nav-link {
+      color: #FFFFFF;
+    }
+
+    .custom-navbar .nav-link:hover {
+      color: #8A4A50;
+    }
+
+    .custom-navbar .navbar-toggler-icon {
+      filter: brightness(0) invert(1);
+    }
+
+    /* Home Section Styling */
+    .home-section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      min-height: 100vh;
+      background-color: #FFF5F7;
+      padding: 50px;
+    }
+
+    .profile-pic {
+      width: 400px;
+      height: 400px;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+      border: 10px solid #FBA1A8;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      opacity: 0.8;
+    }
+
+    .home-text {
+      max-width: 600px;
+      margin-left: 30px;
+    }
+
+    .home-text p {
+      font-size: 1.2rem;
+      color: #444;
+    }
+
+    /* CTA Button Styles */
+    .btn-cta {
+      background-color: #FBA1A8;
+      color: #FFFFFF;
+      border-radius: 50px;
+      padding: 10px 30px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+
+    .btn-cta:hover {
+      background-color: #FBA1A8;
+      color: #8A4A50;
+      transform: scale(1.05);
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn-cta:active {
+      transform: scale(1);
+    }
+
+    /* About Me Section Styling */
+    .about-section {
+      background-color: #FFF5F7;
+      padding: 50px 0;
+    }
+
+    .about-text h2 {
+      font-size: 2rem;
+      color: #444;
+      font-weight: bold;
+    }
+
+    .about-text h3 {
+      font-size: 1.5rem;
+      color: #FBA1A8;
+      font-weight: 500;
+    }
+
+    .about-text p {
+      font-size: 1.2rem;
+      color: #444;
+    }
+
+    .about-text .social-links {
+      margin-top: 20px;
+    }
+
+    .about-text .social-links a {
+      font-size: 2rem;
+      color: #444;
+      margin: 0 10px;
+    }
+
+    /* Accordion Styling */
+    .accordion {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .accordion-button {
+      padding: 0.5rem 1rem;
+      font-size: 0.875rem;
+    }
+
+    .accordion-item {
+      margin-bottom: 0.5rem;
+    }
+
+    .accordion-body {
+      padding: 1rem;
+    }
+
+    .accordion-header {
+      font-size: 1rem;
+    }
+
+    /* Skills Section Styling */
+    .skills-section {
+      background-color: #FFF5F7;
+      padding: 50px 0;
+    }
+
+    .skills-section h2 {
+      font-size: 2.5rem;
+      color: #444;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .accordion-button:not(.collapsed) {
+      background-color: #FBA1A8;
+      color: #FFFFFF;
+    }
+
+    .accordion-body {
+      background-color: #FFFFFF;
+      color: #444;
+    }
+
+    .accordion-button:hover {
+      background-color: #FBA1A8;
+      color: #FFFFFF;
+    }
+
+    /* Portfolio Section */
+    .portfolio-section {
+      background-color: #FFF5F7;
+      padding: 50px 0;
+    }
+
+    /* Custom Card Styling */
+    .custom-card {
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out;
+      background-color: #FFF5F7;
+    }
+
+    .custom-card:hover {
+      transform: scale(1.05);
+    }
+
+    .custom-card .card-img-top {
+      border-top-left-radius: 12px;
+      border-top-right-radius: 12px;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .custom-card .btn-primary {
+      background-color: #FBA1A8;
+      border: none;
+    }
+
+    .custom-card .btn-primary:hover {
+      background-color: #FDD2D5;
+    }
+
+        
+    .custom-card .card-body {
+      font-size: 1.2rem;
+      color: #444;
+      font-family: inherit;
+    }
+    
+    .custom-card .card-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #444;
+    }
+
+    /* Contact Section Styling */
+    .contact-section {
+      background-color: #FFF5F7;
+      padding: 50px 0;
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      color: #444;
+      font-weight: bold;
+    }
+
+    .section-description {
+      font-size: 1.2rem;
+      color: #444;
+      max-width: 800px;
+      margin: 0 auto 40px;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .contact-item {
+      font-size: 1.2rem;
+      color: #444;
+      margin: 10px 0;
+    }
+
+    .contact-item i {
+      color: #FDD2D5;
+      margin-right: 8px;
+    }
+
+    /* Universal Button Styling */
+    .btn-custom {
+      background-color: #FBA1A8;
+      color: #FFFFFF;
+      border-radius: 50px;
+      padding: 10px 30px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+
+    .btn-custom:hover {
+      background-color: #FBA1A8;
+      color: #8A4A50;
+      transform: scale(1.05);
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn-custom:active {
+      transform: scale(1);
+    }
+
+    /* Custom Footer Styling */
+    .custom-footer {
+      background-color: #FBA1A8; 
+      color: #FFFFFF;
+      font-size: 1rem;
+      font-weight: bold;
+      text-align: center;
+      padding: 20px 0; 
+    }
+  </style>
 </head>
 <body>
 
-    <!-- Hello Section -->
-    <p id="h1strong">
-        <span id="h1color">
-            <strong class="italic-text">Hello</strong>
-            <strong class="italic-text">World ...</strong>
-            <span class="black-font">my name is</span>
-            <strong class="italic-text">Cathy</strong>!
-        </span>
-    </p>
-
-    <!-- Horizontal Line (Separator) -->
-    <hr class="separator">
-
-    <!-- Containers Section -->
-    <div class="container-wrapper">
-        <div id="container">
-            <!-- "I ❤ CSS" Box -->
-            <div id="b1">
-                <div id="b2"><span>I</span></div>
-                <div id="b3"><span>❤</span></div>
-                <div id="b4">
-                    <div id="b5"><span>C</span></div>
-                    <div id="b6"><span>S</span></div>
-                    <div id="b7"><span>S</span></div>
-                </div>
-            </div>
-
-            <p>
-                I am a graduate from triOS college where I studied Web Development Fundamentals and gained skills in:
-            </p>
-            <div class="skills-icons">
-                <img src="https://i.ibb.co/39qWP5xb/photoshop.png" alt="photoshop icon">
-                <img src="https://i.ibb.co/vCYPBWp1/illustrator.png" alt="illustrator icon">
-                <img src="https://i.ibb.co/qLKH7LkT/xd.png" alt="XD icon">
-                <img src="https://i.ibb.co/wn7rznw/html.png" alt="HTML icon">
-                <img src="https://i.ibb.co/ZzcyxJbL/css-3.png" alt="CSS icon">
-                <img src="https://i.ibb.co/6J02Gb4t/js.png" alt="JavaScript icon">
-                <img src="https://i.ibb.co/RGrfsHG8/linux.png" alt="Linux icon">
-                <img src="https://i.ibb.co/7JsFFQKZ/wordpress-logo.png" alt="WordPress icon">
-                <img src="https://i.ibb.co/vxR3JvCm/file.png" alt="Markdown icon">
-                <img src="https://i.ibb.co/gb7G6K4w/github.png" alt="GitHub icon">
-                <img src="https://i.ibb.co/N22bVyTC/java.png" alt="Java icon">
-                <img src="https://i.ibb.co/PztQYbcz/swift.png" alt="Swift icon">
-            </div>
-            <p>
-                I am passionate about collaborating on projects involving Web Development, Software Applications, Graphic Design, and Video Game Development.
-            </p>
-            <p>Images courtesy of 
-                <a href="https://www.flaticon.com/free-icons/swift" title="swift icons">Pixel Perfect</a> / 
-                <a href="https://www.flaticon.com/free-icons/swift" title="swift icons">Flaticon</a>
-            </p>
-        </div>
-
-        <!-- Image Container -->
-        <div id="container2">
-            <img src="https://i.postimg.cc/kXv6VnL4/Sun-Flower-Girl-upscaled.jpg" alt="Sunflower Girl Image"/>
-        </div>
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg custom-navbar sticky-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">Cathy's Portfolio</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#home"><i class="bi bi-house-door"></i> Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about"><i class="bi bi-person"></i> About Me</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#skills"><i class="bi bi-tools"></i> Skills</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#portfolio"><i class="bi bi-folder"></i> Portfolio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact"><i class="bi bi-envelope"></i> Contact</a>
+        </li>
+      </ul>
     </div>
+  </div>
+</nav>
 
-    <!-- Portfolio Samples Section (Centered) -->
-    <div class="side-by-side-container">
-        <div id="portfolioSamples">
-            <p>Here is a list of websites I have created!</p>
-            
-            <a href="https://catcodes89.github.io/PlantShop/home.html" target="_blank">
-                Sample 1
-            </a>
-            <a href="https://catcodes89.github.io/NailSalon/index.html" target="_blank">
-                Sample 2
-            </a>
-            <a href="https://catcodes89.github.io/AnimalShelture/index.html" target="_blank">
-                Sample 3
-            </a>
-            <a href="https://catcodes89.github.io/CoffeeShop/index.html" target="_blank">
-                Sample 4
-            </a>
-                        <a href="https://catcodes89.github.io/CharacterCreation/index.html" target="_blank">
-                Sample 5
-            </a>
+<!-- Home Section -->
+<section id="home" class="home-section">
+  <img src="/assets/linkedin.png" alt="Profile picture of Cathy Carvalho" class="profile-pic" loading="lazy">
+  <div class="home-text">
+    <h1>Welcome to My Portfolio</h1>
+    <p>Hi! I'm Cathy, a passionate front-end developer. I love crafting beautiful, user-friendly web experiences.</p>
+    <a href="#portfolio" class="btn btn-cta">View My Work</a>
+  </div>
+</section>
+
+<!-- About Me Section -->
+<section id="about" class="about-section">
+  <div class="container">
+    <div class="row d-flex align-items-center justify-content-center text-center">
+      <div class="col-md-6 order-md-1 d-flex flex-column align-items-center">
+        <div class="about-text">
+          <h1>I'm Cathy Carvalho</h1>
+          <p>As a passionate front-end developer, I thrive on creating visually appealing and user-friendly websites. My journey in front-end began with a fascination for how design can enhance user experience.</p>
+          <a href="#contact" class="btn btn-cta">Contact Me</a>
         </div>
+      </div>
+      <div class="col-md-4 order-md-2 d-flex justify-content-center">
+        <img src="/assets/HeartBubble.gif" alt="Animated chat bubble with a heart inside" loading="lazy">
+      </div>
     </div>
+  </div>
+</section>
 
-    <!-- Horizontal Line (Separator) -->
-    <hr class="separator">
+<!-- Skills Section -->
+<section id="skills" class="skills-section py-5">
+  <div class="container">
+    <h1 class="text-center mb-4">My Skills</h1>
+    <div class="accordion" id="skillsAccordion">
+      <!-- Languages -->
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#languages" aria-expanded="true" aria-controls="languages">
+            <i class="bi bi-translate me-2"></i> Languages
+          </button>
+        </h2>
+        <div id="languages" class="accordion-collapse collapse show" data-bs-parent="#skillsAccordion">
+          <div class="accordion-body">
+            <strong>HTML, CSS, JavaScript, TypeScript, Markdown, Java, Swift</strong>
+          </div>
+        </div>
+      </div>
+      <!-- Frameworks & Libraries -->
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#frameworks" aria-expanded="false" aria-controls="frameworks">
+            <i class="bi bi-book-half me-2"></i> Frameworks & Libraries
+          </button>
+        </h2>
+        <div id="frameworks" class="accordion-collapse collapse" data-bs-parent="#skillsAccordion">
+          <div class="accordion-body">
+            <strong>ReactJS, AngularJS, NodeJS, Tailwind CSS, Bootstrap</strong>
+          </div>
+        </div>
+      </div>
+      <!-- Tools & Version Control -->
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#tools" aria-expanded="false" aria-controls="tools">
+            <i class="bi bi-wrench me-2"></i> Tools & Version Control
+          </button>
+        </h2>
+        <div id="tools" class="accordion-collapse collapse" data-bs-parent="#skillsAccordion">
+          <div class="accordion-body">
+            <strong>VS Code, GitHub, FileZilla, Microsoft Edge DevTools, GitHub</strong>
+          </div>
+        </div>
+      </div>
+      <!-- Design & UI/UX -->
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#design" aria-expanded="false" aria-controls="design">
+            <i class="bi bi-palette-fill me-2"></i> Design & UI/UX
+          </button>
+        </h2>
+        <div id="design" class="accordion-collapse collapse" data-bs-parent="#skillsAccordion">
+          <div class="accordion-body">
+            <strong>Adobe Photoshop, Adobe Illustrator, Adobe XD, Responsive Web Design</strong>
+          </div>
+        </div>
+      </div>
+      <!-- Web Technologies -->
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#webTech" aria-expanded="false" aria-controls="webTech">
+            <i class="bi bi-cpu me-2"></i> Web Technologies
+          </button>
+        </h2>
+        <div id="webTech" class="accordion-collapse collapse" data-bs-parent="#skillsAccordion">
+          <div class="accordion-body">
+            <strong>Linux Web Hosting, WordPress</strong>
+          </div>
+        </div>
+      </div>
+      <!-- Soft Skills -->
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#softSkills" aria-expanded="false" aria-controls="softSkills">
+            <i class="bi bi-heart-fill me-2"></i> Soft Skills
+          </button>
+        </h2>
+        <div id="softSkills" class="accordion-collapse collapse" data-bs-parent="#skillsAccordion">
+          <div class="accordion-body">
+            <strong>Problem-Solving, Attention to Detail, Collaboration, Communication</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Portfolio Section -->
+<section id="portfolio" class="portfolio-section py-5">
+  <div class="container">
+    <h1>My Portfolio</h1>
+    <div class="row justify-content-center">
+      <!-- Portfolio Card 1 -->
+      <div class="col-md-3 col-sm-6 col-12 mt-4">
+        <div class="card custom-card">
+          <img src="/assets/apple.png" class="card-img-top" alt="Project 1 Preview">
+          <div class="card-body text-center">
+            <h5 class="card-title">Project 1</h5>
+            <p class="card-text">A modern web design with interactive elements.</p>
+            <a href="https://yourwebsite.com/project1" target="_blank" class="btn btn-cta" rel="noopener noreferrer">View Project</a>
+          </div>
+        </div>
+      </div>
+      <!-- Portfolio Card 2 -->
+      <div class="col-md-3 col-sm-6 col-12 mt-4">
+        <div class="card custom-card">
+          <img src="/assets/apple.png" class="card-img-top" alt="Project 2 Preview">
+          <div class="card-body text-center">
+            <h5 class="card-title">Project 2</h5>
+            <p class="card-text">A responsive landing page built with Bootstrap.</p>
+            <a href="https://yourwebsite.com/project2" target="_blank" class="btn btn-cta" rel="noopener noreferrer">View Project</a>
+          </div>
+        </div>
+      </div>
+      <!-- Portfolio Card 3 -->
+      <div class="col-md-3 col-sm-6 col-12 mt-4">
+        <div class="card custom-card">
+          <img src="/assets/apple.png" class="card-img-top" alt="Project 3 Preview">
+          <div class="card-body text-center">
+            <h5 class="card-title">Project 3</h5>
+            <p class="card-text">A custom WordPress theme for small businesses.</p>
+            <a href="https://yourwebsite.com/project3" target="_blank" class="btn btn-cta" rel="noopener noreferrer">View Project</a>
+          </div>
+        </div>
+      </div>
+      <!-- Portfolio Card 4 -->
+      <div class="col-md-3 col-sm-6 col-12 mt-4">
+        <div class="card custom-card">
+          <img src="/assets/apple.png" class="card-img-top" alt="Project 4 Preview">
+          <div class="card-body text-center">
+            <h5 class="card-title">Project 4</h5>
+            <p class="card-text">An e-commerce website with a custom shopping cart.</p>
+            <a href="https://yourwebsite.com/project4" target="_blank" class="btn btn-cta" rel="noopener noreferrer">View Project</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="contact-section py-5" style="background-color: #FFF5F7;">
+  <div class="container-lg">
+    <div class="text-center">
+      <h1>Contact</h1>
+      <p class="lead" style="color: #444;">Feel free to reach out through any of the platforms below!</p>
+    </div>
+    <div class="row justify-content-center my-5">
+      <div class="col-lg-6 text-center">
+        <div class="contact-icons">
+          <!-- GitHub Icon -->
+          <a href="https://github.com/CatCodes89" target="_blank" class="btn btn-link" rel="noopener noreferrer">
+            <i class="bi bi-github" style="font-size: 3rem; color: #333;"></i>
+          </a>
+          <!-- LinkedIn Icon -->
+          <a href="https://www.linkedin.com/in/cathy-carvalho/" target="_blank" class="btn btn-link" rel="noopener noreferrer">
+            <i class="bi bi-linkedin" style="font-size: 3rem; color: #333;"></i>
+          </a>
+          <!-- Email Icon (Mailto link) -->
+          <a href="mailto:tc.ccarval@gmail.com" class="btn btn-link" rel="noopener noreferrer">
+            <i class="bi bi-envelope-fill" style="font-size: 3rem; color: #333;"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="custom-footer">
+  <p>&copy; 2025 Made with love <i class="bi bi-heart"></i></p>
+</footer>
+
+<!-- Bootstrap JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
