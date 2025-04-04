@@ -2,7 +2,7 @@
 
 body {
   background-color: #a39bd2;
-  background-image: url("/CatCodes89.github.io/assets/HighlighterBG.png");
+  background-image: url("../assets/HighlighterBG.png");
   background-size: 100% 100%; 
   background-position: left center; 
   min-height: 70vh;
