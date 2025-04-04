@@ -9,14 +9,15 @@ body {
   font-family: "Pixelify Sans", sans-serif;
   text-align: center;
   font-size: 150%;
+  height: 100vh; 
+  margin: 0;
 }
 
 .background-img {
-  background-color: #a39bd2;
-  background-size: 100% 100%; 
-  background-position: left center; 
-  min-height: 70vh;
-  padding: 1rem;
+  width: 100%; 
+  height: auto; 
+  object-fit: cover; 
+  min-height: 70vh; 
 }
 
 @media only screen and (min-width: 500px) {
