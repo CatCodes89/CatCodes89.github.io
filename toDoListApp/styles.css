@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
 
 body {
-  background-color: #a39bd2; /* Keep the background color */
-  margin: 0; /* Remove any default margin */
-  height: 100vh; /* Ensure the body takes up the full height */
+  background-color: #a39bd2;
+  background-size: 100% 100%; 
+  background-position: left center; 
+  min-height: 70vh;
+  padding: 1rem;
   box-sizing: border-box;
   display: flex;
   justify-content: center;
@@ -12,17 +14,6 @@ body {
   font-family: "Pixelify Sans", sans-serif;
   text-align: center;
   font-size: 150%;
-}
-
-.background-img {
-  position: absolute; /* Position the image absolutely in the background */
-  top: 0;
-  left: 0;
-  width: 100%; /* Make the image cover the width of the screen */
-  height: auto; /* Maintain aspect ratio */
-  object-fit: cover; /* Make sure the image covers the entire container */
-  min-height: 70vh; /* Make the image at least 70% of the viewport height */
-  z-index: -1; /* Place the image behind the content */
 }
 
 @media only screen and (min-width: 500px) {
