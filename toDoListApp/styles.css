@@ -2,9 +2,9 @@
 
 body {
   background-color: #a39bd2;
-  background-image: url("toDoListApp/assets/HighlighterBG.png");
-  background-size: cover; 
-  background-position: center center;
+  background-image: url('https://raw.githubusercontent.com/CatCodes89/CatCodes89.github.io/main/toDoListApp/assets/HighlighterBG.png');
+  background-size: cover;
+  background-position: center;
   min-height: 70vh;
   padding: 1rem;
   box-sizing: border-box;
