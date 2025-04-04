@@ -4,9 +4,9 @@ body {
   background-color: #a39bd2;
   background-image: url('https://raw.githubusercontent.com/CatCodes89/CatCodes89.github.io/main/toDoListApp/assets/HighlighterBG.png');
   background-size: 100px 100px; 
-  background-repeat: repeat; 
+  background-repeat: no-repeat; 
   background-position: center;
-  min-height: 90vh;
+  min-height: 70vh;
   padding: 1rem;
   box-sizing: border-box;
   display: flex;
