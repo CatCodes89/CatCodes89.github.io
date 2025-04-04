@@ -2,7 +2,7 @@
 
 body {
   background-color: #a39bd2;
-  background-image: url("/assets/HighlighterBG.png");
+  background-image: url("https://media-hosting.imagekit.io/b31fe6df91f14309/HighlighterBG.png?Expires=1838336295&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=2zKWRuDE8xCsu0AjI3wK5ZjvsNkUMP278qt5jT7qQHEV-FoPO7UmISkdPbZSTENSFKhhA1-IR9-UPWVPKUrThPhdh646~-4vbv0oN2gPi44jbkCsKBjmScpHNKptaGSrTjPkxBil8JWeSfcKHW36R71B0Jzfi6kuPHXtyWgBNq~2PFEBuk~dG1uGQkXd5F~lGV8~ju4g2wePVIknvRgHIMUz6hDBSgvP30x2FmVvwruY-Su30R6XKk6Fk0l8S6GnX6SvAj5Y5FCJc9sFpbsS7IfwNeBty3TehVcC5SMnmTC0NWZlWndUjEJrRfecnnE6JUVt~f0lT1U0rUXPbl1p~g__");
   background-size: 100% 100%; 
   background-position: left center; 
   min-height: 70vh;
