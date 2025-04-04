@@ -6,7 +6,7 @@ body {
   background-size: 100px 100px; 
   background-repeat: repeat; 
   background-position: center;
-  min-height: 70vh;
+  min-height: 90vh;
   padding: 1rem;
   box-sizing: border-box;
   display: flex;
