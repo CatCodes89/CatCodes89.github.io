@@ -3,7 +3,7 @@
 body {
   background-color: #a39bd2;
   background-image: url('https://raw.githubusercontent.com/CatCodes89/CatCodes89.github.io/main/toDoListApp/assets/HighlighterBG.png');
-  background-size: contain; 
+  background-size: cover; 
   background-position: center; 
   background-repeat: no-repeat;
   min-height: 70vh;
