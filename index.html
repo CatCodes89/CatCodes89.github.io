@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Photo Wheel</title>
+
+  <!-- ✅ Google Font for Wheel Labels -->
+  <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap" rel="stylesheet">
+
+  <!-- Your CSS file -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="wheel-container">
+    <img src="assets/cathy.png" alt="Center" class="center-photo" />
+
+    <!-- Wheel Photo Items with Labels -->
+    <div class="wheel-item">
+      <div class="wheel-photo"><img src="assets/folder7.png" alt="Home" /></div>
+      <div class="wheel-label">Websites</div>
+    </div>
+    <div class="wheel-item">
+      <div class="wheel-photo"><img src="assets/folder2.png" alt="About" /></div>
+      <div class="wheel-label">Apps</div>
+    </div>
+    <div class="wheel-item">
+      <div class="wheel-photo"><img src="assets/folder4.png" alt="Art" /></div>
+      <div class="wheel-label">Art</div>
+    </div>
+    <div class="wheel-item">
+      <div class="wheel-photo"><img src="assets/folder3.png" alt="Gallery" /></div>
+      <div class="wheel-label">Heartwood</div>
+    </div>
+    <div class="wheel-item">
+      <div class="wheel-photo"><img src="assets/folder5.png" alt="Shop" /></div>
+      <div class="wheel-label">GitHub</div>
+    </div>
+    <div class="wheel-item">
+      <div class="wheel-photo"><img src="assets/folder8.png" alt="Blog" /></div>
+      <div class="wheel-label">LinkedIn</div>
+    </div>
+    <div class="wheel-item">
+      <div class="wheel-photo"><img src="assets/folder.png" alt="FAQ" /></div>
+      <div class="wheel-label">About</div>
+    </div>
+    <div class="wheel-item">
+      <div class="wheel-photo"><img src="assets/folder6.png" alt="Contact" /></div>
+      <div class="wheel-label">Skills</div>
+    </div>
+  </div>
+
+  <!-- Popup Modal -->
+  <div class="popup" id="popup">
+    <div class="popup-content">
+      <span class="popup-close" id="popupClose">&times;</span>
+      <div id="popupText"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
