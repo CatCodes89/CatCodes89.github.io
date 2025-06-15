@@ -1,179 +1,206 @@
 body {
-    margin: 0;
-    height: 100vh;
-    background: #f0f0f0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    font-family: sans-serif;
-    background-image: url('assets/background.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-  
-  .wheel-container {
-    position: relative;
-    width: 500px;
-    height: 500px;
-  }
-  
-  .center-photo {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border: 5px solid white;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-    z-index: 2;
-  }
-  
-  .wheel-item {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 80px;
-    pointer-events: none;
-  }
-  
-  .wheel-photo {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    cursor: pointer;
-    animation: float 3s ease-in-out infinite;
-    transition: transform 0.3s;
-    border: 4px solid white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: visible;
-    box-sizing: border-box;
-    pointer-events: auto;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-  }
-  
-  .wheel-photo img {
-    width: 80%;
-    height: 80%;
-    object-fit: contain;
-    border-radius: 50%;
-    pointer-events: none;
-  }
-  
-  .wheel-photo:hover {
-    transform: scale(1.1);
-  }
-  
-  /* 🔽 NEW: Underline label on photo hover */
-  .wheel-photo:hover + .wheel-label {
-    text-decoration: underline;
-    text-decoration-color: #e6007e;
-  }
-  
-  .wheel-label {
-    margin-top: 6px;
-    font-size: 25px;
-    color: #f8f0f8;  /* lighter */
-    text-align: center;
-    font-family: 'Pixelify Sans', cursive;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
-  }
-  
-  /* Floating Animation */
-  @keyframes float {
-    0%, 100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-10px);
-    }
-  }
-  
-  /* Popup styles with animation */
-  .popup {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.8);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 999;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.4s ease;
-  }
-  
-  .popup-content h2 {
-    margin-top: 6px;
-    font-size: 25px;
-    text-align: center;
-    font-family: 'Pixelify Sans', cursive;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
-  }
-  
-  .popup.show {
-    opacity: 1;
-    pointer-events: auto;
-  }
-  
-  .popup-content {
-    background: white;
-    padding: 40px;
-    border-radius: 10px;
-    width: 500px;
-    height: 400px;
-    max-width: 90vw;
-    max-height: 80vh;
-    overflow-y: auto;
-    text-align: center;
-    position: relative;
-    transform: scale(0.95);
-    transition: transform 0.4s ease;
-    box-sizing: border-box;
-  }
-  
-  .popup.show .popup-content {
-    transform: scale(1);
-  }
-  
-  .popup-close {
-    position: absolute;
-    top: 15px;
-    right: 20px;
-    font-size: 32px;
-    cursor: pointer;
-    color: #FF0000;
-    padding: 1px 4px 2px 4px;  /* top, right, bottom, left */
-    border-radius: 0;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
-    line-height: 1; /* Ensures tight vertical alignment */
-  }
-  
-  .popup-close:hover {
-    background-color: transparent;
-    box-shadow: 0 0 0 2px black;
-  }
+  margin: 0;
+  height: 100vh;
+  background: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  font-family: sans-serif;
+  background-image: url("assets/background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 
-  .skill-icon {
-    width: 50px;
-    height: 50px;
-    object-fit: contain;
-    display: inline-block;
-    margin: 6px;
-    background-color: white; /* optional: gives a clean borderless feel */
-    border-radius: 10px; /* optional: smooth edges */
-    box-shadow: 0 0 5px rgba(0,0,0,0.3); /* optional: soft border for consistency */
+.wheel-container {
+  position: relative;
+  width: 500px;
+  height: 500px;
+}
+
+/* Curved text SVG: Top (Cathy Carvalho) */
+.curved-text-svg.top-text {
+  position: absolute;
+  top: 18%;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+  z-index: 3;
+}
+
+/* Curved text SVG: Bottom (iOS Developer) */
+.curved-text-svg.bottom-text {
+  position: absolute;
+  bottom: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+  z-index: 3;
+
+}
+
+/* Center photo */
+.center-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 5px solid white;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+
+/* No longer used since we're using curved text */
+.center-title {
+  display: none;
+}
+
+.wheel-item {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80px;
+  pointer-events: none;
+}
+
+.wheel-photo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  cursor: pointer;
+  animation: float 3s ease-in-out infinite;
+  transition: transform 0.3s;
+  border: 4px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: visible;
+  box-sizing: border-box;
+  pointer-events: auto;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.wheel-photo img {
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.wheel-photo:hover {
+  transform: scale(1.1);
+}
+
+/* Underline label on photo hover */
+.wheel-photo:hover + .wheel-label {
+  text-decoration: underline;
+  text-decoration-color: #e6007e;
+}
+
+.wheel-label {
+  margin-top: 6px;
+  font-size: 25px;
+  color: #f8f0f8;
+  text-align: center;
+  font-family: "Pixelify Sans", cursive;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+/* Floating Animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
   }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Popup styles with animation */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+.popup.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.popup-content {
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  width: 500px;
+  height: 400px;
+  max-width: 90vw;
+  max-height: 80vh;
+  overflow-y: auto;
+  text-align: center;
+  position: relative;
+  transform: scale(0.95);
+  transition: transform 0.4s ease;
+  box-sizing: border-box;
+}
+
+.popup-content h2 {
+  margin-top: 6px;
+  font-size: 25px;
+  text-align: center;
+  font-family: "Pixelify Sans", cursive;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.popup.show .popup-content {
+  transform: scale(1);
+}
+
+.popup-close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 32px;
+  cursor: pointer;
+  color: #ff0000;
+  padding: 1px 4px 2px 4px;
+  border-radius: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  line-height: 1;
+}
+
+.popup-close:hover {
+  background-color: transparent;
+  box-shadow: 0 0 0 2px black;
+}
+
+.skill-icon {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  display: inline-block;
+  margin: 6px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
