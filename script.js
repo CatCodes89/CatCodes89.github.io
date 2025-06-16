@@ -65,11 +65,11 @@ window.onload = () => {
     },
     {
       label: "Websites",
-      content: "<h2>Websites</h2>" + popupText.innerHTML, // Use the default gallery
+      content: "<h2>Websites</h2>" + popupText.innerHTML,
     },
     {
-      label: "Apps",
-      content: "<h2>Apps</h2>",
+        label: "Apps",
+        content: "<h2>Apps</h2>" + document.getElementById("appProjects").innerHTML,
     },
     {
       label: "Art",
@@ -100,8 +100,7 @@ window.onload = () => {
   popupText.innerHTML = "";
 
   items.forEach((item, index) => {
-    // Position items in circle
-    const angle = (index / items.length) * 2 * Math.PI - Math.PI / 2; // Start from top center
+    const angle = (index / items.length) * 2 * Math.PI - Math.PI / 2;
     const width = item.offsetWidth;
     const height = item.offsetHeight;
 
@@ -112,13 +111,11 @@ window.onload = () => {
     item.style.left = `${x}px`;
     item.style.top = `${y}px`;
 
-    // Add click to photo image
     const photo = item.querySelector(".wheel-photo");
     photo.style.cursor = "pointer";
     photo.addEventListener("click", () => {
       const section = sectionContent[index];
       if (section.link) {
-        // Open external link in new tab
         window.open(section.link, "_blank");
       } else if (section.content) {
         popupText.innerHTML = section.content;
@@ -127,12 +124,10 @@ window.onload = () => {
     });
   });
 
-  // Close popup when clicking X
   popupClose.addEventListener("click", () => {
     popup.classList.remove("show");
   });
 
-  // Close popup when clicking outside content
   popup.addEventListener("click", (e) => {
     if (e.target === popup) {
       popup.classList.remove("show");
