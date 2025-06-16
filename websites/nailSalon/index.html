@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nail Salon Landing Page</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Add Font Awesome for social media icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Import Fonts from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lora:wght@400&family=Poppins:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- Hero Section -->
+<header class="hero">
+    <video autoplay muted loop id="heroVideo">
+        <source src="assets/paint.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="hero-content">
+        <h1>Welcome to Luxe Nails</h1>
+        <p>Get the perfect nails you deserve!</p>
+        <button class="book-btn">Book an Appointment</button>
+    </div>
+</header>
+
+<!-- Booking Modal -->
+<div id="bookingModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>Book an Appointment</h2>
+        <form id="bookingForm">
+            <label for="service">Select Service:</label>
+            <select class="service-select" name="service" required>
+                <option value="manicure">Manicure</option>
+                <option value="pedicure">Pedicure</option>
+                <option value="nailArt">Nail Art</option>
+                <option value="gelNails">Gel Nails</option>
+            </select>
+            <label for="date">Choose Date:</label>
+            <input type="date" class="date-input" name="date" required>
+            <label for="time">Choose Time:</label>
+            <input type="time" class="time-input" name="time" required>
+            <button type="submit" class="book-now-btn">Book Now</button>
+        </form>
+    </div>
+</div>
+
+<!-- Services and Reviews Section -->
+<section class="services-reviews">
+    <!-- Services Section -->
+    <section class="services">
+        <h2>Our Services</h2>
+        <div class="service-list">
+            <div class="service">
+                <div class="service-icon"><img src="https://i.ibb.co/mrf3ktDx/Nails.jpg" alt="Beautiful Nails" class="nail-image"></div>
+                <p>Manicure</p>
+                <p class="price">Starting at $30</p>
+            </div>
+            <div class="service">
+                <div class="service-icon"><img src="https://i.postimg.cc/ZY8SSYFn/Pedicure.jpg" alt="Pedicure" class="nail-image"></div>
+                <p>Pedicure</p>
+                <p class="price">Starting at $40</p>
+            </div>
+            <div class="service">
+                <div class="service-icon"><img src="https://i.postimg.cc/P51TjVhd/NailArt.jpg" alt="Nail Art" class="nail-image"></div>
+                <p>Nail Art</p>
+                <p class="price">Starting at $50</p>
+            </div>
+            <div class="service">
+                <div class="service-icon"><img src="https://i.postimg.cc/sXHvhHvt/GelNails.webp" alt="Gel Nails" class="nail-image"></div>
+                <p>Gel Nails</p>
+                <p class="price">Starting at $60</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <h2>What Our Clients Say</h2>
+        <div class="carousel">
+            <button class="prev">&#10094;</button>
+            <div class="review-container">
+                <div class="review active">
+                    <img src="https://i.ibb.co/5hg6bLPF/Review.jpg" alt="Client Image" class="client-img">
+                    <p>"Amazing service! My nails have never looked better." – Katie L.</p>
+                    <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                </div>
+                <div class="review">
+                    <img src="https://i.ibb.co/PSGpMVc/Review2.jpg" alt="Client Image" class="client-img">
+                    <p>"Absolutely love the staff and ambiance!" – Emily R.</p>
+                    <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                </div>
+                <div class="review">
+                    <img src="https://i.ibb.co/Zzjk9X9r/Review3.jpg" alt="Client Image" class="client-img">
+                    <p>"Best nail salon experience I've had!" – Jessica M.</p>
+                    <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                </div>
+            </div>
+            <button class="next">&#10095;</button>
+        </div>
+    </section>
+</section>
+
+<!-- Location & Contact Section -->
+<section class="location-contact-container">
+    <!-- Contact Section -->
+    <section class="contact">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+    
+    <!-- Location Section -->
+    <section class="location">
+        <h2>Our Location</h2>
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=YOUR_EMBED_LINK" 
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+</section>
+
+<!-- Social Media Links -->
+<div class="social-media">
+    <a href="https://www.facebook.com" target="_blank" class="social-icon">
+        <i class="fab fa-facebook-f"></i>
+    </a>
+    <a href="https://www.instagram.com" target="_blank" class="social-icon">
+        <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://www.twitter.com" target="_blank" class="social-icon">
+        <i class="fab fa-twitter"></i>
+    </a>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
