@@ -3,19 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <title>Photo Wheel</title>
-
-    <!-- ✅ Google Font for Wheel Labels -->
     <link
       href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap"
       rel="stylesheet"
     />
-
-    <!-- Your CSS file -->
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
     <div class="wheel-container">
-      
       <!-- Curved Text SVG for Name (Top) -->
       <svg
         width="500"
@@ -28,7 +24,13 @@
           <path id="curve-top" d="M 150,120 A 120,120 0 0,1 350,120" />
           <!-- Text shadow simulation -->
           <filter id="textShadow" x="-50%" y="-50%" width="200%" height="200%">
-            <feDropShadow dx="1" dy="1" stdDeviation="1" flood-color="black" flood-opacity="0.7"/>
+            <feDropShadow
+              dx="1"
+              dy="1"
+              stdDeviation="1"
+              flood-color="black"
+              flood-opacity="0.7"
+            />
           </filter>
         </defs>
         <text
@@ -72,61 +74,129 @@
       </svg>
 
       <!-- Wheel Photo Items with Labels -->
-      <div class="wheel-item">
-        <div class="wheel-photo">
-          <img src="assets/folder7.png" alt="Home" />
-        </div>
-        <div class="wheel-label">Websites</div>
-      </div>
-      <div class="wheel-item">
-        <div class="wheel-photo">
-          <img src="assets/folder2.png" alt="About" />
-        </div>
-        <div class="wheel-label">Apps</div>
-      </div>
-      <div class="wheel-item">
-        <div class="wheel-photo">
-          <img src="assets/folder4.png" alt="Art" />
-        </div>
-        <div class="wheel-label">Art</div>
-      </div>
-      <div class="wheel-item">
-        <div class="wheel-photo">
-          <img src="assets/folder3.png" alt="Gallery" />
-        </div>
-        <div class="wheel-label">Heartwood</div>
-      </div>
-      <div class="wheel-item">
-        <div class="wheel-photo">
-          <img src="assets/folder5.png" alt="Shop" />
-        </div>
-        <div class="wheel-label">GitHub</div>
-      </div>
-      <div class="wheel-item">
-        <div class="wheel-photo">
-          <img src="assets/folder8.png" alt="Blog" />
-        </div>
-        <div class="wheel-label">LinkedIn</div>
-      </div>
-      <div class="wheel-item">
-        <div class="wheel-photo">
-          <img src="assets/folder.png" alt="FAQ" />
-        </div>
-        <div class="wheel-label">About</div>
-      </div>
-      <div class="wheel-item">
-        <div class="wheel-photo">
-          <img src="assets/folder6.png" alt="Contact" />
-        </div>
-        <div class="wheel-label">Skills</div>
-      </div>
-    </div>
+<!-- Wheel Photo Items with Labels -->
+<div class="wheel-item">
+  <div class="wheel-photo">
+    <img src="assets/folder.png" alt="FAQ" />
+  </div>
+  <div class="wheel-label">About</div>
+</div>
+<div class="wheel-item">
+  <div class="wheel-photo">
+    <img src="assets/folder6.png" alt="Contact" />
+  </div>
+  <div class="wheel-label">Skills</div>
+</div>
+<div class="wheel-item">
+  <div class="wheel-photo">
+    <img src="assets/folder7.png" alt="Home" />
+  </div>
+  <div class="wheel-label">Websites</div>
+</div>
+<div class="wheel-item">
+  <div class="wheel-photo">
+    <img src="assets/folder2.png" alt="About" />
+  </div>
+  <div class="wheel-label">Apps</div>
+</div>
+<div class="wheel-item">
+  <div class="wheel-photo">
+    <img src="assets/folder4.png" alt="Art" />
+  </div>
+  <div class="wheel-label">Art</div>
+</div>
+<div class="wheel-item">
+  <div class="wheel-photo">
+    <img src="assets/folder3.png" alt="Gallery" />
+  </div>
+  <div class="wheel-label">Heartwood</div>
+</div>
+<div class="wheel-item">
+  <div class="wheel-photo">
+    <img src="assets/folder5.png" alt="Shop" />
+  </div>
+  <div class="wheel-label">GitHub</div>
+</div>
+<div class="wheel-item">
+  <div class="wheel-photo">
+    <img src="assets/folder8.png" alt="Blog" />
+  </div>
+  <div class="wheel-label">LinkedIn</div>
+</div>
 
     <!-- Popup Modal -->
     <div class="popup" id="popup">
       <div class="popup-content">
         <span class="popup-close" id="popupClose">&times;</span>
-        <div id="popupText"></div>
+        <div id="popupText">
+          <div class="website-gallery">
+            <!-- Website 1 -->
+            <div class="website-card">
+              <img
+                src="assets/portfolio-site.png"
+                alt="Portfolio Site"
+                class="site-thumb"
+              />
+              <div class="site-details">
+                <h3>Portfolio Website</h3>
+                <p>
+                  A personal portfolio to showcase my skills, projects, and
+                  resume as a web developer.
+                </p>
+                <a
+                  href="https://example.com/portfolio"
+                  target="_blank"
+                  class="visit-btn"
+                  >Visit Site</a
+                >
+              </div>
+            </div>
+
+            <!-- Website 2 -->
+            <div class="website-card">
+              <img
+                src="assets/shop-demo.png"
+                alt="Online Shop"
+                class="site-thumb"
+              />
+              <div class="site-details">
+                <h3>Beach Shop</h3>
+                <p>
+                  A beach-themed online store featuring a carousel, product
+                  pages, and countdown sale banner.
+                </p>
+                <a
+                  href="https://example.com/beachshop"
+                  target="_blank"
+                  class="visit-btn"
+                  >Visit Site</a
+                >
+              </div>
+            </div>
+
+            <!-- Website 3 -->
+            <div class="website-card">
+              <img
+                src="assets/pet-game.png"
+                alt="Virtual Pet Game"
+                class="site-thumb"
+              />
+              <div class="site-details">
+                <h3>Virtual Pet Game</h3>
+                <p>
+                  A fun browser-based pet game built with JavaScript that
+                  includes status bars and care buttons.
+                </p>
+                <a
+                  href="https://example.com/virtualpet"
+                  target="_blank"
+                  class="visit-btn"
+                  >Visit Site</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
