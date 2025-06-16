@@ -1,0 +1,363 @@
+/* General Styles */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    flex-direction: column;
+    background-color: #86BD9B;
+    color: black;
+}
+
+/* Navigation Bar */
+header {
+    background-color: #4A6D54;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Navigation Link Hover Effect */
+nav ul li a:not(#cart-link):hover {
+    text-decoration: none;
+    border-bottom: 3px solid #355640;
+    padding-bottom: 4px;
+}
+
+/* Main Shop Page Layout */
+.shop-container {
+    padding: 40px 20px;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.shop-container h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.shop-container p {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Shop Content Layout */
+.shop-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+/* Product Listings */
+.shop-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-height: 600px;
+    overflow-y: auto;
+    flex: 1;
+    scroll-behavior: smooth;
+}
+
+/* Individual Shop Item */
+.shop-item {
+    width: 220px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.shop-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.shop-item h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.shop-item p {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.shop-item-btn {
+    font-family: 'Montserrat', sans-serif;
+    padding: 10px 20px;
+    background-color: #4A6D54;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease;
+}
+
+.shop-item-btn:hover {
+    background-color: #355640;
+}
+
+/* Cart Summary */
+.cart-summary {
+    width: 300px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: sticky;
+    top: 20px;
+    align-self: flex-start;
+}
+
+.cart-summary h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.cart-summary ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.cart-summary ul li {
+    font-size: 16px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#cart-total {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#checkout-btn {
+    padding: 10px;
+    width: 100%;
+    background-color: #4A6D54;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+    margin-top: 10px;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease;
+}
+
+#checkout-btn:hover {
+    background-color: #355640;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #4A6D54;
+    color: white;
+    margin-top: auto;
+}
+
+/* Cart Item Buttons */
+.cart-item-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.cart-item-buttons button {
+    padding: 5px 10px;
+    background-color: #4A6D54;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease;
+}
+
+.cart-item-buttons button:hover {
+    background-color: #355640;
+}
+
+/* Mobile and Tablet Layout Adjustments */
+@media (max-width: 768px) {
+    /* Centering the navigation */
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+
+    nav ul li {
+        margin: 0 10px;
+    }
+
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+    }
+
+    nav ul li a:hover {
+        border-bottom: 3px solid #355640;
+        padding-bottom: 4px;
+    }
+
+    /* Main Shop Page Layout */
+    .shop-container {
+        padding: 40px 20px;
+        text-align: center;
+        flex-grow: 1;
+    }
+
+    /* Shop Content Layout */
+    .shop-content {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        max-width: 1000px;
+        margin: 0 auto;
+        flex-wrap: wrap;
+    }
+
+    .shop-items {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        max-height: 600px;
+        overflow-y: auto;
+        flex: 1;
+        scroll-behavior: smooth;
+    }
+
+    /* Cart Summary */
+    .cart-summary {
+        width: 100%;
+        max-width: 300px;
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        position: sticky;
+        top: 20px;
+        align-self: flex-start;
+    }
+
+    .cart-summary h2 {
+        font-size: 22px;
+    }
+
+    .cart-summary ul li {
+        font-size: 14px;
+    }
+
+    #checkout-btn {
+        font-size: 16px;
+    }
+
+    /* Individual Shop Item */
+    .shop-item {
+        width: 180px;
+    }
+
+    /* Shop Item Button */
+    .shop-item-btn {
+        font-size: 14px;
+    }
+}
+
+/* Mobile Layout Adjustments */
+@media (max-width: 480px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    /* Main Shop Page Layout */
+    .shop-container {
+        padding: 20px 10px;
+    }
+
+    .shop-container h1 {
+        font-size: 28px;
+    }
+
+    .shop-container p {
+        font-size: 16px;
+    }
+
+    /* Cart Summary */
+    .cart-summary {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .cart-summary h2 {
+        font-size: 20px;
+    }
+
+    .cart-summary ul li {
+        font-size: 14px;
+    }
+
+    #checkout-btn {
+        font-size: 16px;
+    }
+
+    /* Individual Shop Item */
+    .shop-item {
+        width: 150px;
+    }
+
+    /* Shop Item Button */
+    .shop-item-btn {
+        font-size: 14px;
+    }
+}
