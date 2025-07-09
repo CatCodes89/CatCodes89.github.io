@@ -72,10 +72,6 @@ content: `<h2>About Me</h2>
         content: "<h2>Apps</h2>" + document.getElementById("appProjects").innerHTML,
     },
     {
-      label: "Art",
-      content: "<h2>Art</h2>",
-    },
-    {
       label: "GitHub",
       link: "https://github.com/CatCodes89?tab=repositories",
     },
