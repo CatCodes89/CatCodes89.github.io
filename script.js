@@ -12,47 +12,42 @@ window.onload = () => {
   // Define the content or links for each wheel item by index
   const sectionContent = [
     {
-      label: "About",
-content: `<h2>About Me</h2>
-<p>Hi! I’m Cathy Carvalho, based in Canada. I’m a developer, a creative, and a lover of all things video games.</p>
+      label: "About Cathy",
+content: `<h2>About Cathy</h2>
 
-<p>My motto is: One day at a time. As long as I create something each day, even if it’s small, that’s one step closer to the goal and the bigger picture.</p>
+<p>Hi! I’m Cathy, a Unity game developer and UI/UX designer based in Canada, passionate about 2D pixel art and building thoughtful, player-friendly interfaces.</p>
 
-<p>My journey into tech began as a teenager, designing pixel outfits for my favourite roguelike game. That early love for game art turned into a passion for building fun, user-friendly digital experiences.</p>
+<p>My journey into game development started with a beloved rogue-like game as a teen. I was creating custom pixel outfits and editing sprites before I ever wrote a line of code. That early love for visual design evolved into a passion for crafting interactive experiences that are fun, intuitive, and engaging.</p>
 
-<p>In 2024, I earned my diploma in Web Development from triOS College. Since then, I’ve been designing and developing websites with HTML, CSS, and JavaScript, while growing my skills in UI/UX design to create interfaces that feel intuitive and engaging.</p>
+<p>In 2024, I earned my diploma in Web Development from triOS College, where I built a foundation in HTML, CSS, and JavaScript. Since then, I’ve expanded into game development using Unity and C#, with a special focus on designing in-game UI like menus, HUDs, and feedback systems.</p>
 
-<p>Right now, I’m focused on UI/UX design for web and mobile, with a special interest in video game UI. My dream is to help bring games to life with thoughtful, player-friendly interfaces that make every click and tap feel amazing!</p>
+<p>Right now, I’m developing a PC indie game in Unity that combines my love for 2D pixel art and interface design. I'm handling everything from programming to UI/UX. Designing systems that feel natural, support gameplay, and create a strong sense of immersion.</p>
 
-<p>Currently, I’m working on my own passion project, a fully functional mobile game app for Android that lets me combine my love for design, development, and interactive storytelling.</p>
+<p>While my current focus is on PC, I’m also interested in mobile game development and love working on projects that bring beautiful, accessible game experiences to any platform.</p>
 
-<p><strong>Let’s connect!</strong> I’m looking for opportunities in UI/UX design, especially for games or apps where I can learn, grow, and create experiences people love to use.</p>`
+<p><strong>Let’s connect!</strong> I’m looking for opportunities as a <strong>2D Game Developer</strong> or <strong>Game UI/UX Designer</strong>, especially on pixel-style games where I can grow, collaborate, and help create something players truly enjoy.</p>`
     },
     {
-      label: "Skills",
+      label: "My Toolkit",
       content: `
-        <h2>Skills</h2>
+        <h2>My Toolkit</h2>
       
         <h3>Languages</h3>
         <p>
           <img src="assets/html.png" alt="HTML" class="skill-icon">
           <img src="assets/css.png" alt="CSS" class="skill-icon">
           <img src="assets/js.png" alt="JavaScript" class="skill-icon">
-          <img src="assets/swift.png" alt="Swift" class="skill-icon">
         </p>
       
         <h3>Frameworks</h3>
         <p>
-          <img src="assets/react.png" alt="React" class="skill-icon">
           <img src="assets/unity.png" alt="Unity" class="skill-icon">
         </p>
       
         <h3>Tools & Version Control</h3>
         <p>
           <img src="assets/vscode.png" alt="VS Code" class="skill-icon">
-          <img src="assets/xcode.png" alt="Xcode" class="skill-icon">
           <img src="assets/github.png" alt="GitHub" class="skill-icon">
-          <img src="assets/edgedev.png" alt="Edge DevTools" class="skill-icon">
         </p>
       
         <h3>UI/UX</h3>
@@ -64,12 +59,12 @@ content: `<h2>About Me</h2>
         </p> `,
     },
     {
-      label: "Websites",
-      content: "<h2>Websites</h2>" + popupText.innerHTML,
+      label: "Game Projects",
+      content: "<h2>Game Projects</h2>" + popupText.innerHTML,
     },
     {
-        label: "Apps",
-        content: "<h2>Apps</h2>" + document.getElementById("appProjects").innerHTML,
+        label: "Pixel Game UI/UX",
+        content: "<h2>Pixel Game UI/UX</h2>" + document.getElementById("appProjects").innerHTML,
     },
     {
       label: "GitHub",
