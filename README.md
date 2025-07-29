@@ -4,7 +4,7 @@ This repo includes mock-up UI sketches and final versions used in the game.
 
 ## 📝 Main Menu Mock-up
 
-![Main Menu Sketch](assets/MockUpSketch1.png)
+![Main Menu Sketch](assets/MockUpSketch1.jpg)
 
 A hand-drawn mock-up showing my vision for the Start Menu UI. It outlines logo placement, animation notes, and sound effects.
 
