@@ -37,7 +37,7 @@ content: `<h2>About Cathy</h2>
           <img src="assets/html.png" alt="HTML" class="skill-icon">
           <img src="assets/css.png" alt="CSS" class="skill-icon">
           <img src="assets/js.png" alt="JavaScript" class="skill-icon">
-          <img src="asssets/c-sharp.png" alt="C#" class="skill-icon">
+          <img src="assets/csharp.jpeg" alt="C#" class="skill-icon">
         </p>
       
         <h3>Frameworks</h3>
