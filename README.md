@@ -1,46 +1,14 @@
-# Mika and the 7 Sisters - UI/UX Sketches
+# Mika and the 7 Sisters – UI/UX Sketches
 
-This repo includes mock-up UI sketches and final versions used in the game.
+This repo includes UI mock-ups, final UI implementations, and design notes used throughout development.
 
 ## Main Menu Mock-up
 
 ![Main Menu Sketch](assets/MockUpSketch1.jpg)
 
-A hand-drawn mock-up showing my vision for the Start Menu UI. It outlines logo placement, animation notes, and sound effects.
-
-## Final In-Game Screenshot
-
-![Unity Screenshot](assets/GameMenuFinal.png)
-
-Final version implemented in Unity using pixel art and C#.
-
----
-
-## Mika's Custom Dialog Box – Pixel UI Design
-
-![Mika Dialog Box](assets/CharacterDialogueBox.png)
-
-A fully original pixel UI element created with a restricted color palette. This dialog box was designed to reflect Mika’s mood, tone, and story. Sprite expressions, button layout, and text clarity were carefully crafted for player immersion.
-
-## Mika's Sprite Sheet Animation
-
-🎥 [Watch Animation](assets/MikaSpriteSheet.mp4)
-
-A pixel animation showcasing Mika’s idle and walking cycles. Each frame was carefully crafted at 64×64 pixels to reflect the flow of her robe, sway of her hood charm, and subtle head and arm movement—capturing her personality in motion.
-
-
-
-# Mika and the 7 Sisters – UI/UX Sketches
-
-This repo includes UI mock-ups, final UI implementations, and design notes used throughout development.
-
-## 📝 Main Menu Mock-up
-
-![Main Menu Sketch](assets/MockUpSketch1.jpg)
-
 A hand-drawn mock-up showing my vision for the Start Menu UI. It outlines logo placement, animation cues, and sound effect ideas for button interactions.
 
-## ✅ Final In-Game Screenshot
+## Final In-Game Screenshot
 
 ![Unity Screenshot](assets/GameMenuFinal.png)
 
@@ -48,7 +16,7 @@ This main menu was implemented in Unity using the built-in UI system and C#. The
 
 ---
 
-## 💬 Mika's Custom Dialog Box – Pixel UI Design
+## Mika's Custom Dialog Box – Pixel UI Design
 
 ![Mika Dialog Box](assets/CharacterDialogueBox.png)
 
@@ -59,23 +27,31 @@ An original pixel UI element created using a restricted color palette. This dial
 
 ---
 
-## 🧭 Inventory & Stats Pages – New UI Elements
+## Inventory & Stats Pages – Pixel UI Implementation
 
-*These were added as part of the dev blog update.*
+These UI screens were developed during the second phase of my dev blog and implemented in Unity using custom pixel art and C# scripting.
 
-Screens and assets showing my implementation of:
-- 📦 Inventory system
-- 📊 Player stats menu
-- ⏸️ Pause menu
+### Mika’s Stats Menu
 
-These systems were built in Unity using pixel UI sprites, consistent button layout, and animated transitions to improve flow and immersion.
+![Mika Stats Page](/assets/StatsPage.png)
+
+A clean, minimal stats page showing Mika’s portrait and base attributes (HP, Attack, Defense). I designed the button icons and page layout with strong visual balance, keeping everything center-aligned for readability and gamepad accessibility. Decorative borders reinforce the magical theme while keeping it elegant.
+
+### Inventory Menu
+
+![Inventory Page](/assets/Inventory.png)
+
+This grid-based inventory UI allows for item management and navigation. Items are presented with a bold outline and highlighted selection box. The arrow on the right hints at multiple pages. Designed for both keyboard and gamepad input.
+
+### Pause Menu
+
+![Pause Meny Page](/assets/PauseMenu.png)
+
+The pause menu includes clean vertical navigation with options like Resume, Save, Load, and Settings. It mirrors the same visual language as the stats and inventory pages to keep UI consistent and immersive.
 
 ---
 
-## 🧵 Mika’s Sprite Sheet Animation
-
-🎥 [Watch Animation](assets/MikaSpriteSheet.mp4)
-
-A pixel animation showcasing Mika’s idle and walking cycles (64×64 resolution). Every frame was crafted to emphasize small personality details like robe movement, charm sway, and expression.
-
----
+### Design Notes:
+- Focused on **clarity** and **readability** using a limited color palette and chunky pixel fonts.
+- Each menu is built modularly, allowing new buttons and categories to be added later.
+- These pages reflect my focus on strong UI/UX foundations even in early gameplay systems, while supporting a cohesive aesthetic style.
